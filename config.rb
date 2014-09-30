@@ -119,3 +119,7 @@ configure :build do
 
   activate :sitemap, :hostname => "http://www.example.com"
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+end
