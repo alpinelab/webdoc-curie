@@ -3,10 +3,10 @@ title: Curie Webdoc - Résultats de recherche
 ---
 
 %h1 Page de recherche
-%form{action: "search"}
+%form{action: "/search"}
   %input#tipue_search_input{name: 'q', autocomplete: "off", required: true}
   %button{class: 'btn btn-primary btn-lg'}
-    %img{src: '/images/search.png'}
+    = image_tag('search.png', alt: "search")
 #tipue_drop_content
 #tipue_search_content
 
@@ -17,4 +17,3 @@ title: Curie Webdoc - Résultats de recherche
       $('#tipue_search_input').tipuedrop();
       $('#tipue_search_input').tipuesearch();
     });
-

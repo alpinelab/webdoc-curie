@@ -85,13 +85,13 @@ configure :build do
   activate :minify_html
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, ignore: [/images\/tipuesearch\/.*\.png/]
 
   # Use relative URLs
   activate :relative_assets
 
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  # Produce gzipped versions of HTML, CSS, and JavaScript
+  activate :gzip
 
    # Create a whole bunch of favicons for various devices and OSes
   activate :favicon_maker, icons: {
