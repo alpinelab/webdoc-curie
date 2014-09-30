@@ -1,0 +1,9 @@
+#=r equire vendor/modernizr.custom.11383.min
+#= require vendor/jquery-2.1.1.min
+#= require bootstrap-sprockets
+#= require bootstrap
+#= require vendor/tipuesearch/tipuesearch_set
+#= require vendor/tipuesearch/tipue_content
+#= require vendor/tipuesearch/tipuesearch.min
+#= require vendor/tipuesearch/tipuedrop.min
+#= require_tree .

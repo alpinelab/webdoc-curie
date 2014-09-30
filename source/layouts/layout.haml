@@ -28,4 +28,8 @@
   %header
   =yield
   %footer
+  = javascript_include_tag 'main'
+  = yield_content(:javascripts)
   = google_analytics_universal_tag
+:plain
+  </html>

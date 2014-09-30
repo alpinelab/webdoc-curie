@@ -1,17 +1,20 @@
 ---
-title: Curie Webdoc - Guérir le regard
+title: Curie Webdoc - Résultats de recherche
 ---
 
-%h1 Curie Webdoc
+%h1 Page de recherche
 %form{action: "search"}
   %input#tipue_search_input{name: 'q', autocomplete: "off", required: true}
   %button{class: 'btn btn-primary btn-lg'}
     %img{src: '/images/search.png'}
 #tipue_drop_content
+#tipue_search_content
 
 
 - content_for :javascripts do
   :javascript
     $(document).ready(function() {
       $('#tipue_search_input').tipuedrop();
+      $('#tipue_search_input').tipuesearch();
     });
+
