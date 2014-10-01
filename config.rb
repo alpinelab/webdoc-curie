@@ -47,6 +47,9 @@ set :images_dir, 'images'
 #   end
 # end
 
+# i18n extension
+activate :i18n, :mount_at_root => :fr
+
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
 
