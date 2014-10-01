@@ -2,16 +2,20 @@
 title: Curie Webdoc - Guérir le regard
 ---
 
-%h1 Curie Webdoc
-%form{action: "/search"}
-  %input#tipue_search_input{name: 'q', autocomplete: "off", required: true}
-  %button{class: 'btn btn-primary btn-lg'}
-    = image_tag('search.png', alt: "search")
-#tipue_drop_content
-
+.wrapper
+  = partial "layouts/circular_navigation"
 
 - content_for :javascripts do
   :javascript
     $(document).ready(function() {
       $('#tipue_search_input').tipuedrop();
+      $(function() {
+        var BV = new $.BigVideo({useFlashForFirefox:false});
+        BV.init();
+        BV.show([
+          { type: "video/mp4",  src: "http://video-js.zencoder.com/oceans-clip.mp4"  },
+          { type: "video/webm", src: "http://video-js.zencoder.com/oceans-clip.webm" },
+          { type: "video/ogg",  src: "http://video-js.zencoder.com/oceans-clip.ogv"  }
+        ], {ambient:true, loop:true});
+      });
     });

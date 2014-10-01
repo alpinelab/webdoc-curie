@@ -1,0 +1,10 @@
+---
+en:
+  common:
+    search: "Search"
+  navbar:
+    make-a-choice: "make a choice"
+    mastectomy: "the mastectomy"
+    non-surgical-reconstruction: "non surgical reconstruction"
+    surgical-reconstruction: "surgical reconstruction"
+    toogle-navigation: "toggle navigation"

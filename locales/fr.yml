@@ -1,0 +1,10 @@
+---
+fr:
+  common:
+    search: "Rechercher"
+  navbar:
+    make-a-choice: "faire son choix"
+    mastectomy: "la mastéctomie"
+    non-surgical-reconstruction: "la reconstruction non chirurgicale"
+    surgical-reconstruction: "la reconstruction chirurgicale"
+    toogle-navigation: "Déplier la navigation"
