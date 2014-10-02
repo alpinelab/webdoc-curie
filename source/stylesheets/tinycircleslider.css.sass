@@ -1,0 +1,65 @@
+img
+  border: 0
+
+// Tiny Circleslider
+
+#rotatescroll
+  height: 40em
+  position: relative
+  width: 40em
+  display: block
+  margin: 0 auto
+  .overlay
+    pointer-events: none
+    border: solid 1px pink
+    border-radius: 50%
+    margin: 0 auto
+    height: 35em
+    width: 35em
+    line-height: 35em
+    text-align: center
+  .viewport
+    border-radius: 50%
+    overflow: hidden
+    height: 30em
+    width: 30em
+    display: inline-block
+    vertical-align: middle
+    line-height: 30em
+    text-align: center
+  .overview
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      height: 30em
+      width: 425px
+      float: left
+      background-color: green
+      position: relative
+      span
+        font-size: 2.6em
+        text-transform: uppercase
+        vertical-align: middle
+        display: inline-block
+        text-align: left
+        line-height: normal
+
+  .thumb
+    position: absolute
+    border-radius: 50%
+    background-color: red
+    cursor: pointer
+    width: 2em
+    z-index: 200
+    height: 2em
+  .dot
+    border-radius: 50%
+    background: blue
+    display: none
+    height: 2em
+    width: 2em
+    position: absolute
+    z-index: 100
+    span
+      display: none
