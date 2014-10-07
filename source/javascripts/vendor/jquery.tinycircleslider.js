@@ -182,8 +182,6 @@
             $.each(dots, function(index, dot)
             {
                 $(dot.dot).addClass("dot-" + (index + 1));
-                $(dot.dot).html("<span>" + (index + 1) + "</span>");
-
                 $overview.append(dot.slide);
             });
 

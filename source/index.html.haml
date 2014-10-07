@@ -5,48 +5,33 @@ title: Curie Webdoc - Guérir le regard
 .container-fluid
   .row
     .col-sm-4.col-sm-offset-4
-      // = partial "layouts/circular_navigation"
-      #rotatescroll
-        .overlay
-          .viewport
-            %ul.overview
-              %li
-                %span= I18n.t('navbar.mastectomy')
-              %li
-                %span= I18n.t('navbar.make-a-choice')
-              %li
-                %span= I18n.t('navbar.surgical-reconstruction')
-              %li
-                %span= I18n.t('navbar.non-surgical-reconstruction')
-              %li
-                %span= I18n.t('navbar.mastectomy')
-        .thumb
-        .dot.dot-1
-        .dot.dot-2
-        .dot.dot-3
-        .dot.dot-4
-        .dot.dot-5
-
+      = partial "layouts/circular_navigation"
 
 - content_for :javascripts do
-  :javascript
-    $(document).ready(function() {
-      $('#tipue_search_input').tipuedrop();
-      $(function() {
-        var BV = new $.BigVideo({useFlashForFirefox:false});
-        BV.init();
-        if (Modernizr.touch) {
-          BV.show('http://video-js.zencoder.com/oceans-clip.png');
-        } else {
-          BV.show([
-            { type: "video/mp4",  src: "http://video-js.zencoder.com/oceans-clip.mp4"  },
-            { type: "video/webm", src: "http://video-js.zencoder.com/oceans-clip.webm" },
-            { type: "video/ogg",  src: "http://video-js.zencoder.com/oceans-clip.ogv"  }
-          ], {ambient:true, loop:true});
-        }
-      });
-      $("#rotatescroll").tinycircleslider({
-        dotsSnap : true,
-        radius   : 300
-      });
-    });
+  :coffeescript
+    $(document).ready ->
+      $("#tipue_search_input").tipuedrop()
+      $ ->
+        BV = new $.BigVideo(useFlashForFirefox: false)
+        BV.init()
+        if Modernizr.touch
+          BV.show "http://video-js.zencoder.com/oceans-clip.png"
+        else
+          BV.show [
+            {
+              type: "video/mp4"
+              src: "http://video-js.zencoder.com/oceans-clip.mp4"
+            }
+            {
+              type: "video/webm"
+              src: "http://video-js.zencoder.com/oceans-clip.webm"
+            }
+            {
+              type: "video/ogg"
+              src: "http://video-js.zencoder.com/oceans-clip.ogv"
+            }
+          ],
+            ambient: true
+            loop: true
+        return
+      return
