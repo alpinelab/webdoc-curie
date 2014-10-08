@@ -18,9 +18,7 @@
     var pluginName = "tinycircleslider"
     ,   defaults   =
         {
-            interval       : false // move to another block on intervals.
-        ,   intervalTime   : 3500  // time between intervals.
-        ,   dots           : true  // automatic placement of dots or use predefined location on slide.
+            dots           : true  // automatic placement of dots or use predefined location on slide.
         ,   dotsSnap       : false // shows dots when user starts dragging and snap to them.
         ,   dotsHide       : true  // fades out the dots when user stops dragging.
         ,   radius         : 140   // Used to determine the size of the circleslider
@@ -64,8 +62,6 @@
             ,   height : $dots.outerHeight()
             }
 
-        ,   intervalTimer   = null
-        ,   animationTimer  = null
         ,   animationStep   = 0
         ,   touchEvents     = "ontouchstart" in document.documentElement
         ;
@@ -86,7 +82,7 @@
 
             setEvents();
 
-            self.move(0, self.options.interval);
+            self.move(0);
 
             return self;
         }
@@ -113,26 +109,13 @@
                     event.preventDefault();
                     event.stopImmediatePropagation();
 
-                    clearTimeout(intervalTimer);
-
                     if(0 === animationStep)
                     {
                         self.move($(this).text() - 1);
                     }
-
-                    self.start();
-
                     return false;
                 });
             }
-        }
-
-        function setTimer(slideFirst)
-        {
-            intervalTimer = setTimeout(function()
-            {
-                self.move(($slides[(self.slideCurrent + 1)] !== undefined ? (self.slideCurrent + 1) : 0), true);
-            }, (slideFirst ? 50 : self.options.intervalTime));
         }
 
         function toRadians(degrees)
@@ -189,22 +172,6 @@
 
             $dots = $container.find(".dot");
         }
-
-        this.start = function(first)
-        {
-            if(self.options.interval)
-            {
-                setTimer( first );
-            }
-            return self;
-        };
-
-        this.stop = function()
-        {
-            clearTimeout(intervalTimer);
-
-            return self;
-        };
 
         function findShortestPath(angleA, angleB)
         {
@@ -265,7 +232,7 @@
                     ];
         }
 
-        this.move = function(slideIndex, interval)
+        this.move = function(slideIndex)
         {
             var angleDestination = dots[slideIndex] && dots[slideIndex].angle || 0
             ,   angleDelta       = findShortestPath(angleDestination, self.angleCurrent)[0]
@@ -275,7 +242,7 @@
 
             self.slideCurrent = slideIndex;
 
-            stepMove(angleStep, angleDestination, framerate, interval);
+            stepMove(angleStep, angleDestination, framerate);
 
             return self;
         };
@@ -285,25 +252,17 @@
             return (degrees < 0) ? 360 + (degrees % -360) : degrees % 360;
         }
 
-        function stepMove(angleStep, angleDestination, framerate, interval)
+        function stepMove(angleStep, angleDestination, framerate)
         {
             animationStep += 1;
 
             var angle = sanitizeAngle(Math.round(animationStep * angleStep + self.angleCurrent));
 
-            if(animationStep === framerate && interval)
-            {
-                self.start();
-            }
-
             setCSS(angle, animationStep === framerate);
 
             if(animationStep < framerate)
             {
-                animationTimer = setTimeout(function()
-                {
-                    stepMove(angleStep, angleDestination, framerate, interval);
-                }, 50);
+                stepMove(angleStep, angleDestination, framerate);
             }
             else
             {
@@ -363,8 +322,6 @@
             }
             event.preventDefault();
 
-            clearTimeout(animationTimer);
-
             if(!touchEvents)
             {
                 $(document).unbind("mousemove mouseup");
@@ -375,13 +332,11 @@
             {
                 if(self.options.dotsHide)
                 {
-                    $dots.stop(true, true).fadeOut("slow");
+                    $dots.fadeOut("slow");
                 }
 
                 self.move(findClosestSlide(self.angleCurrent)[0][0]);
             }
-
-            self.start();
         }
 
         function startDrag(event)
@@ -393,8 +348,6 @@
                 return false;
             }
 
-            clearTimeout(intervalTimer);
-
             if(!touchEvents)
             {
                 $(document).mousemove(drag);
@@ -404,7 +357,7 @@
 
             if(self.options.dotsSnap && self.options.dotsHide)
             {
-                $dots.stop(true, true).fadeIn("slow");
+                $dots.fadeIn("slow");
             }
         }
 
