@@ -9,29 +9,24 @@ title: Curie Webdoc - Guérir le regard
 
 - content_for :javascripts do
   :coffeescript
+    @playlist = [
+      [{ type: "video/mp4",  src: "http://video-js.zencoder.com/oceans-clip.mp4"  }
+       { type: "video/webm", src: "http://video-js.zencoder.com/oceans-clip.webm" }
+       { type: "video/ogg",  src: "http://video-js.zencoder.com/oceans-clip.ogv"  }],
+      [{ type: "video/mp4",  src: "http://dfcb.github.io/BigVideo.js/vids/dock.mp4"  }
+       { type: "video/webm", src: "http://dfcb.github.io/BigVideo.js/vids/dock.webm" }
+       { type: "video/ogg",  src: "http://dfcb.github.io/BigVideo.js/vids/dock.ogv"  }],
+      [{ type: "video/mp4",  src: "http://dfcb.github.io/BigVideo.js/vids/river.mp4"  }
+       { type: "video/webm", src: "http://dfcb.github.io/BigVideo.js/vids/river.webm" }
+       { type: "video/ogg",  src: "http://dfcb.github.io/BigVideo.js/vids/river.ogv"  }]
+    ]
     $(document).ready ->
       $("#tipue_search_input").tipuedrop()
       $ ->
-        BV = new $.BigVideo(useFlashForFirefox: false)
         BV.init()
         if Modernizr.touch
           BV.show "http://video-js.zencoder.com/oceans-clip.png"
         else
-          BV.show [
-            {
-              type: "video/mp4"
-              src: "http://video-js.zencoder.com/oceans-clip.mp4"
-            }
-            {
-              type: "video/webm"
-              src: "http://video-js.zencoder.com/oceans-clip.webm"
-            }
-            {
-              type: "video/ogg"
-              src: "http://video-js.zencoder.com/oceans-clip.ogv"
-            }
-          ],
-            ambient: true
-            loop: true
+          BV.show playlist[0], ambient: true
         return
       return

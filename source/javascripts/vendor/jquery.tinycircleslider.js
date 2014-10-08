@@ -239,11 +239,13 @@
             ,   framerate        = Math.ceil(Math.abs(angleDelta) / 10)
             ,   angleStep        = (angleDelta / framerate) || 0
             ;
-
             self.slideCurrent = slideIndex;
 
             stepMove(angleStep, angleDestination, framerate);
-
+            if(BV.getPlayer())
+            {
+                BV.show(playlist[slideIndex],{ambient: true});
+            }
             return self;
         };
 
