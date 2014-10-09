@@ -2,7 +2,6 @@
 #= require vendor/_jquery-2.1.1.min
 #= require vendor/_jquery-ui.min
 #= require bootstrap-sprockets
-#= require bootstrap
 #= require vendor/tipuesearch/_tipuesearch_set
 #= require vendor/tipuesearch/_tipue_content
 #= require vendor/tipuesearch/_tipuesearch
