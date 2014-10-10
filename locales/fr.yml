@@ -6,6 +6,12 @@ fr:
     doc-title2: "Regard"
     enter: "Entrer"
     search: "Rechercher"
+  footer:
+    glossary: "Fiches techniques"
+    credits: "Crédits"
+    legal: "Mentions légales"
+    read-more: "En savoir plus"
+    about: "À propos"
   landing:
     credits:
       directed-by: "Un film de Caroline Swysen"

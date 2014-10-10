@@ -26,8 +26,8 @@
   = stylesheet_link_tag 'main'
 %body
   = partial "layouts/header"
-  =yield
-  %footer
+  = yield
+  = partial "layouts/footer"
   = javascript_include_tag 'main'
   = yield_content(:javascripts)
   = google_analytics_universal_tag
