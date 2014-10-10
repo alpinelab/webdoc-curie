@@ -31,3 +31,15 @@ title: Curie Webdoc - Guérir le regard
       .modal-footer
         %a{href: "/"}= I18n.t("warning.discover")
         .divider
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $ ->
+        BV.init()
+        if Modernizr.touch
+          BV.show "http://video-js.zencoder.com/oceans-clip.png"
+        else
+          BV.show [{ type: "video/webm", src: "http://there-is-something-in.com/curie/testhomepage/montage_curie_04.webm" }], ambient: true
+        return
+      return
