@@ -39,10 +39,10 @@ fr:
     subtitle: ""
     title: "Mentions légales"
   navbar:
-    make-a-choice: "faire son choix"
-    mastectomy: "la mastéctomie"
-    non-surgical-reconstruction: "la reconstruction non chirurgicale"
-    surgical-reconstruction: "la reconstruction chirurgicale"
+    alternatives: "Les alternatives"
+    group: "Le groupe"
+    mastectomy: "La mastéctomie"
+    reconstruction: "La reconstruction"
     toogle-navigation: "Déplier la navigation"
   read-more:
     link:

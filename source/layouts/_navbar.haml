@@ -11,13 +11,13 @@
     #curie-navbar.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li
+          %a{href: "#"}= I18n.t('navbar.group')
+        %li
           %a{href: "#"}= I18n.t('navbar.mastectomy')
         %li
-          %a{href: "#"}= I18n.t('navbar.make-a-choice')
+          %a{href: "#"}= I18n.t('navbar.reconstruction')
         %li
-          %a{href: "#"}= I18n.t('navbar.surgical-reconstruction')
-        %li
-          %a{href: "#"}= I18n.t('navbar.non-surgical-reconstruction')
+          %a{href: "#"}= I18n.t('navbar.alternatives')
       %form.navbar-form.navbar-right{action: "/search"}
         %label.sr-only{for: "tipue_search_input"}= "Rechercher"
         %input#tipue_search_input{name: 'q', autocomplete: "off", required: true}
