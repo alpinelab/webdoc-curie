@@ -1,29 +1,52 @@
 ---
 fr:
+  about:
+    partner:
+      download: "Lire leur engagement"
+      url: "#"
+      name: "Nom du partenaire"
+    subtitle: "L'engagement de nos partenaires"
+    title: "À propos"
   common:
     close: "Close"
     doc-title1: "Guérir le"
     doc-title2: "Regard"
     enter: "Entrer"
     search: "Rechercher"
-  footer:
-    glossary: "Fiches techniques"
-    credits: "Crédits"
-    legal: "Mentions légales"
-    read-more: "En savoir plus"
-    about: "À propos"
+  credits:
+    credit:
+      name: "Nom Prénom"
+      role: "Fonction"
+    subtitle: ""
+    title: "Crédits"
+  datasheets:
+    datasheet:
+      download: "Télécharger la fiche technique"
+      url: "#"
+      name: "Nom de la fiche technique"
+    subtitle: ""
+    title: "Fiches techniques"
+  disclaimer:
+    message:
+      part1: "Ce web-documentaire ne remplace pas une consultation médicale,"
+      part2: "ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toutes femmes se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
+    discover: "Découvrez le web-documentaire"
   landing:
     credits:
       directed-by: "Un film de Caroline Swysen"
       producted-by: "produit par Kepler 22"
+  legal:
+    subtitle: ""
+    title: "Mentions légales"
   navbar:
     make-a-choice: "faire son choix"
     mastectomy: "la mastéctomie"
     non-surgical-reconstruction: "la reconstruction non chirurgicale"
     surgical-reconstruction: "la reconstruction chirurgicale"
     toogle-navigation: "Déplier la navigation"
-  disclaimer:
-    message:
-      part1: "Ce web-documentaire ne remplace pas une consultation médicale,"
-      part2: "ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toutes femmes se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
-    discover: "Découvrez le web-documentaire"
+  read-more:
+    link:
+      name: "Nom du lien"
+      url: "url vers le site"
+    subtitle: ""
+    title: "En savoir plus"

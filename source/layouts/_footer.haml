@@ -3,13 +3,13 @@
     .container-fluid
       .row
         .col-sm-1
-          = I18n.t("footer.glossary")
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#datasheets"}= I18n.t("datasheets.title")
         .col-sm-7
         .col-sm-1
-          = I18n.t("footer.credits")
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#credits"}= I18n.t("credits.title")
         .col-sm-1
-          = I18n.t("footer.legal")
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#legal"}= I18n.t("legal.title")
         .col-sm-1
-          = I18n.t("footer.read-more")
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#read-more"}= I18n.t("read-more.title")
         .col-sm-1
-          = I18n.t("footer.about")
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#about"}= I18n.t("about.title")
