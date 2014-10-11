@@ -9,7 +9,7 @@ title: Curie Webdoc - Guérir le regard
         #title
           %p.part-one= I18n.t("common.doc-title1")
           %p.part-two= I18n.t("common.doc-title2")
-        %button#enter.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#warning"}= I18n.t("common.enter")
+        %button#enter.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#disclaimer"}= I18n.t("common.enter")
       #credits
         %p.directed-by= I18n.t("landing.credits.directed-by")
         %p.producted-by= I18n.t("landing.credits.producted-by")
@@ -18,22 +18,7 @@ title: Curie Webdoc - Guérir le regard
   .container-fluid
     #partners
 
-#warning.modal.fade
-  .modal-dialog
-    .modal-content
-      .modal-header
-        %button.close{"data-dismiss" => "modal", :type => "button"}
-          %span{"aria-hidden" => "true"} ×
-          %span.sr-only= I18n.t("common.close")
-        .modal-title
-          %p.part-one= I18n.t("common.doc-title1")
-          %p.part-two= I18n.t("common.doc-title2")
-      .modal-body
-        %span.part-one= I18n.t("warning.message.part1")
-        %span.part-two= I18n.t("warning.message.part2")
-      .modal-footer
-        %a{href: "/"}= I18n.t("warning.discover")
-        .divider
+= partial 'pages/landing/disclaimer'
 
 - content_for :javascripts do
   :coffeescript
