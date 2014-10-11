@@ -84,6 +84,11 @@
 
             self.move(0);
 
+            $thumb.css({
+                top  : -Math.cos(toRadians(45)) * self.options.radius + (containerSize.height / 2 - thumbSize.height / 2)
+            ,   left :  Math.sin(toRadians(45)) * self.options.radius + (containerSize.width / 2 - thumbSize.width / 2)
+            });
+
             return self;
         }
 
@@ -171,6 +176,7 @@
             $container.append(docFragment);
 
             $dots = $container.find(".dot");
+            $dots.hide();
         }
 
         function findShortestPath(angleA, angleB)
