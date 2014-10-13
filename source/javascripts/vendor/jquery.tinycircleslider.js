@@ -82,12 +82,13 @@
 
             setEvents();
 
-            self.move(0);
-
             $thumb.css({
                 top  : -Math.cos(toRadians(45)) * self.options.radius + (containerSize.height / 2 - thumbSize.height / 2)
             ,   left :  Math.sin(toRadians(45)) * self.options.radius + (containerSize.width / 2 - thumbSize.width / 2)
             });
+
+            // Add a temporary slide to show the webdoc title. It's only used on the initial state, then the slide is hide once the compass is drag
+            $overview.prepend('<li id="temp"><span>GUERIR LE REGARD</span></li>');
 
             return self;
         }
@@ -350,7 +351,8 @@
         function startDrag(event)
         {
             event.preventDefault();
-
+            // hide the temporary slide
+            $("#temp").hide();
             if($(event.target).hasClass("dot"))
             {
                 return false;
