@@ -1,0 +1,23 @@
+.circle-container
+  %a.center
+    %img{:src => "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/2000px-Circle_-_black_simple.svg.png", width: "100%"}/
+  - current_page.data.items.each do |key, item|
+    .menu-item{class: "deg#{item.angle}"}
+      %h2
+        %a= I18n.t(["nav",current_page.data.name,key].join("."))
+      - if !item["sub_items"].nil?
+        %ul
+          - item["sub_items"].each do |sub_item|
+            %li
+              %a= I18n.t(["nav",current_page.data.name,sub_item].join("."))
+
+
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"
+      $('.menu-item').on 'mouseenter', ->
+        $(this).find('ul').animate({opacity: 1})
+      $('.menu-item').on 'mouseleave', ->
+        $(this).find('ul').animate({opacity: 0})
