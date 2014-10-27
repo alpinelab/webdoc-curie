@@ -1,0 +1,6 @@
+= partial 'pages/modal', locals: {name: 'mastectomy'}
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#mastectomy").modal "show"
