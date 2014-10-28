@@ -1,8 +1,4 @@
-%video#video-player.video-js.vjs-default-skin{controls: "", :height => "264", :poster => "http://video-js.zencoder.com/oceans-clip.png", :preload => "auto", :width => "640"}
-  %source{:src => current_page.data.videos.values.first["src"], :type => "video/mp4"}
-  %p.vjs-no-js
-    To view this video please enable JavaScript, and consider upgrading to a web browser that
-    %a{:href => "http://videojs.com/html5-video-support/", :target => "_blank"} supports HTML5 video
+= partial "pages/nav/default_player", locals: { default_src: current_page.data.videos.values.first["src"] }
 
 - current_page.data.videos.each do |key, video|
   .video-nav{"data-video-src" => video["src"]}
