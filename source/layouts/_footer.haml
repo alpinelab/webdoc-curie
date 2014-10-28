@@ -13,3 +13,9 @@
           %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#read-more"}= I18n.t("read-more.title")
         .col-sm-1
           %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#about"}= I18n.t("about.title")
+
+= partial 'pages/modal', locals: {name: 'datasheets'}
+= partial 'pages/modal', locals: {name: 'credits'   }
+= partial 'pages/modal', locals: {name: 'legal'     }
+= partial 'pages/modal', locals: {name: 'read-more' }
+= partial 'pages/modal', locals: {name: 'about'     }

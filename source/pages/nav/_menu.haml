@@ -1,0 +1,25 @@
+.circle-container
+  %a.center
+    = partial "layouts/compass"
+  - current_page.data.items.each do |key, item|
+    .menu-item{class: "deg#{item.angle}"}
+      %h2
+        - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
+        %a{ href: page_name.slugify }= page_name 
+      - if !item["sub_items"].nil?
+        %ul
+          - item["sub_items"].each do |sub_item|
+            %li
+              - item_name = I18n.t(["nav",current_page.data.name,sub_item].join("."))
+              %a{href: item_name.slugify }= item_name
+
+
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"
+      $('.menu-item').on 'mouseenter', ->
+        $(this).find('ul').animate({opacity: 1})
+      $('.menu-item').on 'mouseleave', ->
+        $(this).find('ul').animate({opacity: 0})

@@ -7,12 +7,6 @@ title: Curie Webdoc - Guérir le regard
     .col-sm-4.col-sm-offset-4
       = partial "layouts/circular_navigation"
 
-= partial 'pages/modal', locals: {name: 'datasheets'}
-= partial 'pages/modal', locals: {name: 'credits'   }
-= partial 'pages/modal', locals: {name: 'legal'     }
-= partial 'pages/modal', locals: {name: 'read-more' }
-= partial 'pages/modal', locals: {name: 'about'     }
-
 - content_for :javascripts do
   :coffeescript
     @playlist = [
