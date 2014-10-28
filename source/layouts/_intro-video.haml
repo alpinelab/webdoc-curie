@@ -1,0 +1,26 @@
+#skip-intro{:'data-video' => current_page.data.video, :'data-poster' => current_page.data.poster}
+  %span= I18n.t("common.skip-intro")
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      BV.init()
+      if Modernizr.touch
+        BV.show $("#skip-intro").data('poster')
+      else
+        BV.show [
+          src: $("#skip-intro").data('video'), type: 'video/mp4'
+        ]
+      $("#skip-intro").click((event) ->
+        hideIntroVideo()
+        BV.getPlayer().pause()
+      )
+      BV.getPlayer().on("ended", (event) ->
+        hideIntroVideo()
+      )
+      return
+    hideIntroVideo = ->
+      $("#big-video-wrap").hide()
+      $("#big-video-control-container").hide()
+      $("#skip-intro").hide()
+      return
