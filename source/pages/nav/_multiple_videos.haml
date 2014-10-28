@@ -6,7 +6,7 @@
 
 - current_page.data.videos.each do |key, video|
   .video-nav{"data-video-src" => video["src"]}
-    %img{ src: "http://upload.wikimedia.org/wikipedia/commons/1/18/Okapi2.jpg", width: "100px" }
+    %img{ src: video["thumbnail"], width: "100px" }
 
 - content_for :javascripts do
   :coffeescript
