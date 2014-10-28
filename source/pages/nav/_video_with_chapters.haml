@@ -1,8 +1,9 @@
-= partial "pages/nav/default_player", locals: { default_src: current_page.data.src }
+#video-wrapper
+  = partial "pages/nav/default_player", locals: { default_src: current_page.data.src }
 
-- current_page.data.chapters.each do |key, chapter|
-  .video-nav{"data-video-offset" => chapter["offset"]}
-    %img{ src: chapter["thumbnail"], width: "100px" }
+  - current_page.data.chapters.each do |key, chapter|
+    .video-nav{"data-video-offset" => chapter["offset"]}
+      %img{ src: chapter["thumbnail"], width: "100px" }
 
 - content_for :javascripts do
   :coffeescript

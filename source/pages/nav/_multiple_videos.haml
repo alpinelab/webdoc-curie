@@ -1,8 +1,9 @@
-= partial "pages/nav/default_player", locals: { default_src: current_page.data.videos.values.first["src"] }
+#video-wrapper
+  = partial "pages/nav/default_player", locals: { default_src: current_page.data.videos.values.first["src"] }
 
-- current_page.data.videos.each do |key, video|
-  .video-nav{"data-video-src" => video["src"]}
-    %img{ src: video["thumbnail"], width: "100px" }
+  - current_page.data.videos.each do |key, video|
+    .video-nav{"data-video-src" => video["src"]}
+      %img{ src: video["thumbnail"], width: "100px" }
 
 - content_for :javascripts do
   :coffeescript
