@@ -7,7 +7,13 @@
     <loc>http://www.example.com/search</loc>
   </url>
   <url>
+    <loc>http://www.example.com/pages/mastectomy/example-video-with-chapters</loc>
+  </url>
+  <url>
     <loc>http://www.example.com/pages/mastectomy</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/mastectomy/example-multiple-videos</loc>
   </url>
   <url>
     <loc>http://www.example.com/pages/mastectomy/nav</loc>
