@@ -1,0 +1,33 @@
+---
+title: Curie Webdoc - Guérir le regard
+---
+.row
+  .col-sm-12
+    #sylvie
+      .wheel
+        = partial "layouts/compass"
+        #title
+          %p.part-one= I18n.t("common.doc-title1")
+          %p.part-two= I18n.t("common.doc-title2")
+        %button#enter.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#disclaimer"}= I18n.t("common.enter")
+      #credits
+        %p.directed-by= I18n.t("landing.credits.directed-by")
+        %p.producted-by= I18n.t("landing.credits.producted-by")
+
+%nav.navbar.navbar-default.navbar-fixed-bottom{role: "navigation"}
+  .container-fluid
+    #partners
+
+= partial 'pages/landing/disclaimer'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $ ->
+        BV.init()
+        if Modernizr.touch
+          BV.show "http://video-js.zencoder.com/oceans-clip.png"
+        else
+          BV.show [{ type: "video/webm", src: "http://there-is-something-in.com/curie/testhomepage/montage_curie_04.webm" }], ambient: true
+        return
+      return

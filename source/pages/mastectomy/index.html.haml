@@ -1,0 +1,13 @@
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $ ->
+        BV.init(useFlashForFirefox: true)
+        if Modernizr.touch
+          BV.show "http://video-js.zencoder.com/oceans-clip.png"
+        else
+          BV.show [
+            src: "http://video-js.zencoder.com/oceans-clip.mp4", type: 'video/mp4'
+          ], doLoop: true, ambient: true
+        return
+      return

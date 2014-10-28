@@ -1,0 +1,21 @@
+%footer
+  %nav.navbar.navbar-default.navbar-fixed-bottom{role: "navigation"}
+    .container-fluid
+      .row
+        .col-sm-1
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#datasheets"}= I18n.t("datasheets.title")
+        .col-sm-7
+        .col-sm-1
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#credits"}= I18n.t("credits.title")
+        .col-sm-1
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#legal"}= I18n.t("legal.title")
+        .col-sm-1
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#read-more"}= I18n.t("read-more.title")
+        .col-sm-1
+          %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#about"}= I18n.t("about.title")
+
+= partial 'pages/modal', locals: {name: 'datasheets'}
+= partial 'pages/modal', locals: {name: 'credits'   }
+= partial 'pages/modal', locals: {name: 'legal'     }
+= partial 'pages/modal', locals: {name: 'read-more' }
+= partial 'pages/modal', locals: {name: 'about'     }

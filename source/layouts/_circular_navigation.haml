@@ -1,0 +1,93 @@
+#rotatescroll
+  .overlay
+    .viewport
+      %ul.overview
+        %li
+          %span= I18n.t('navbar.group')
+          %a.btn.btn-default{href: "#{}"}= I18n.t("common.enter")
+        %li
+          %span= I18n.t('navbar.mastectomy')
+          %a.btn.btn-default{href: "/pages/mastectomy"}= I18n.t("common.enter")
+        %li
+          %span= I18n.t('navbar.reconstruction')
+          %a.btn.btn-default{href: "#"}= I18n.t("common.enter")
+        %li
+          %span= I18n.t('navbar.alternatives')
+          %a.btn.btn-default{href: "#"}= I18n.t("common.enter")
+  .thumb
+  .dot
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#rotatescroll").tinycircleslider
+        dotsSnap: true
+        radius: 300
+      return
+
+
+/ .component
+/   %button#cn-button.cn-button= "+"
+/   #cn-wrapper.cn-wrapper
+/     %ul
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-picture
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-headphones
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-home
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-facetime-video
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-envelope
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-glass
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-camera
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-cloud
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-heart
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-plane
+/       %li
+/         %a{href: "#"}
+/           %span.glyphicon.glyphicon-calendar
+/   #cn-overlay.cn-overlay
+
+/ :javascript
+/   (function(){
+
+/     var button = document.getElementById('cn-button'),
+/       wrapper = document.getElementById('cn-wrapper');
+
+/       //open and close menu when the button is clicked
+/     var open = false;
+/     button.addEventListener('click', handler, false);
+
+/     function handler(){
+/       if(!open){
+/         this.innerHTML = "Close";
+/         classie.add(wrapper, 'opened-nav');
+/       }
+/       else{
+/         this.innerHTML = "Menu";
+/       classie.remove(wrapper, 'opened-nav');
+/       }
+/       open = !open;
+/     }
+/     function closeWrapper(){
+/       classie.remove(wrapper, 'opened-nav');
+/     }
+
+/   })();

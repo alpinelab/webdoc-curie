@@ -20,9 +20,9 @@
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+with_layout :landing do
+  page "/pages/landing/*"
+end
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -46,6 +46,9 @@ set :images_dir, 'images'
 #     "Helping"
 #   end
 # end
+
+# i18n extension
+activate :i18n, :mount_at_root => :fr
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
@@ -85,17 +88,17 @@ configure :build do
   activate :minify_html
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, ignore: [/images\/tipuesearch\/.*\.png/]
 
   # Use relative URLs
   activate :relative_assets
 
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  # Produce gzipped versions of HTML, CSS, and JavaScript
+  activate :gzip
 
    # Create a whole bunch of favicons for various devices and OSes
   activate :favicon_maker, icons: {
-    'img/logo-alpinelab-500.png' => [
+    'images/logo-500.png' => [
       { icon: 'apple-touch-icon-152x152-precomposed.png' },
       { icon: 'apple-touch-icon-144x144-precomposed.png' },
       { icon: 'apple-touch-icon-120x120-precomposed.png' },
@@ -118,4 +121,8 @@ configure :build do
   }
 
   activate :sitemap, :hostname => "http://www.example.com"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
 end

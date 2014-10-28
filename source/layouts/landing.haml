@@ -25,9 +25,8 @@
   %link{rel: 'icon', type: 'image/ico', href: 'favicon.ico' }
   = stylesheet_link_tag 'main'
 %body
-  = partial "layouts/header"
-  = yield
-  = partial "layouts/footer"
+  .container-fluid
+    = yield
   = javascript_include_tag 'main'
   = yield_content(:javascripts)
   = google_analytics_universal_tag
