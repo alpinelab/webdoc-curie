@@ -4,12 +4,14 @@
   - current_page.data.items.each do |key, item|
     .menu-item{class: "deg#{item.angle}"}
       %h2
-        %a= I18n.t(["nav",current_page.data.name,key].join("."))
+        - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
+        %a{ href: page_name.slugify }= page_name 
       - if !item["sub_items"].nil?
         %ul
           - item["sub_items"].each do |sub_item|
             %li
-              %a= I18n.t(["nav",current_page.data.name,sub_item].join("."))
+              - item_name = I18n.t(["nav",current_page.data.name,sub_item].join("."))
+              %a{href: item_name.slugify }= item_name
 
 
 

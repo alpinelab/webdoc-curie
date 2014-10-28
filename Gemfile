@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem "bootstrap-sass", "~> 3.2", :require => false
+gem "slugify"
 gem "middleman", "~> 3.3"
 gem "middleman-livereload"
 gem 'middleman-favicon-maker'
