@@ -1,0 +1,20 @@
+%video#example_video_1.video-js.vjs-default-skin{:controls => "", "data-setup" => "{\"example_option\":true}", :height => "264", :poster => "http://video-js.zencoder.com/oceans-clip.png", :preload => "auto", :width => "640"}
+  %source{:src => "http://video-js.zencoder.com/oceans-clip.mp4", :type => "video/mp4"}
+  %source{:src => "http://video-js.zencoder.com/oceans-clip.webm", :type => "video/webm"}
+  %source{:src => "http://video-js.zencoder.com/oceans-clip.ogv", :type => "video/ogg"}
+  %p.vjs-no-js
+    To view this video please enable JavaScript, and consider upgrading to a web browser that
+    %a{:href => "http://videojs.com/html5-video-support/", :target => "_blank"} supports HTML5 video
+
+.chapter{"data-offset" => 15} bla
+
+- content_for :javascripts do
+  :coffeescript
+    videojs("example_video_1").ready ->
+      myPlayer = this
+      $(document).ready ->
+        $('.chapter').on 'click', ->
+          myPlayer.currentTime($(this).data('offset'))
+      return
+
+
