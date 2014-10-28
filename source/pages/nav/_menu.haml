@@ -1,6 +1,11 @@
+.home-button
+  %a{href: "/"} HOME
+.back-button
+  %a{href: "."} BACK
+  
 .circle-container
   %a.center
-    %img{:src => "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/2000px-Circle_-_black_simple.svg.png", width: "100%"}/
+    = partial "layouts/compass"
   - current_page.data.items.each do |key, item|
     .menu-item{class: "deg#{item.angle}"}
       %h2
