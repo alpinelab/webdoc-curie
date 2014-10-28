@@ -1,0 +1,23 @@
+%video#video-player{:controls => "", "data-setup" => "{\"example_option\":true}", :height => "264", :poster => "http://video-js.zencoder.com/oceans-clip.png", :preload => "auto", :width => "640"}
+  %source{:src => current_page.data.src, :type => "video/mp4"}
+  %p.vjs-no-js
+    To view this video please enable JavaScript, and consider upgrading to a web browser that
+    %a{:href => "http://videojs.com/html5-video-support/", :target => "_blank"} supports HTML5 video
+
+- current_page.data.chapters.each do |chapter|
+  .video-nav{"data-video-offset" => chapter}
+    %img{ src: "http://upload.wikimedia.org/wikipedia/commons/1/18/Okapi2.jpg" }
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $('.video-link').each ->
+        playlist.push { src: $(this).parent().data('video-src'), type: "video/mp4" }
+
+      $('.video-nav').on 'click', 'img', ->
+        offset = $(this).parent().data('video-offset')
+        videojs("video-player").ready ->
+          myPlayer = this
+          myPlayer.currentTime(offset)
+      return
+    return
