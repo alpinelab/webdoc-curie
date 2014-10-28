@@ -15,4 +15,6 @@
 #= require_tree .
 
 videojs.options.flash.swf = "/javascripts/vendor/video-js/video-js.swf"
-@BV = new $.BigVideo(useFlashForFirefox:false)
+@BV = new $.BigVideo
+  useFlashForFirefox:false
+  controls: true

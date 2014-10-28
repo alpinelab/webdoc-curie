@@ -13,6 +13,7 @@ fr:
     doc-title2: "Regard"
     enter: "Entrer"
     search: "Rechercher"
+    skip-intro: "Passer le flim d'introduction"
   credits:
     credit:
       name: "Nom Prénom"
