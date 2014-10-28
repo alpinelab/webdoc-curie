@@ -55,4 +55,10 @@ fr:
     subtitle: logo
   nav:
     mastectomy:
-      mots-soignants: 
+      mots-soignants: Les mots des soignants
+      sentence-image: La sentence des images
+      mots-femmes: Les mots des femmes
+      mots-mathieu: Les mots de Mathieu
+      parcours-lena: Le parcours de Léna
+      sous-menu-1: Sous menu 1
+      sous-menu-2: Sous menu 2
