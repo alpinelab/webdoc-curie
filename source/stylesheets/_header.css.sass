@@ -1,0 +1,55 @@
+header
+  #menu
+    position: relative
+    +font-curie-header
+    text-transform: uppercase
+    padding: 1em
+    .menu-btn
+      color: white
+      background-repeat: no-repeat
+      background-position: left center
+      min-height: 1em
+      min-width: 2.5em
+      cursor: pointer
+      span
+        margin-left: 2.5em
+    .menu-open
+      background-image: url('/images/various/btn_arrow_down.png')
+    .menu-close
+      background-image: url('/images/various/btn_arrow_up.png')
+      span
+        display: none
+    .menu-item
+      background-color: $curie-gray-bg
+      a
+        color: $curie-orange
+    .menu-item:nth-child(-n+5)
+      border-right: solid 1px $curie-gray
+      margin-right: 0.75em
+      padding-right: 0.75em
+    #search-bar
+      text-align: right
+      background-repeat: no-repeat
+      background-position: right center
+      #tipue_search_input
+        +font-curie-header
+        font-size: 14px
+        text-align: center
+        border: none
+        border-bottom: solid 1px $curie-orange
+        background-color: rgba(0, 0, 0, 0)
+        text-transform: uppercase
+        width: 10em
+        margin-right: 2.5em
+    .white-search
+      background-image: url('/images/various/btn_search_white.png')
+      color: white
+      input
+        +input-placeholder-color(white)
+    .gray-search
+      background-image: url('/images/various/btn_search_orange.png')
+      color: $curie-gray
+      input
+        +input-placeholder-color($curie-gray)
+  .menu-collapsed
+    background-color: $curie-gray-bg

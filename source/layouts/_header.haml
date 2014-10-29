@@ -1,2 +1,29 @@
 %header
-  = partial 'layouts/navbar'
+  #menu
+    .menu-btn.menu-open.pull-left
+      %span= I18n.t('common.menu')
+    .menu-item.hide.pull-left
+      %a{href: "#"}= I18n.t('menu.group-infosein-project')
+    .menu-item.hide.pull-left
+      %a{href: "#"}= I18n.t('menu.mastectomy')
+    .menu-item.hide.pull-left
+      %a{href: "#"}= I18n.t('menu.surgical')
+    .menu-item.hide.pull-left
+      %a{href: "#"}= I18n.t('menu.nonsurgical')
+    .menu-item.hide.pull-left
+      %a{href: "#"}= I18n.t('menu.questions')
+    .menu-search
+      #search-bar.white-search
+        %input#tipue_search_input{name: 'q', autocomplete: "off", required: true, placeholder: I18n.t('common.search')}
+        #tipue_drop_content
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $(".menu-btn").click ->
+        $(".menu-item").toggleClass('hide')
+        $(".menu-btn").toggleClass("menu-open")
+        $(".menu-btn").toggleClass("menu-close")
+        $("#menu").toggleClass("menu-collapsed")
+        $("#search-bar").toggleClass("white-search")
+        $("#search-bar").toggleClass("gray-search")
