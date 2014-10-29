@@ -51,11 +51,11 @@ fr:
       url: "url vers le site"
     subtitle: ""
     title: "En savoir plus"
-  mastectomy:
-    title: la mastectomie
-    subtitle: logo
   nav:
     mastectomy:
+      article: la
+      title: mastéctomie
+      text-intro: Il n’y a pas de mots pour décrire la perte d’un sein. Cette épreuve, aussi difficile que cachée pour la plupart des femmes, est le point de départ de leur chemin vers la reconstruction, soit chirurgicale, soit par un autre chemin.
       mots-soignants: Les mots des soignants
       sentence-image: La sentence des images
       mots-femmes: Les mots des femmes

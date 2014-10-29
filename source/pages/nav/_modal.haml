@@ -6,6 +6,7 @@
           %span{"aria-hidden" => "true"} ×
           %span.sr-only= I18n.t("common.close")
         .modal-title
+          %h2= I18n.t(["nav",current_page.data.name,"article"].join("."))
           %h2= I18n.t(["nav",current_page.data.name,"title"].join("."))
           = image_tag "pictograms/" + current_page.data.name + "-grey.png"
       .modal-body
