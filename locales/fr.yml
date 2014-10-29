@@ -63,3 +63,6 @@ fr:
       parcours-lena: Le parcours de Léna
       sous-menu-1: Sous menu 1
       sous-menu-2: Sous menu 2
+  tutorial:
+    image: "Tutoriel"
+    arrow: "Déplacer la flèche pour naviguer"
