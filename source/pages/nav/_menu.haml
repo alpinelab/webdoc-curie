@@ -1,7 +1,7 @@
 .circle-container
   %span
     = partial "layouts/compass"
-  .compass-title
+  .compass-title{class: "color-#{current_page.data.color}"}
     %h2= I18n.t(["nav",current_page.data.name,"article"].join("."))
     %h2= I18n.t(["nav",current_page.data.name,"title"].join("."))
     = image_tag "pictograms/" + current_page.data.name + "-white.png"
