@@ -1,12 +1,9 @@
-%video#video-player.video-js.vjs-default-skin{controls: "", :height => "264", :poster => "http://video-js.zencoder.com/oceans-clip.png", :preload => "auto", :width => "640"}
-  %source{:src => current_page.data.src, :type => "video/mp4"}
-  %p.vjs-no-js
-    To view this video please enable JavaScript, and consider upgrading to a web browser that
-    %a{:href => "http://videojs.com/html5-video-support/", :target => "_blank"} supports HTML5 video
+#video-wrapper
+  = partial "pages/nav/default_player", locals: { default_src: current_page.data.src }
 
-- current_page.data.chapters.each do |chapter|
-  .video-nav{"data-video-offset" => chapter}
-    %img{ src: "http://upload.wikimedia.org/wikipedia/commons/1/18/Okapi2.jpg", width: "100px" }
+  - current_page.data.chapters.each do |key, chapter|
+    .video-nav{"data-video-offset" => chapter["offset"]}
+      %img{ src: chapter["thumbnail"], width: "100px" }
 
 - content_for :javascripts do
   :coffeescript
@@ -17,6 +14,7 @@
         videojs("video-player").ready ->
           myPlayer = this
           myPlayer.currentTime(offset)
+          myPlayer.play()
           
       return
     return
