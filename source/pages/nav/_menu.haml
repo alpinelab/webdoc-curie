@@ -10,6 +10,8 @@
       = image_tag "pictograms/arrow_#{current_page.data.color}_small.png"
     .menu-item{class: "deg#{item.angle}"}
       %h2
+        .thumbnail-nav
+          = image_tag "thumbnails/thumbnail_rounded_avec_tmp.png"
         - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
         %a{ href: page_name.slugify }= page_name 
       - if !item["sub_items"].nil?
