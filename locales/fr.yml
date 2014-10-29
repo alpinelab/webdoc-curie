@@ -54,16 +54,13 @@ fr:
   nav:
     mastectomy:
       article: la
-      title: mastéctomie
+      title: mastectomie
       text-intro: Il n’y a pas de mots pour décrire la perte d’un sein. Cette épreuve, aussi difficile que cachée pour la plupart des femmes, est le point de départ de leur chemin vers la reconstruction, soit chirurgicale, soit par un autre chemin.
-      mots-soignants: Les mots des soignants
-      mots-soignants-test: Les mots des soignants
+      paroles-soignants: Les paroles des soignants
       sentence-image: La sentence des images
       mots-femmes: Les mots des femmes
       mots-mathieu: Les mots de Mathieu
       parcours-lena: Le parcours de Léna
-      sous-menu-1: Sous menu 1
-      sous-menu-2: Sous menu 2
   tutorial:
     image: "Tutoriel"
     arrow: "Déplacer la flèche pour naviguer"
