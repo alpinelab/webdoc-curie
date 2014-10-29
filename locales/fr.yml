@@ -12,7 +12,8 @@ fr:
     doc-title1: "Guérir le"
     doc-title2: "Regard"
     enter: "Entrer"
-    search: "Rechercher"
+    menu: "Menu"
+    search: "Recherche"
     skip-intro: "Passer le flim d'introduction"
   credits:
     credit:
@@ -39,12 +40,12 @@ fr:
   legal:
     subtitle: ""
     title: "Mentions légales"
-  navbar:
-    alternatives: "Les alternatives"
-    group: "Le groupe"
-    mastectomy: "La mastéctomie"
-    reconstruction: "La reconstruction"
-    toogle-navigation: "Déplier la navigation"
+  menu:
+    group-infosein-project: "Groupe projet info-sein"
+    mastectomy: "Mastectomie"
+    nonsurgical: "La reconstruction non chirurgicale"
+    questions: "Interrogations"
+    surgical: "La reconstruction chirurgicale"
   read-more:
     link:
       name: "Nom du lien"
@@ -65,5 +66,5 @@ fr:
       sous-menu-1: Sous menu 1
       sous-menu-2: Sous menu 2
   tutorial:
-    image: "Tutoriel"
     arrow: "Déplacer la flèche pour naviguer"
+    image: "Tutoriel"
