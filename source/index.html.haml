@@ -6,19 +6,17 @@ title: Curie Webdoc - Guérir le regard
   .row
     .col-sm-4.col-sm-offset-4
       = partial "layouts/circular_navigation"
+  .row
+    .col-sm-1.col-sm-offset-11
+      #tutorial
+        %img{src: "/images/btn_tutorial.png", alt: I18n.t("tutorial.image")}
 
 - content_for :javascripts do
   :coffeescript
     @playlist = [
-      [{ type: "video/mp4",  src: "http://video-js.zencoder.com/oceans-clip.mp4"  }
-       { type: "video/webm", src: "http://video-js.zencoder.com/oceans-clip.webm" }
-       { type: "video/ogg",  src: "http://video-js.zencoder.com/oceans-clip.ogv"  }],
-      [{ type: "video/mp4",  src: "http://dfcb.github.io/BigVideo.js/vids/dock.mp4"  }
-       { type: "video/webm", src: "http://dfcb.github.io/BigVideo.js/vids/dock.webm" }
-       { type: "video/ogg",  src: "http://dfcb.github.io/BigVideo.js/vids/dock.ogv"  }],
-      [{ type: "video/mp4",  src: "http://dfcb.github.io/BigVideo.js/vids/river.mp4"  }
-       { type: "video/webm", src: "http://dfcb.github.io/BigVideo.js/vids/river.webm" }
-       { type: "video/ogg",  src: "http://dfcb.github.io/BigVideo.js/vids/river.ogv"  }]
+      [{ type: "video/mp4",  src: "http://player.vimeo.com/external/109821776.hd.mp4?s=123961b2d810db71fa25e52555caf8f1"  }],
+      [{ type: "video/mp4",  src: "http://dfcb.github.io/BigVideo.js/vids/dock.mp4"  }],
+      [{ type: "video/mp4",  src: "http://dfcb.github.io/BigVideo.js/vids/river.mp4"  }]
     ]
     $(document).ready ->
       $("#tipue_search_input").tipuedrop()
@@ -29,4 +27,8 @@ title: Curie Webdoc - Guérir le regard
         else
           BV.show playlist[0], ambient: true
         return
+      $("#tutorial").click (event) ->
+        $("#tutorial-circle").toggleClass("tutorial-mask hide")
+        event.stopPropagation()
+        $("body").one("click", (-> $("#tutorial-circle").toggleClass("tutorial-mask hide")))
       return
