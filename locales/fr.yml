@@ -29,14 +29,14 @@ fr:
     subtitle: ""
     title: "Fiches techniques"
   disclaimer:
-    message:
-      part1: "Ce web-documentaire ne remplace pas une consultation médicale,"
-      part2: "ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toutes femmes se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
+    message: "Ce web-documentaire ne remplace pas une consultation médicale, ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toutes femmes se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
     discover: "Découvrez le web-documentaire"
   landing:
     credits:
+      introduced-by: "L'institut Curie présente"
       directed-by: "Un film de Caroline Swysen"
-      producted-by: "produit par Kepler 22"
+      producted-by: "produit par "
+      in-partenership-with: "en partenariat avec"
   legal:
     subtitle: ""
     title: "Mentions légales"

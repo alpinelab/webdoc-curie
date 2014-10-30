@@ -3,63 +3,49 @@
   width: 100%
   max-width: 100em
   height: 50em
-  margin: 0 auto
   background-position: center 0
   display: block
   text-align: center
-  .wheel
-    width: 100%
-    display: inline-block
-    margin: 0 auto
-    vertical-align: center
-    #compass
-      display: block
-      margin: 5em auto 0
-    #title
-      margin: -25em auto 25em
-      text-transform: uppercase
-      .part-one
-        font-size: 2.5em
-        color: white
-      .part-two
-        font-size: 3.5em
-        color: $curie-orange
-    #enter
-      text-transform: uppercase
-      margin-top: -35em
-      background-color: $curie-orange
-      border-color: $curie-orange
-      font-weight: bold
-  #credits
-    margin-top: -7em
+  
+  #introduced-by
+    margin-top: 60px
+
+  .circle-container
+    top: 45%
+    .compass-title
+      #enter
+        button
+          text-transform: uppercase
+          background-color: $curie-orange
+          border-color: $curie-orange
+          font-weight: bold
+
+  #introduced-by, #productor
+    @include font-curie-landing-sub
+    color: white
 
 #partners
-  background-image: url('/images/partners.png')
-  background-repeat: no-repeat
   width: 100%
   max-width: 72em
-  height: 4.5em
+  color: $curie-gray
   margin: 0 auto
   background-position: center 0
+  text-align: center
+  @include font-curie-landing-sub
+  p
+    margin: 0
+  li
+    display: inline
+    list-style-type: none
+    img
+      max-width: 100px
+      max-height: 100px
 
-#disclaimer
-  .modal-header, .modal-body, .modal-footer
+#modal-intro
+  #disclaimer-modal-footer
     text-align: center
     border: none
-  button.close
-    color: $curie-orange
-  .modal-title
-    p
-      text-transform: uppercase
-  .modal-body
-    padding: 2em 4em
-    line-height: 2em
-    text-transform: uppercase
-    .part-one
-      color: $curie-orange
-    .part-two
-      color: $curie-gray
-  .modal-footer .divider
-    border-top: solid 1px $curie-orange
-    width: 15%
-    margin: 2em auto
+    .divider
+      border-top: solid 1px $curie-orange
+      width: 15%
+      margin: auto
