@@ -1,13 +1,16 @@
+body
+  position: relative
+
+#landing
+  padding-bottom: 115px
 #sylvie
   -webkit-font-smoothing: antialiased
   background-repeat: no-repeat
   width: 100%
-  height: 40em
-
+  min-height: 50em
   background-position: center 0
   display: block
   text-align: center
-  
   #introduced-by
     margin-top: 30px
 
@@ -15,11 +18,10 @@
     top: 50%
     border: none
     .compass-title
-      
       img
         margin-top: 2em
       h2
-        @include font-curie-landing
+        +font-curie-landing
         line-height: 45px
       h2:first-child
         font-size: 40px
@@ -32,7 +34,7 @@
           background-color: $curie-orange
           border-color: $curie-orange
           font-weight: bold
-          width: 50%
+          width: 80%
           color: white
 
   .landing-deg-triangle
@@ -40,23 +42,23 @@
     border: none
 
   #introduced-by, #productor
-    @include font-curie-landing-sub
+    +font-curie-landing-sub
     color: white
   #productor
     img
       margin-left: 3px
 
 #partners
-  width: 100%
-  position: fixed
+  position: absolute
+  margin-top: -115px
   bottom: 0
-  left: 0
+  width: 100%
   color: $curie-gray
   margin: 0 auto
   background-position: center 0
   background-color: white
   text-align: center
-  @include font-curie-landing-sub
+  +font-curie-landing-sub
   p
     margin: 0
     position: relative
