@@ -25,8 +25,22 @@
   text-align: center
   color: $curie-gray
   @include font-curie-text
-  h2
-    @include font-curie-popover-title
+  .modal-header 
+    border: none
+    h2
+      @include font-curie-popover-title
+  .modal-body
+    padding: 2em 4em
+    line-height: 2em
+  #disclaimer-modal-footer
+    text-align: center
+    border: none
+    .divider
+      border-top: solid 1px $curie-orange
+      width: 15%
+      margin: auto
+
+
 
     
 

@@ -1,16 +1,34 @@
-#disclaimer.modal.fade
+-# #disclaimer.modal.fade
+-#   .modal-dialog
+-#     .modal-content
+-#       .modal-header
+-#         %button.close{"data-dismiss" => "modal", :type => "button"}
+-#           %span{"aria-hidden" => "true"} ×
+-#           %span.sr-only= I18n.t("common.close")
+-#         .modal-title
+-#           %p.part-one= I18n.t("common.doc-title1")
+-#           %p.part-two= I18n.t("common.doc-title2")
+-#       .modal-body
+-#         %span.part-one= I18n.t("disclaimer.message.part1")
+-#         %span.part-two= I18n.t("disclaimer.message.part2")
+-#       .modal-footer
+-#         %a{href: "/"}= I18n.t("disclaimer.discover")
+-#         .divider
+
+#modal-intro.modal.fade
   .modal-dialog
-    .modal-content
+    .modal-content{class: "color-orange"}
       .modal-header
         %button.close{"data-dismiss" => "modal", :type => "button"}
           %span{"aria-hidden" => "true"} ×
           %span.sr-only= I18n.t("common.close")
         .modal-title
-          %p.part-one= I18n.t("common.doc-title1")
-          %p.part-two= I18n.t("common.doc-title2")
+          %h2= I18n.t("common.doc-title1")
+          %h2= I18n.t("common.doc-title2")
+          = image_tag "pictograms/mastectomy-grey.png"
       .modal-body
-        %span.part-one= I18n.t("disclaimer.message.part1")
-        %span.part-two= I18n.t("disclaimer.message.part2")
-      .modal-footer
-        %a{href: "/"}= I18n.t("disclaimer.discover")
+        %p= I18n.t("disclaimer.message")
+      .modal-footer#disclaimer-modal-footer
+        %p
+          %a{href: "/"}= I18n.t("disclaimer.discover")
         .divider

@@ -34,13 +34,21 @@
     margin-top: -7em
 
 #partners
-  background-image: url('/images/partners.png')
-  background-repeat: no-repeat
   width: 100%
   max-width: 72em
-  height: 4.5em
+  color: $curie-gray
   margin: 0 auto
   background-position: center 0
+  text-align: center
+  @include font-curie-landing-sub
+  p
+    margin: 0
+  li
+    display: inline
+    list-style-type: none
+    img
+      max-width: 100px
+      max-height: 100px
 
 #disclaimer
   .modal-header, .modal-body, .modal-footer
@@ -63,3 +71,8 @@
     border-top: solid 1px $curie-orange
     width: 15%
     margin: 2em auto
+
+
+#introduced-by, #productor
+  @include font-curie-landing-sub
+  color: white
