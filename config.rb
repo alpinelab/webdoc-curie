@@ -103,7 +103,7 @@ configure :build do
 
    # Create a whole bunch of favicons for various devices and OSes
   activate :favicon_maker, icons: {
-    'images/logo-500.png' => [
+    '/images/pictograms/main_logo.png' => [
       { icon: 'apple-touch-icon-152x152-precomposed.png' },
       { icon: 'apple-touch-icon-144x144-precomposed.png' },
       { icon: 'apple-touch-icon-120x120-precomposed.png' },
