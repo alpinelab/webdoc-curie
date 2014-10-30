@@ -23,14 +23,5 @@
           this.play()
           element.attr('id','pause')
 
-      $('#control-wrapper').on 'click', '#next', ->
-        videojs("video-player").ready ->
-          current_src = this.currentSrc()
-          $('.video-nav[data-video-src="'+current_src+'"]').next('.video-nav').find('img').click()
-
-      $('#control-wrapper').on 'click', '#prev', ->
-        videojs("video-player").ready ->
-          current_src = this.currentSrc()
-          $('.video-nav[data-video-src="'+current_src+'"]').prev('.video-nav').find('img').click()
       return
     return

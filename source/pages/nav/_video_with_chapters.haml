@@ -1,8 +1,10 @@
 #video-wrapper
   = partial "pages/nav/default_player", locals: { default_src: current_page.data.src }
 
+  .video-description= I18n.t("chapters." + current_page.data.chapters.keys.first)
+
   - current_page.data.chapters.each do |key, chapter|
-    .video-nav{"data-video-offset" => chapter["offset"]}
+    .video-nav{"data-video-offset" => chapter["offset"], "data-video-description" => I18n.t("chapters." + key)}
       %img{ src: chapter["thumbnail"], width: "100px" }
 
 - content_for :javascripts do
@@ -11,10 +13,13 @@
 
       $('.video-nav').on 'click', 'img', ->
         offset = $(this).parent().data('video-offset')
+        video_desc = $(this).parent().data('video-description')
         videojs("video-player").ready ->
           myPlayer = this
           myPlayer.currentTime(offset)
+          $('.video-description').text(video_desc)
           myPlayer.play()
-          
+          $("#play").attr('id','pause')
+      
       return
     return
