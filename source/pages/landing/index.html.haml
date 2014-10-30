@@ -14,7 +14,9 @@ title: Curie Webdoc - Guérir le regard
           %h2= I18n.t("common.doc-title2")
           = image_tag "pictograms/cicatrice-white.png"
           #enter
-            %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
+            -# For the modal
+            -# %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
+            %span.btn= I18n.t("common.enter")
         #productor
           %p.directed-by= I18n.t("landing.credits.directed-by")
           %p.producted-by
@@ -30,7 +32,7 @@ title: Curie Webdoc - Guérir le regard
           %li
             = image_tag "landing/footer_logo0#{index}.png"
 
-= partial 'pages/landing/disclaimer'
+-#= partial 'pages/landing/disclaimer'
 
 - content_for :javascripts do
   :coffeescript

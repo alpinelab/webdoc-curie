@@ -1,45 +1,58 @@
 #sylvie
   background-repeat: no-repeat
   width: 100%
-  max-width: 100em
+
   height: 50em
   background-position: center 0
   display: block
   text-align: center
   
   #introduced-by
-    margin-top: 60px
+    margin-top: 30px
 
   .circle-container
-    top: 45%
+    top: 41%
+    border: none
     .compass-title
+      img
+        margin-top: 2em
+      h2
+        @include font-curie-landing
       #enter
-        button
+        padding-top: 2em
+        .btn, .btn:hover, .btn:active, .btn:visited, .btn:focus
           text-transform: uppercase
           background-color: $curie-orange
           border-color: $curie-orange
           font-weight: bold
+          width: 100%
+          color: white
 
   #introduced-by, #productor
     @include font-curie-landing-sub
     color: white
+  #productor
+    img
+      margin-left: 3px
 
 #partners
   width: 100%
-  max-width: 72em
   color: $curie-gray
   margin: 0 auto
   background-position: center 0
+  background-color: white
   text-align: center
   @include font-curie-landing-sub
   p
     margin: 0
+    position: relative
+    top: 10px
   li
     display: inline
     list-style-type: none
     img
-      max-width: 100px
-      max-height: 100px
+      width: auto
+      max-height: 80px
 
 #modal-intro
   #disclaimer-modal-footer
