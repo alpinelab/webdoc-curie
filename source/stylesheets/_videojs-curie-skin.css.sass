@@ -1,9 +1,29 @@
-#video-player
-  &:before
+#video-wrapper
+  #control-wrapper
+    position: relative
+
+  .control
     position: absolute
     content: " "
-    width: 100px
-    height: 100px
-    background-image: image-url("controlVideo/next.png")
-    background-repeat: none
+    width: 35px
+    height: 35px
+    background-repeat: no-repeat
     z-index: 100
+    bottom: 10%
+    transform: translate(-50%)
+
+  #next
+    background-image: image-url("controlVideo/next.png")
+    left: 70%
+
+  #prev
+    background-image: image-url("controlVideo/prev.png")
+    left: 30%
+
+  #pause
+    background-image: image-url("controlVideo/pause.png")
+    left: 50%
+
+  #play
+    background-image: image-url("controlVideo/play.png")
+    left: 50%

@@ -8,13 +8,13 @@
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
-
       $('.video-nav').on 'click', 'img', ->
         video_src = $(this).parent().data('video-src')
         videojs("video-player").ready ->
           myPlayer = this
           myPlayer.src(video_src)
           myPlayer.play()
+          $("#play").attr('id','pause')
           
       return
     return

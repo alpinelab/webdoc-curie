@@ -1,5 +1,36 @@
-%video#video-player.video-js.vjs-default-skin{"data-setup" => '{ "controls": false, "autoplay": true, "preload": "auto" }', :height => "264", :poster => "http://video-js.zencoder.com/oceans-clip.png", :preload => "auto", :width => "640"}
-  %source{:src => default_src, :type => "video/mp4"}
-  %p.vjs-no-js
-    To view this video please enable JavaScript, and consider upgrading to a web browser that
-    %a{:href => "http://videojs.com/html5-video-support/", :target => "_blank"} supports HTML5 video
+#control-wrapper
+  #next.control
+  #prev.control
+  #pause.control
+  %video#video-player.video-js.vjs-default-skin{"data-setup" => '{ "controls": false, "autoplay": true, "preload": "auto" }', :height => "264", :poster => "http://video-js.zencoder.com/oceans-clip.png", :preload => "auto", :width => "640"}
+    %source{:src => default_src, :type => "video/mp4"}
+    %p.vjs-no-js
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      %a{:href => "http://videojs.com/html5-video-support/", :target => "_blank"} supports HTML5 video
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $('#control-wrapper').on 'click', '#pause', ->
+        element = $(this)
+        videojs("video-player").ready ->
+          this.pause()
+          element.attr('id','play')
+
+      $('#control-wrapper').on 'click', '#play', ->
+        element = $(this)
+        videojs("video-player").ready ->
+          this.play()
+          element.attr('id','pause')
+
+      $('#control-wrapper').on 'click', '#next', ->
+        videojs("video-player").ready ->
+          current_src = this.currentSrc()
+          $('.video-nav[data-video-src="'+current_src+'"]').next('.video-nav').find('img').click()
+
+      $('#control-wrapper').on 'click', '#prev', ->
+        videojs("video-player").ready ->
+          current_src = this.currentSrc()
+          $('.video-nav[data-video-src="'+current_src+'"]').prev('.video-nav').find('img').click()
+      return
+    return
