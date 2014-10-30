@@ -15,10 +15,16 @@
     top: 50%
     border: none
     .compass-title
+      
       img
         margin-top: 2em
       h2
         @include font-curie-landing
+        line-height: 45px
+      h2:first-child
+        font-size: 40px
+      h2:last-of-type
+        font-size: 60px
       #enter
         padding-top: 2em
         .btn, .btn:hover, .btn:active, .btn:visited, .btn:focus
@@ -26,7 +32,7 @@
           background-color: $curie-orange
           border-color: $curie-orange
           font-weight: bold
-          width: 100%
+          width: 50%
           color: white
 
   .landing-deg-triangle
