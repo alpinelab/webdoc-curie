@@ -1,13 +1,26 @@
 footer
-  .navbar
-    min-height: 0px
-    .col-sm-1
-      text-align: center
-      a
-        color: $curie-gray
-    .col-sm-1:nth-child(-n+5)
-      border-right: solid 1px $curie-gray
-    .col-sm-1:nth-child(1)
+  position: absolute
+  bottom: 0
+  height: 36px
+  margin-top: -40px
+  width: 100%
+  background-color: red
+  border-bottom: solid 4px $curie-orange
+  background-color: $curie-gray-bg
+  +font-curie-footer
+  text-align: center
+  text-transform: capitalize
+  .left-part, .right-part
+    .footer-item
+      padding: 0 2em
+  .left-part
+    padding-top: 10px
+    .footer-item:nth-child(1)
       border-right: solid 1px $curie-orange
-      a
-        color: $curie-orange
+    a
+      color: $curie-orange
+  .right-part
+    .footer-item:nth-child(-n+3)
+      border-right: solid 1px $curie-gray
+    a
+      color: $curie-gray

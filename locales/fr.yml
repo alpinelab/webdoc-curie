@@ -46,6 +46,9 @@ fr:
     nonsurgical: "La reconstruction non chirurgicale"
     questions: "Interrogations"
     surgical: "La reconstruction chirurgicale"
+  miscellanea:
+    title: "Miscellanées"
+    subtitle: ""
   read-more:
     link:
       name: "Nom du lien"
@@ -62,6 +65,9 @@ fr:
       mots-femmes: Les mots des femmes
       mots-mathieu: Les mots de Mathieu
       parcours-lena: Le parcours de Léna
+  the-movie:
+    title: "Le film"
+    subtitle: "Guérir le regard"
   tutorial:
     arrow: "Déplacer la flèche pour naviguer"
     image: "Tutoriel"
