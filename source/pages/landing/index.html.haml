@@ -13,6 +13,8 @@ title: Curie Webdoc - Guérir le regard
           %h2= I18n.t("common.doc-title1")
           %h2= I18n.t("common.doc-title2")
           = image_tag "pictograms/cicatrice-white.png"
+          .triangle.landing-deg-triangle
+            = image_tag "pictograms/arrow_orange_small.png"
           #enter
             -# For the modal
             -# %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
@@ -42,6 +44,6 @@ title: Curie Webdoc - Guérir le regard
         if Modernizr.touch
           BV.show "http://video-js.zencoder.com/oceans-clip.png"
         else
-          BV.show [{ type: "video/mp4", src: "http://there-is-something-in.com/curie/testhomepage/montage_curie_04.mp4" }], ambient: true
+          BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110470750.hd.mp4?s=af9b58ea0a25cff6377b7e98c52d5204" }], ambient: true
         return
       return
