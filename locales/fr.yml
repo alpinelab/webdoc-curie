@@ -64,3 +64,6 @@ fr:
   tutorial:
     image: "Tutoriel"
     arrow: "Déplacer la flèche pour naviguer"
+  videos:
+    first-video: "lala"
+    second-video: "loulou"
