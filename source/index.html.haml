@@ -2,14 +2,11 @@
 title: Curie Webdoc - Guérir le regard
 ---
 
-.container-fluid
+#main.container-fluid
   .row
     .col-sm-4.col-sm-offset-4
       = partial "layouts/circular_navigation"
-  .row
-    .col-sm-1.col-sm-offset-11
-      #tutorial
-        %img{src: "/images/various/btn_tutorial.png", alt: I18n.t("tutorial.image")}
+#tutorial
 
 - content_for :javascripts do
   :coffeescript

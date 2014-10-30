@@ -1,8 +1,19 @@
+body
+  position: relative
+
+#main
+  padding-bottom: 40px
+
 #tutorial
-  position: fixed
-  width: 100%
-  bottom: 6em
+  height: 45px
+  width: 48px
+  background-image: url("/images/various/btn_tutorial.png")
+  background-repeat: none
+  background-position: center
+  position: absolute
+  bottom: 5em
   pointer: pointer
+  right: 2em
 
 #tutorial-circle.tutorial-mask
   height: 100px
@@ -13,6 +24,7 @@
   border-radius: 50%
   box-shadow: 0 0 0 9999px rgba(0,0,0, 0.5)
   span
+    +font-curie-tutorial
     color: white
     position: fixed
     margin-left: 7em
