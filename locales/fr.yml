@@ -2,17 +2,22 @@
 fr:
   about:
     partner:
-      download: "Lire leur engagement"
+      broadcast:
+        title: "Nos partenaires de diffusion"
+      involvement: "Lire leur engagement"
       url: "#"
       name: "Nom du partenaire"
-    subtitle: "L'engagement de nos partenaires"
-    title: "À propos"
+      financial:
+        title: "L'engagement de nos partenaires financiers"
+    title: À propos
   common:
+    back: "Retour"
     close: "Close"
     doc-title1: "Guérir le"
     doc-title2: "Regard"
     enter: "Entrer"
-    search: "Rechercher"
+    menu: "Menu"
+    search: "Recherche"
     skip-intro: "Passer le flim d'introduction"
   credits:
     credit:
@@ -39,12 +44,15 @@ fr:
   legal:
     subtitle: ""
     title: "Mentions légales"
-  navbar:
-    alternatives: "Les alternatives"
-    group: "Le groupe"
-    mastectomy: "La mastéctomie"
-    reconstruction: "La reconstruction"
-    toogle-navigation: "Déplier la navigation"
+  menu:
+    group-infosein-project: "Groupe projet info-sein"
+    mastectomy: "Mastectomie"
+    nonsurgical: "La reconstruction non chirurgicale"
+    questions: "Interrogations"
+    surgical: "La reconstruction chirurgicale"
+  miscellanea:
+    title: "Miscellanées"
+    subtitle: ""
   read-more:
     link:
       name: "Nom du lien"
@@ -61,9 +69,12 @@ fr:
       mots-femmes: Les mots des femmes
       mots-mathieu: Les mots de Mathieu
       parcours-lena: Le parcours de Léna
+  the-movie:
+    title: "Le film"
+    subtitle: "Guérir le regard"
   tutorial:
-    image: "Tutoriel"
     arrow: "Déplacer la flèche pour naviguer"
+    image: "Tutoriel"
   videos:
     first-video: "lala"
     second-video: "loulou"
