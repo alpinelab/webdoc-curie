@@ -20,9 +20,9 @@ fr:
     search: "Recherche"
     skip-intro: "Passer le flim d'introduction"
   credits:
-    credit:
-      name: "Nom Prénom"
-      role: "Fonction"
+    role:
+      director: "Réalisteur"
+      productor: "Producteur"
     subtitle: ""
     title: "Crédits"
   datasheets:
