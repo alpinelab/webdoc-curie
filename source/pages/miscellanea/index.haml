@@ -5,7 +5,7 @@ images:
  - "lien"
  - "lien"
 ---
-.col-md-8.col-md-offset-1.misc-wrapper
+.col-md-10.col-md-offset-1.misc-wrapper
   .row
     - current_page.data.images.each_with_index do |image, index|
       .col-md-4
@@ -14,6 +14,5 @@ images:
           %h2= I18n.t("misc.title-"+index.to_s)
         .misc-image
           = link_to "./" + page_name.slugify do
-            = image_tag lorem.image('250x200')
-        .misc-text
-          = I18n.t("misc.text-"+index.to_s)
+            = image_tag lorem.image('320x180')
+
