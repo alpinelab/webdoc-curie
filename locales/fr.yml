@@ -2,12 +2,16 @@
 fr:
   about:
     partner:
-      download: "Lire leur engagement"
+      broadcast:
+        title: "Nos partenaires de diffusion"
+      involvement: "Lire leur engagement"
       url: "#"
       name: "Nom du partenaire"
-    subtitle: "L'engagement de nos partenaires"
-    title: "À propos"
+      financial:
+        title: "L'engagement de nos partenaires financiers"
+    title: À propos
   common:
+    back: "Retour"
     close: "Close"
     doc-title1: "Guérir le"
     doc-title2: "Regard"

@@ -1,14 +1,18 @@
-.container-fluid
-  .row
-    .col-sm-6
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
-    .col-sm-6
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
-      = partial 'pages/about/partner', locals: {name: I18n.t("about.partner.name"), url: I18n.t("about.partner.url")}
+- financial_partners = %w(fondation-michelin fondation-macsf fondation-dominique-tom-alberici mutuelle-bleue astra-zeneca au-sein-de-la-difference thermes-la-roche-posay)
+- broadcast_partners = %w()
+#about-wrapper
+  #financial-partners
+    %h2= I18n.t("about.partner.financial.title")
+    - financial_partners.each_with_index do |partner, index|
+      - if (index % 4) == 0
+        .financial-row
+      = partial 'pages/about/financial-partner', locals: {partner: partner, url: I18n.t("about.partner.url")}
+  #broadcast-partners
+    %h2= I18n.t("about.partner.broadcast.title")
+    - broadcast_partners.each_with_index do |partner, index|
+      - if (index % 5) == 0
+        .broadcast-row
+      = partial 'pages/about/broadcast-partner', locals: {partner: partner, url: I18n.t("about.partner.url")}
+
+- financial_partners.each do |partner|
+  = partial 'pages/about/involvement', locals: {partner: partner, url: "#"}

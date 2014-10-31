@@ -1,16 +1,21 @@
-#modal
+.modal
   .modal-header, .modal-body, .modal-footer
     text-align: center
     border: none
+  .modal-header
+    padding-top: 3em
   button.close
     color: $curie-orange
   .modal-title
-    p
-      text-transform: uppercase
+    +font-curie-popover-title
+    color: $curie-gray
+    text-transform: uppercase
   .modal-body
-    padding: 2em 4em
+    overflow-x: hidden
+    padding: 0
     line-height: 2em
     text-transform: uppercase
+    position: relative
     .part-one
       color: $curie-orange
     .part-two
@@ -24,11 +29,11 @@
   text-transform: uppercase
   text-align: center
   color: $curie-gray
-  @include font-curie-text
-  .modal-header 
+  +font-curie-text
+  .modal-header
     border: none
     h2
-      @include font-curie-popover-title
+      +font-curie-popover-title
   .modal-body
     padding: 2em 4em
     line-height: 2em

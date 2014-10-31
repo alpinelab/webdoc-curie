@@ -1,0 +1,83 @@
+#financial-partners, #broadcast-partners
+  h2
+    +font-curie-popover-text
+    font-size: 14px
+    color: $curie-orange
+    position: relative
+    display: inline-block
+#financial-partners
+  h2
+    &:before, &:after
+      content: ""
+      width: 18em
+      position: absolute
+      top: 0.5em
+      border-bottom: 1px solid $curie-orange
+      display: block
+    &:before
+      left: -20em
+    &:after
+      right: -20em
+#broadcast-partners
+  h2
+    &:before, &:after
+      content: ""
+      width: 23em
+      position: absolute
+      top: 0.5em
+      border-bottom: 1px solid $curie-orange
+      display: block
+    &:before
+      left: -25em
+    &:after
+      right: -25em
+.partner
+  display: inline-block
+  padding: 1em
+  img, a
+    display: block
+    margin: 0 auto
+  a
+    text-transform: none
+    color: $curie-orange
+    text-decoration: underline
+
+.involvement-wrapper
+  position: absolute
+  margin-left: -100%
+  width: 100%
+  z-index: 100
+  top: 0
+  background: white
+  border-radius: 6px
+  height: 100%
+  text-align: left
+  +font-curie-popover-text
+  -webkit-transition: all .6s ease-in-out
+  -moz-transition: all .6s ease-in-out
+  -o-transition: all .6s ease-in-out
+  -ms-transition: all .6s ease-in-out
+  transition: all .6s ease-in-out
+  a
+    position: relative
+    margin-left: 8%
+    color: $curie-orange
+    font-size: 12px
+    &:after
+      right: -50em
+      content: ""
+      width: 49em
+      position: absolute
+      top: 0.5em
+      border-bottom: 1px solid $curie-orange
+      display: block
+  p, img
+    display: block
+  p
+    margin: 1.5em 20%
+    color: $curie-gray
+  img
+    margin: 0 auto
+
+.involvement-wrapper:target
+  margin-left: 0%
