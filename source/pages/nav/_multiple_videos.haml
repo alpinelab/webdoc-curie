@@ -5,7 +5,7 @@
 
   - current_page.data.videos.each do |key, video|
     .video-nav{"data-video-src" => video["src"], "data-video-description" => I18n.t("videos." + key) }
-      %img{ src: video["thumbnail"], width: "100px" }
+      = image_tag "posters/" + video["thumbnail"], width: "100px"
 
 - content_for :javascripts do
   :coffeescript

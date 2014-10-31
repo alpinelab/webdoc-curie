@@ -5,7 +5,7 @@
 
   - current_page.data.chapters.each do |key, chapter|
     .video-nav{"data-video-offset" => chapter["offset"], "data-video-description" => I18n.t("chapters." + key)}
-      %img{ src: chapter["thumbnail"], width: "100px" }
+      = image_tag "posters/" + chapter["thumbnail"], width: "100px"
 
 - content_for :javascripts do
   :coffeescript
