@@ -3,7 +3,7 @@
     .footer-item.pull-left
       %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#the-movie"}= I18n.t("the-movie.title")
     .footer-item.pull-left
-      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#miscellanea"}= I18n.t("miscellanea.title")
+      %a{href: "/pages/miscellanea"}= I18n.t("miscellanea.title")
   .right-part.pull-right
     .footer-item.pull-left
       %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#credits"}= I18n.t("credits.title")
@@ -15,7 +15,6 @@
       %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#about"}= I18n.t("about.title")
 
 = partial 'pages/modal', locals: {name: 'the-movie'   }
-= partial 'pages/modal', locals: {name: 'miscellanea' }
 = partial 'pages/modal', locals: {name: 'credits'     }
 = partial 'pages/modal', locals: {name: 'legal'       }
 = partial 'pages/modal', locals: {name: 'read-more'   }
