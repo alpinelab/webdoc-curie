@@ -9,27 +9,22 @@ images:
     desc: "chouchou"
 ---
 #carousel-wraper
-  #carousel-curie.carousel.slide{"data-ride" => "carousel"}
+  #carousel-curie.carousel.slide{"data-ride" => "carousel", "data-interval" => "false"}
     / Wrapper for slides
     .carousel-inner{:role => "listbox"}
       - current_page.data.images.each_with_index do |image, index|
         .item{"data-description" => image["desc"], class: "#{'active' if index==0}"}
           = image_tag lorem.image("600x600")
 
-    / Controls
-    %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-curie", :role => "button"}
-      %span.glyphicon.glyphicon-chevron-left
-      %span.sr-only Previous
-    %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-curie", :role => "button"}
-      %span.glyphicon.glyphicon-chevron-right
-      %span.sr-only Next
-  %li
-    %a#carousel-selector-0.selected
-      %img.img-responsive{:src => "http://placehold.it/80x60&text=one"}/
-  %li
-    %a#carousel-selector-1
-      %img.img-responsive{:src => "http://placehold.it/80x60&text=two"}/
   #image-description= current_page.data.images.first["desc"]
+
+  %ul.list-inline
+    %li
+      %a#carousel-selector-0.selected
+        %img.img-responsive{:src => "http://placehold.it/80x60&text=one"}/
+    %li
+      %a#carousel-selector-1
+        %img.img-responsive{:src => "http://placehold.it/80x60&text=two"}/
 
 - content_for :javascripts do
   :coffeescript
