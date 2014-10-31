@@ -131,6 +131,13 @@ fr:
   tutorial:
     arrow: "Déplacer la flèche pour naviguer"
     image: "Tutoriel"
+  misc:
+    title-0: Les opérations
+    text-0: "je suis un text c'est trop bien, j'appartiens au misc 0"
+    title-1: Les femmes
+    text-1: "je suis un text c'est trop bien, j'appartiens au misc 1"
+    title-2: Titre livre
+    text-2: "je suis un text c'est trop bien, j'appartiens au misc 2"
   videos:
     first-video: "Titre Description"
     second-video: "loulou"

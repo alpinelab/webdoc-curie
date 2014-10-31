@@ -1,0 +1,18 @@
+---
+layout: nav
+images:
+ - "lien"
+ - "lien"
+ - "lien"
+---
+.col-md-10.col-md-offset-1.misc-wrapper
+  .row
+    - current_page.data.images.each_with_index do |image, index|
+      .col-md-4
+        .misc-title
+          - page_name = I18n.t("misc.title-"+index.to_s)
+          %h2= I18n.t("misc.title-"+index.to_s)
+        .misc-image
+          = link_to "./" + page_name.slugify do
+            = image_tag lorem.image('320x180')
+
