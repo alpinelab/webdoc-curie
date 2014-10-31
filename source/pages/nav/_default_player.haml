@@ -2,7 +2,7 @@
   #next.control
   #prev.control
   #pause.control
-  %video#video-player.video-js.vjs-curie-skin{"data-setup" => '{ "controls": true, "autoplay": true, "preload": "auto" }', :height => "264", :poster => "http://video-js.zencoder.com/oceans-clip.png", :preload => "auto", :width => "640"}
+  %video#video-player.video-js.vjs-curie-skin{"data-setup" => '{ "controls": true, "preload": "auto" }', :height => "264", :poster => "http://video-js.zencoder.com/oceans-clip.png", :preload => "auto", :width => "640", "data-current-video" => 0}
     %source{:src => default_src, :type => "video/mp4"}
     %p.vjs-no-js
       To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -11,6 +11,10 @@
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
+
+      videojs("video-player").ready ->
+        this.play()
+
       $('#control-wrapper').on 'click', '#pause', ->
         element = $(this)
         videojs("video-player").ready ->
@@ -23,5 +27,18 @@
           this.play()
           element.attr('id','pause')
 
+      $('#control-wrapper').on 'click', '#next', ->
+        videojs("video-player").ready ->
+          current_video = $('#video-player').data('current-video')
+          if current_video < $('.video-nav').length - 1 
+            $('#video-player').data('current-video',current_video + 1)
+            $('.video-nav').eq(current_video+1).find('img').click()
+
+      $('#control-wrapper').on 'click', '#prev', ->
+        videojs("video-player").ready ->
+          current_video = $('#video-player').data('current-video')
+          if current_video > 0
+            $('#video-player').data('current-video',current_video - 1)
+            $('.video-nav').eq(current_video-1).find('img').click()
       return
     return

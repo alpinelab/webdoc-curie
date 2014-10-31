@@ -20,6 +20,12 @@
           $('.video-description').text(video_desc)
           myPlayer.play()
           $("#play").attr('id','pause')
+
+      videojs("video-player").ready ->
+        myPlayer = this
+        this.on 'timeupdate', ->
+          if myPlayer.currentTime() > $('.video-nav').eq($("#video-player").data('current-video')+1).data('video-offset')
+            $("#next").click()
       
       return
     return
