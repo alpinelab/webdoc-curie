@@ -25,13 +25,6 @@ fr:
       productor: "Producteur"
     subtitle: ""
     title: "Crédits"
-  datasheets:
-    datasheet:
-      download: "Télécharger la fiche technique"
-      url: "#"
-      name: "Nom de la fiche technique"
-    subtitle: ""
-    title: "Fiches techniques"
   disclaimer:
     message: "Ce web-documentaire ne remplace pas une consultation médicale, ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toutes femmes se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
     discover: "Découvrez le web-documentaire"
@@ -54,11 +47,59 @@ fr:
     title: "Miscellanées"
     subtitle: ""
   read-more:
-    link:
-      name: "Nom du lien"
-      url: "url vers le site"
-    subtitle: ""
+    bibliographies:
+      title: "Articles / Bibliographies"
+      bibliography:
+        one:
+          author: "de Anne Tourre"
+          editor: "Editions R. Laffont - 2007"
+          title: "Je ferai comme toi, je ne mourrai pas"
+        two:
+          author: "de Pascal Bonnier"
+          editor: "Romain PAges Editions - 2007"
+          title: "J'ai un cancer Et après"
+        three:
+          author: "de Dominique Gros"
+          editor: "Editions Springer - 2009"
+          title: "Cancer du sein, entre raison et sentiments"
+        four:
+          author: "de Ester Lynne"
+          editor: "Editions Dangles - 2008"
+          title: "Au Sein... Du Cancer - Guide pour gagner contre la Maladie"
+        five:
+          author: "de Annick Parent"
+          editor: "Ellébore Editions - 2006"
+          title: "Itinéraire d'une amazone - Cancer du sein, l'intime partagé"
+    datasheets:
+      title: "Fiches techniques chirurgicales"
+      datasheet:
+        booklet-faq: "Livret FAQ"
+        breast-reconstruction: "Reconstruction mammaire"
+        download: "Télécharger la fiche technique"
+        total-mastectomy: "Mastectomie totale"
+    dvds:
+      dvd:
+        one:
+          author: "du Dr François Dravet"
+          editor: "Institut de Cancérologie de l'Ouest"
+          title: "Comprendre pour participer aux soins - le cancer du sein"
+        two:
+          author: "Martine Arnaud-Goddet"
+          editor: "Association AGARO - 2010"
+          title: "Le cancer du sein dans le parcours d'une vie"
+      title: "DVD"
     title: "En savoir plus"
+    web:
+      curie-institute: "Institut Curie - Cancers du sein"
+      curie-institute-webradio: "Institut Curie - Web radio"
+      guerir-le-regard: "Guérir le regard"
+      infosein-group: "Groupe Info-Sein"
+      link:
+        webdoc: "Voir le documentaire"
+        website: "Voir le site"
+      melilotus-blog: "Blog de Mélilotus"
+      monoboob: "MoNoBooB.com"
+      title: "Web"
   nav:
     mastectomy:
       article: la
