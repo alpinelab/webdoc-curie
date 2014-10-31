@@ -21,4 +21,16 @@
   <url>
     <loc>http://www.example.com/pages/landing</loc>
   </url>
+  <url>
+    <loc>http://www.example.com/pages/miscellanea</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/miscellanea/titre-livre</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/miscellanea/les-femmes</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/miscellanea/les-operations</loc>
+  </url>
 </urlset>
