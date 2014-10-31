@@ -3,8 +3,8 @@
 
   .video-description= I18n.t("chapters." + current_page.data.chapters.keys.first)
 
-  - current_page.data.chapters.each do |key, chapter|
-    .video-nav{"data-video-offset" => chapter["offset"], "data-video-description" => I18n.t("chapters." + key)}
+  - current_page.data.chapters.each_with_index do |(key, chapter), index|
+    .video-nav{"data-video-offset" => chapter["offset"], "data-video-description" => I18n.t("chapters." + key), class: "#{'selected' if index == 0}"}
       = image_tag "posters/" + chapter["thumbnail"], width: "100px"
 
 - content_for :javascripts do
@@ -14,12 +14,16 @@
       $('.video-nav').on 'click', 'img', ->
         offset = $(this).parent().data('video-offset')
         video_desc = $(this).parent().data('video-description')
+        element = $(this).closest('.video-nav')
         videojs("video-player").ready ->
           myPlayer = this
           myPlayer.currentTime(offset)
           $('.video-description').text(video_desc)
           myPlayer.play()
           $("#play").attr('id','pause')
+          $('.video-nav.selected').removeClass('selected')
+          element.addClass('selected')
+          $('#video-player').data("current-video", $('.video-nav').index(element))
 
       videojs("video-player").ready ->
         myPlayer = this
