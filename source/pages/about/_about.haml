@@ -1,18 +1,20 @@
-- financial_partners = %w(fondation-michelin fondation-macsf fondation-dominique-tom-alberici mutuelle-bleue astra-zeneca au-sein-de-la-difference thermes-la-roche-posay)
-- broadcast_partners = %w()
+- financial_partners = [{name: "fondation-michelin", url: "http://www.michelin.com"},{name: "fondation-macsf", url: "https://www.macsf.fr/nous-connaitre/partenaire-professionnels-sante/fondation-entreprise-macsf/presentation-objectifs-fondation-macsf.html"}, {name: "fondation-dominique-tom-alberici", url: "http://initiative-octalfa.eu/fondation-Dominique-et-Tom-Alberici"}, {name: "mutuelle-bleue", url: "http://www.mutuellebleue.fr"}, {name: "astra-zeneca", url: "www.astrazeneca.fr"}, {name: "au-sein-de-sa-difference", url: "http://auseindesadifference.com"}, {name: "thermes-la-roche-posay", url: "http://www.thermes-larocheposay.fr/cure-thermale-suites-cancer.html"}]
+
+- broadcast_partners = [{name: "diep-asso", url: "http://www.diep-asso.fr"}, {name: "au-sein-de-sa-difference", url: "http://auseindesadifference.com"}, {name: "europa-donna", url: "http://www.europadonna.fr"}, {name: "ligue-cancer", url: "http://www.ligue-cancer.net"}, {name: "unicancer", url: "http://www.unicancer.fr/patient"}, {name: "vivre-comme-avant", url: "http://www.vivrecommeavant.fr"}]
+
 #about-wrapper
   #financial-partners
     %h2= I18n.t("about.partner.financial.title")
     - financial_partners.each_with_index do |partner, index|
       - if (index % 4) == 0
         .financial-row
-      = partial 'pages/about/financial-partner', locals: {partner: partner, url: I18n.t("about.partner.url")}
+      = partial 'pages/about/financial-partner', locals: {partner: partner[:name], url: partner[:url]}
   #broadcast-partners
     %h2= I18n.t("about.partner.broadcast.title")
     - broadcast_partners.each_with_index do |partner, index|
-      - if (index % 5) == 0
+      - if (index % 6) == 0
         .broadcast-row
-      = partial 'pages/about/broadcast-partner', locals: {partner: partner, url: I18n.t("about.partner.url")}
+      = partial 'pages/about/broadcast-partner', locals: {partner: partner[:name], url: partner[:url]}
 
 - financial_partners.each do |partner|
-  = partial 'pages/about/involvement', locals: {partner: partner, url: "#"}
+  = partial 'pages/about/involvement', locals: {partner: partner[:name], url: partner[:url]}

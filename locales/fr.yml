@@ -4,7 +4,22 @@ fr:
     partner:
       broadcast:
         title: "Nos partenaires de diffusion"
-      involvement: "Lire leur engagement"
+      involvement:
+        title: "Lire leur engagement"
+        fondation-michelin:
+          "La Fondation d'Entreprise Michelin a le plaisir d'accompagner l'Institut Curie dans la réalisation du documentaire et Web documentaire \"Guérir le regard\". La Fondation d'Entreprise Michelin soutien les projets s'inscrivant dans les domaines de Mobilité, de Sport et Santé, de Solidarité et Education, de Protection de l'Environnement et de Culture et Patrimoine."
+        fondation-macsf:
+          "Mieux communiquer, mieux comprendre, reconnaitre l’Autre : un droit et devoir pour ceux qui patients et/ou soignants allient leurs énergies pour combattre la maladie, pour la vie.  Améliorer la communication patient-soignant tel est le credo de la Fondation MACSF qui s’honore d’être le partenaire de l’institut Curie pour « guérir le regard »."
+        fondation-dominique-tom-alberici:
+          "La Fondation Dominique et Tom Alberici soutient activement des projets caritatifs dédiés aux personnes handicapées et aux patients souffrant d’un cancer. La Fondation accompagne des projets en France et dans les pays en voie de développement, notamment à Madagascar. Depuis sa création en 2008, plus de 40 projets ont bénéficié du soutien et du financement de la Fondation."
+        mutuelle-bleue:
+          "Mutuelle Bleue est fière d’apporter sa contribution à la lutte contre le cancer au travers son partenariat avec l’Institut Curie. Nous nous félicitons de cette collaboration mutuelle entre nos deux entreprises, qui au-delà de leur rôle essentiel d’acteur de santé, partagent une même préoccupation pour le bien-être de l’individu : l’Institut Curie dans sa démarche de prise en charge globale du patient et Mutuelle Bleue à travers son offre de santé et de prévoyance pour ses adhérents individuels ou collectifs."
+        astra-zeneca:
+          "AstraZeneca est une multinationale orientée vers l’innovation dans le domaine biopharmaceutique qui se consacre à la recherche, à la mise au point et à la commercialisation de médicaments éthiques, principalement dans les domaines des maladies cardiovasculaires et métaboliques, des maladies respiratoires et inflammatoires, et de l’oncologie. AstraZeneca est présent dans plus de 100 pays et ses médicaments innovants sont utilisés par des millions de patients à travers le monde."
+        au-sein-de-sa-difference:
+          "Au même titre que l’éducation, l’information est un véritable outil de liberté. La complémentarité du film institutionnel et du web-documentaire permet d’embrasser la grande et si forte diversité des femmes que leur histoire-cancer aura amené à vivre une mastectomie… et vivre chacune avec : dans leur singularité. Qu’il s’agisse de la maladie elle-même, du vécu, des attentes et la reconstruction qui finit toujours par s’accomplir."
+        thermes-la-roche-posay:
+          "Le Centre Thermal dermatologique de La Roche Posay a créé en 2008 une cure Thermale Post cancer, permettant aux patients une prise en charge des séquelles cutanées des traitements anticancéreux : séquelles cicatricielles d’ablation ou de tumorectomie, sécheresse de la peau et des muqueuses... Cette cure thermale prescrite et prise en charge à 100% par la Sécurité sociale propose aussi un accompagnement spécifique sur le plan psychologique grâce à des ateliers et consultations complémentaires (psy, diététique, sophrologie, sport, maquillage…) spécifiques pour aider les patients à rebondir après l’étape de la maladie."
       url: "#"
       name: "Nom du partenaire"
       financial:
