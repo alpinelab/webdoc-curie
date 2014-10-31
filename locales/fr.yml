@@ -75,3 +75,9 @@ fr:
   tutorial:
     arrow: "Déplacer la flèche pour naviguer"
     image: "Tutoriel"
+  videos:
+    first-video: "lala"
+    second-video: "loulou"
+  chapters:
+    chapter-1: "yayaya"
+    chapter-2: "bimbim"

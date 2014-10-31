@@ -1,20 +1,28 @@
 #video-wrapper
   = partial "pages/nav/default_player", locals: { default_src: current_page.data.videos.values.first["src"] }
 
+  .video-description= I18n.t("videos." + current_page.data.videos.keys.first)
+
   - current_page.data.videos.each do |key, video|
-    .video-nav{"data-video-src" => video["src"]}
-      %img{ src: video["thumbnail"], width: "100px" }
+    .video-nav{"data-video-src" => video["src"], "data-video-description" => I18n.t("videos." + key) }
+      = image_tag "posters/" + video["thumbnail"], width: "100px"
 
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
-
       $('.video-nav').on 'click', 'img', ->
         video_src = $(this).parent().data('video-src')
+        video_desc = $(this).parent().data('video-description')
         videojs("video-player").ready ->
           myPlayer = this
           myPlayer.src(video_src)
+          $('.video-description').text(video_desc)
           myPlayer.play()
+          $("#play").attr('id','pause')
+      
+      videojs("video-player").ready ->
+        this.on 'ended', ->
+          $("#next").click()
           
       return
     return
