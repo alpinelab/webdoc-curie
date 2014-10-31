@@ -24,7 +24,7 @@ layout: landing
             %p.directed-by= I18n.t("landing.credits.directed-by")
             %p.producted-by
               = I18n.t("landing.credits.producted-by")
-              = image_tag "logo/kepler-22.png"
+              = image_tag "logos/kepler-22.png"
 
 #partners
   %p= I18n.t("landing.credits.in-partenership-with")
@@ -32,7 +32,7 @@ layout: landing
     - partners = %w(institut-curie au-sein-de-la-difference fondation-dominique-tom-alberici mutuelle-bleue fondation-michelin astra-zeneca fondation-macsf thermes-la-roche-posay)
     - partners.each do |index|
       %li
-        = image_tag "logos/#{index}.png"
+        = image_tag "logos/partners/landing/#{index}.png"
 -#= partial 'pages/landing/disclaimer'
 
 - content_for :javascripts do
