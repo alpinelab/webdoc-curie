@@ -2,11 +2,13 @@
   .modal-header, .modal-body, .modal-footer
     text-align: center
     border: none
-  .modal-header
-    padding-top: 3em
   button.close
     color: $curie-orange
+    opacity: 0.7
+    &:hover
+      opacity: 1
   .modal-title
+    padding-top: 1.4em
     +font-curie-popover-title
     color: $curie-gray
     text-transform: uppercase

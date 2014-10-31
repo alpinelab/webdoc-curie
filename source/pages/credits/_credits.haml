@@ -1,14 +1,15 @@
-.container-fluid
-  .row
-    .col-sm-6
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
-    .col-sm-6
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
-      = partial 'pages/credits/credit', locals: {role: I18n.t("credits.credit.role"), name: I18n.t("credits.credit.name")}
+.credits
+  .container-fluid
+    .row
+      .col-sm-3.col-sm-offset-2
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.productor"), name: lorem.name}
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
+      .col-sm-3.col-sm-offset-2
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
+        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
