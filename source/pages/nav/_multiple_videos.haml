@@ -13,12 +13,17 @@
       $('.video-nav').on 'click', 'img', ->
         video_src = $(this).parent().data('video-src')
         video_desc = $(this).parent().data('video-description')
+        element = $(this).closest('.video-nav')
+        console.log(element)
         videojs("video-player").ready ->
           myPlayer = this
           myPlayer.src(video_src)
           $('.video-description').text(video_desc)
           myPlayer.play()
           $("#play").attr('id','pause')
+          $('.video-nav.selected').removeClass('selected')
+          element.addClass('selected')
+          $('#video-player').data("current-video", $('.video-nav').index(element))
       
       videojs("video-player").ready ->
         this.on 'ended', ->
