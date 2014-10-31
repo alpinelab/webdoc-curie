@@ -2,12 +2,31 @@
 fr:
   about:
     partner:
-      download: "Lire leur engagement"
+      broadcast:
+        title: "Nos partenaires de diffusion"
+      involvement:
+        title: "Lire leur engagement"
+        fondation-michelin:
+          "La Fondation d'Entreprise Michelin a le plaisir d'accompagner l'Institut Curie dans la réalisation du documentaire et Web documentaire \"Guérir le regard\". La Fondation d'Entreprise Michelin soutien les projets s'inscrivant dans les domaines de Mobilité, de Sport et Santé, de Solidarité et Education, de Protection de l'Environnement et de Culture et Patrimoine."
+        fondation-macsf:
+          "Mieux communiquer, mieux comprendre, reconnaitre l’Autre : un droit et devoir pour ceux qui patients et/ou soignants allient leurs énergies pour combattre la maladie, pour la vie.  Améliorer la communication patient-soignant tel est le credo de la Fondation MACSF qui s’honore d’être le partenaire de l’institut Curie pour « guérir le regard »."
+        fondation-dominique-tom-alberici:
+          "La Fondation Dominique et Tom Alberici soutient activement des projets caritatifs dédiés aux personnes handicapées et aux patients souffrant d’un cancer. La Fondation accompagne des projets en France et dans les pays en voie de développement, notamment à Madagascar. Depuis sa création en 2008, plus de 40 projets ont bénéficié du soutien et du financement de la Fondation."
+        mutuelle-bleue:
+          "Mutuelle Bleue est fière d’apporter sa contribution à la lutte contre le cancer au travers son partenariat avec l’Institut Curie. Nous nous félicitons de cette collaboration mutuelle entre nos deux entreprises, qui au-delà de leur rôle essentiel d’acteur de santé, partagent une même préoccupation pour le bien-être de l’individu : l’Institut Curie dans sa démarche de prise en charge globale du patient et Mutuelle Bleue à travers son offre de santé et de prévoyance pour ses adhérents individuels ou collectifs."
+        astra-zeneca:
+          "AstraZeneca est une multinationale orientée vers l’innovation dans le domaine biopharmaceutique qui se consacre à la recherche, à la mise au point et à la commercialisation de médicaments éthiques, principalement dans les domaines des maladies cardiovasculaires et métaboliques, des maladies respiratoires et inflammatoires, et de l’oncologie. AstraZeneca est présent dans plus de 100 pays et ses médicaments innovants sont utilisés par des millions de patients à travers le monde."
+        au-sein-de-sa-difference:
+          "Au même titre que l’éducation, l’information est un véritable outil de liberté. La complémentarité du film institutionnel et du web-documentaire permet d’embrasser la grande et si forte diversité des femmes que leur histoire-cancer aura amené à vivre une mastectomie… et vivre chacune avec : dans leur singularité. Qu’il s’agisse de la maladie elle-même, du vécu, des attentes et la reconstruction qui finit toujours par s’accomplir."
+        thermes-la-roche-posay:
+          "Le Centre Thermal dermatologique de La Roche Posay a créé en 2008 une cure Thermale Post cancer, permettant aux patients une prise en charge des séquelles cutanées des traitements anticancéreux : séquelles cicatricielles d’ablation ou de tumorectomie, sécheresse de la peau et des muqueuses... Cette cure thermale prescrite et prise en charge à 100% par la Sécurité sociale propose aussi un accompagnement spécifique sur le plan psychologique grâce à des ateliers et consultations complémentaires (psy, diététique, sophrologie, sport, maquillage…) spécifiques pour aider les patients à rebondir après l’étape de la maladie."
       url: "#"
       name: "Nom du partenaire"
-    subtitle: "L'engagement de nos partenaires"
-    title: "À propos"
+      financial:
+        title: "L'engagement de nos partenaires financiers"
+    title: À propos
   common:
+    back: "Retour"
     close: "Close"
     doc-title1: "Guérir le"
     doc-title2: "Regard"
@@ -16,18 +35,11 @@ fr:
     search: "Recherche"
     skip-intro: "Passer le flim d'introduction"
   credits:
-    credit:
-      name: "Nom Prénom"
-      role: "Fonction"
+    role:
+      director: "Réalisteur"
+      productor: "Producteur"
     subtitle: ""
     title: "Crédits"
-  datasheets:
-    datasheet:
-      download: "Télécharger la fiche technique"
-      url: "#"
-      name: "Nom de la fiche technique"
-    subtitle: ""
-    title: "Fiches techniques"
   disclaimer:
     message: "Ce web-documentaire ne remplace pas une consultation médicale, ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toutes femmes se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
     discover: "Découvrez le web-documentaire"
@@ -50,11 +62,59 @@ fr:
     title: "Miscellanées"
     subtitle: ""
   read-more:
-    link:
-      name: "Nom du lien"
-      url: "url vers le site"
-    subtitle: ""
+    bibliographies:
+      title: "Articles / Bibliographies"
+      bibliography:
+        one:
+          author: "de Anne Tourre"
+          editor: "Editions R. Laffont - 2007"
+          title: "Je ferai comme toi, je ne mourrai pas"
+        two:
+          author: "de Pascal Bonnier"
+          editor: "Romain PAges Editions - 2007"
+          title: "J'ai un cancer Et après"
+        three:
+          author: "de Dominique Gros"
+          editor: "Editions Springer - 2009"
+          title: "Cancer du sein, entre raison et sentiments"
+        four:
+          author: "de Ester Lynne"
+          editor: "Editions Dangles - 2008"
+          title: "Au Sein... Du Cancer - Guide pour gagner contre la Maladie"
+        five:
+          author: "de Annick Parent"
+          editor: "Ellébore Editions - 2006"
+          title: "Itinéraire d'une amazone - Cancer du sein, l'intime partagé"
+    datasheets:
+      title: "Fiches techniques chirurgicales"
+      datasheet:
+        booklet-faq: "Livret FAQ"
+        breast-reconstruction: "Reconstruction mammaire"
+        download: "Télécharger la fiche technique"
+        total-mastectomy: "Mastectomie totale"
+    dvds:
+      dvd:
+        one:
+          author: "du Dr François Dravet"
+          editor: "Institut de Cancérologie de l'Ouest"
+          title: "Comprendre pour participer aux soins - le cancer du sein"
+        two:
+          author: "Martine Arnaud-Goddet"
+          editor: "Association AGARO - 2010"
+          title: "Le cancer du sein dans le parcours d'une vie"
+      title: "DVD"
     title: "En savoir plus"
+    web:
+      curie-institute: "Institut Curie - Cancers du sein"
+      curie-institute-webradio: "Institut Curie - Web radio"
+      guerir-le-regard: "Guérir le regard"
+      infosein-group: "Groupe Info-Sein"
+      link:
+        webdoc: "Voir le documentaire"
+        website: "Voir le site"
+      melilotus-blog: "Blog de Mélilotus"
+      monoboob: "MoNoBooB.com"
+      title: "Web"
   nav:
     mastectomy:
       article: la
@@ -78,3 +138,9 @@ fr:
     text-1: "je suis un text c'est trop bien, j'appartiens au misc 1"
     title-2: Titre livre
     text-2: "je suis un text c'est trop bien, j'appartiens au misc 2"
+  videos:
+    first-video: "Titre Description"
+    second-video: "loulou"
+  chapters:
+    chapter-1: "yayaya"
+    chapter-2: "bimbim"

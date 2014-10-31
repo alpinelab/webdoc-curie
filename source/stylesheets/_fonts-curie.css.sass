@@ -19,6 +19,11 @@
   font-family: "GothamRnd"
   src: url("/fonts/curie/GothamRnd-Medium.otf") format("truetype")
 
+@mixin font-smoothing
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-smooth: always
+
 @mixin font-curie-footer
   font-family: Arial
   font-size: 11px
@@ -46,6 +51,18 @@
 @mixin font-curie-popover-title
   font-family: FILOUNIC
   font-size: 26px
+
+@mixin font-curie-popover-section-title
+  font-family: FILOSMCA
+  font-size: 18px
+
+@mixin font-curie-popover-text
+  font-family: FILOROMA
+  font-size: 14px
+
+@mixin font-curie-popover-small-text
+  font-family: FILOROMA
+  font-size: 12px
 
 @mixin font-curie-landing
   font-family: FILOUNIC
