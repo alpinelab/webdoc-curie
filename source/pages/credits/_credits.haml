@@ -1,15 +1,35 @@
-.credits-wrapper
-  .container-fluid
-    .row
-      .col-sm-3.col-sm-offset-2
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.productor"), name: lorem.name}
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
-      .col-sm-3.col-sm-offset-2
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
-        = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),  name: lorem.name}
+%ul.nav.nav-tabs{role: "tablist"}
+  %li.active{role: "presentation"}
+    %a{href: "#credits", role: "tab", :'data-toggle' => "tab"}= I18n.t("credits.subtitle-credits")
+  %li.pull-right{role: "presentation"}
+    %a{href: "#thanks", role: "tab", :'data-toggle' => "tab"}= I18n.t("credits.subtitle-thanks")
+
+.tab-content
+  #credits.tab-pane.fade.in.active{role: "tabpanel"}
+    .container-fluid
+      .row
+        .col-sm-4.col-sm-offset-1
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.director"),       names: ["Caroline Swysen"]}
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.picture"),        names: ["Florian Bouchet"]}
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.sound"),          names: ["Graciela Barrault", "Guillaume Valeix"]}
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.editing"),        names: ["Bruno Esquirol"]}
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.sound-postprod"), names: ["Renaud Bajeux"]}
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.graphics"),       names: [" Batiste Perron"]}
+        .col-sm-4.col-sm-offset-1
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.executive-productor"), names: ["Kepler 22 productions", "Juliette Cazanave", "César Diaz"]}
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.management-productor"), names: ["Alain Bastide", "Natacha Legrand"]}
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.music"),                names: ["© Kapagama - K Music"]}
+          = partial 'pages/credits/credit', locals: {role: I18n.t("credits.role.web-development"),      names: ["Alpine Lab"]}
+  #thanks.tab-pane.fade{role: "tabpanel"}
+    %p= "Merci à Séverine Alran"
+    %p= "Le Groupe Info-Sein de l’Institut Curie Lydie Wintz, Cathie Malhouitre, Marion Serpeault, Joël Blin, Elisabeth Breuillot, Nathalie Boissière, Martine Capelle, Justine Courtois, Benoît Couturaud, Martine Damecour, Sylvie Dolbeault, Nathalie Etienne, Odile Galopin, Roseline Gelperowic, Cinzia Greco, Corine Grizaud, Isabelle Join-Lambert, Delphine Héquet, Laurence Lathière, Perig Le Masurier, Maryvonne Marchal, Renée Mazerat, Virginie Mendelli, Carmen Ollivier, Cécile Pasquinelli, Marielle Renou, Fabien Reyal, Annick Robert, Roman Rouzier, Anne Sophie Tuszynski dédient ce film à Carmen..."
+    %p= "et"
+    %p= "Delphine Héquet, Hélène Charitansky, Virginie Fourchotte, Charlotte Ngô, Rémy Salmon, Anne de La Rochefordière, Bernard Baranger, Anne Vincent-Salomon, Irène Kriegel, Isabelle Fromantin, Jean-Pierre Hamelin, Marc Estève, Thierry Guihard, Alexandre Leduey, Delphine Mouttet, Agnès Hubert, Marielle Lethrosne, Catherine Goupillon-Senghor, Corinne de Conti, François Doz, Marie-Pierre Chauvet, Sylvie Giard, Krishna Clough, Claude Nos, Anne Lesur, Marie-Christine Missana, Philippe Rouanet, Pascal Bonnier, Richard Villet, Jean-Guillaume Féron, Nicolas Pouget, Alfred Fitoussi, Eugénie Guillot, Fatima Laki, Catherine Bélichard, Serge Lasry, Isabelle Cothier Savey, Juan Pablo Estevez, Xavier Fritel, Emmanuel Barranger, Denis Heitz, Virginie Doridot, Christine Louis Sylvestre, Virginie Morin, Nadia Atmani, Catherine Rougeron, Alexandra Athanassiou, Caroline Malhaire, Anne Tardivon, Liliane Ollivier, Françoise Apiou, Janine Dumont, Karine Laure, Aurore Marcou, Jean-Yves Pierga, Dominique Stoppa-Lyonnet, Sylvie Dolbeault, Cécile Zinzindohoué, Christelle Abboud, Joseph Abboud, Alain Daher, Sonia Baulies-Caballero, Martine Ruszniewski, Annie Nganou, Béatrice Salmon, Hélène Esperou, Geneviève Clastres, Philippe Pataud-Célérié,  Anne Teffo, Lorenzo Weiss, l’ensemble des soignants participants à la prise en charge des patientes ayant une mastectomie et les internes de chirurgie"
+    %p= "Sans oublier"
+    %p= "Léna R, Mathieu Gervais, Sylvie Airaud, Geneviève Timmer,  Dominique Espanol, Aïne Alavi, Émilie Marsollat, Myriam Vépierre, Géraldine Céran, Sabine Garnier, Mélina Kanellopoulos, Damien Traizet, Cécile Fournier, Martine Simoni-Rousseau, Lidwine et Jean Olivier, Annie Portier, Elisabeth et Joseph Ballester, Ana Maria et Henri Llinarès, Christine Broc, Marie Ducatel, Esméralada Krauss, Christine Bertrand, Delphine Fauquet, Danièle Barretz, Elisabeth Vanbremeesch"
+    %p= "Dominique Gros, Alain Fourquet, François Campana, Marie Queinnec, Abdelmalek Ghimouz, Pascale Surugue, Alexandre Leduey, Christine Thorant, Aurélia Rigeasse, Nathalie Le Gallo, Antonine Duchêne, Frédérique Boutté, Lisiane Grosset, Esther Chemouilli, Térésa Druzynska, Aurélie Lebelguet, Sophie Simandoux, Christine Laurent"
+    %p= "Paola Scemama, Mohamad Chati"
+    %p= "Magalie Sanz, Richard et Charlotte Airaud, Michel Lamayson"
+    %p= "Charlotte Dieutre, Stella Cadente, Florian Claudel, le Collectif Krumple"
+    %p= "Géraldine Cerran, Véronique Darras"
+    %p= "Pascal Bonnier pour l’utilisation de son livre « J’ai un cancer Et après» Photographies: Florian Launette - Romain Pages Editions"

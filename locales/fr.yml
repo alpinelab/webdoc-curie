@@ -36,9 +36,18 @@ fr:
     skip-intro: "Passer le flim d'introduction"
   credits:
     role:
-      director: "Réalisteur"
-      productor: "Producteur"
-    subtitle: ""
+      director: "Réalisation"
+      editing: "Montage"
+      executive-productor: "Production exécutive"
+      graphics: "Graphisme"
+      management-productor: "Direction de production"
+      music: Musique
+      picture: "Image"
+      sound: "Son"
+      sound-postprod: "Postproduction son"
+      web-development: "Conception Webdocumentaire"
+    subtitle-credits: "Crédits"
+    subtitle-thanks: "Remerciements"
     title: "Crédits"
   disclaimer:
     message: "Ce web-documentaire ne remplace pas une consultation médicale, ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toutes femmes se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
