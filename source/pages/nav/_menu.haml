@@ -11,11 +11,11 @@
     .menu-item{class: "deg#{item.angle}"}
       %h2
         .thumbnail-nav
-          = image_tag "thumbnails/thumbnail_rounded_avec_tmp.png"
+          -# = image_tag "thumbnails/thumbnail_rounded_avec_tmp.png"
         - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
         %a{ href: page_name.slugify }= page_name 
       - if !item["sub_items"].nil?
-        %ul
+        %ul{class: "#{current_page.data.color}"} 
           - item["sub_items"].each do |sub_item|
             %li
               - item_name = I18n.t(["nav",current_page.data.name,sub_item].join("."))

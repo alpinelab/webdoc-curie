@@ -27,13 +27,27 @@
     text-transform: uppercase
     height: 10em
     width: 60%
-    text-align: center
+    
+    ul
+      list-style-type: none
+      li:before
+        display: inline-block
+        transform: rotate(90deg)
+        margin-right: 10px
+      &.blue
+        li:before 
+          content: image-url("pictograms/arrow_blue_small.png")
+      &.orange
+        li:before 
+          content: image-url("pictograms/arrow_orange_small.png")
+      &.pink
+        li:before 
+          content: image-url("pictograms/arrow_pink_small.png")
+
 
     h2
       @include font-curie-text
-      position: relative
-      top: 37%
-      transform: translate(0,-50%)
+      text-align: center
 
     a:link, a:visited, a:hover, a:active
       text-decoration: none
