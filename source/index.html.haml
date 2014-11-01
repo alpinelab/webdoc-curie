@@ -1,31 +1,44 @@
 ---
 title: Curie Webdoc - Guérir le regard
+layout: landing
 ---
 
-#main.container-fluid
+#landing.container-fluid
   .row
-    .col-sm-4.col-sm-offset-4
-      = partial "layouts/circular_navigation"
-#tutorial
+    .col-sm-12
+      #sylvie
+        #introduced-by
+          %p= I18n.t("landing.credits.introduced-by")
+        .circle-container
+          = partial "layouts/compass"
+          .compass-title.color-orange
+            %h2= I18n.t("common.doc-title1")
+            %h2= I18n.t("common.doc-title2")
+            = image_tag "pictograms/cicatrice-white.png"
+            .triangle.landing-deg-triangle
+              = image_tag "pictograms/arrow_orange_small.png"
+            #enter
+              %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
+          #productor
+            %p.directed-by= I18n.t("landing.credits.directed-by")
+            %p.producted-by
+              = I18n.t("landing.credits.producted-by")
+              = image_tag "logos/kepler-22.png"
+
+#partners
+  %p= I18n.t("landing.credits.in-partenership-with")
+  %ul
+    - %w(institut-curie au-sein-de-la-difference fondation-dominique-tom-alberici mutuelle-bleue fondation-michelin astra-zeneca fondation-macsf thermes-la-roche-posay).each do |partner|
+      %li
+        = image_tag "logos/partners/landing/#{partner}.png"
+= partial 'pages/disclaimer'
 
 - content_for :javascripts do
   :coffeescript
-    @playlist = [
-      [{ type: "video/mp4",  src: "http://player.vimeo.com/external/109821776.hd.mp4?s=123961b2d810db71fa25e52555caf8f1"  }],
-      [{ type: "video/mp4",  src: "http://dfcb.github.io/BigVideo.js/vids/dock.mp4"  }],
-      [{ type: "video/mp4",  src: "http://dfcb.github.io/BigVideo.js/vids/river.mp4"  }]
-    ]
     $(document).ready ->
-      $("#tipue_search_input").tipuedrop()
       $ ->
         BV.init()
         if Modernizr.touch
           BV.show "http://video-js.zencoder.com/oceans-clip.png"
         else
-          BV.show playlist[0], ambient: true
-        return
-      $("#tutorial").click (event) ->
-        $("#tutorial-circle").toggleClass("tutorial-mask hide")
-        event.stopPropagation()
-        $("body").one("click", (-> $("#tutorial-circle").toggleClass("tutorial-mask hide")))
-      return
+          BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110470750.hd.mp4?s=af9b58ea0a25cff6377b7e98c52d5204" }], ambient: true
