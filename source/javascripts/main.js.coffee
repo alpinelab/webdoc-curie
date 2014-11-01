@@ -4,7 +4,6 @@
 #= require bootstrap-sprockets
 #= require vendor/tipuesearch/_tipuesearch_set
 #= require vendor/tipuesearch/_tipue_content
-#= require vendor/tipuesearch/_tipuesearch
 #= require vendor/tipuesearch/_tipuedrop
 #= require vendor/_imagesloaded.pkgd
 #= require vendor/video-js/_video
