@@ -1,18 +1,18 @@
 %footer
   .left-part
     .footer-item.pull-left
-      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#the-movie"}= I18n.t("the-movie.title")
+      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#the-movie-modal"}= I18n.t("the-movie.title")
     .footer-item.pull-left
       %a{href: "/pages/miscellanea"}= I18n.t("miscellanea.title")
   .right-part.pull-right
     .footer-item.pull-left
-      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#credits"}= I18n.t("credits.title")
+      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#credits-modal"}= I18n.t("credits.title")
     .footer-item.pull-left
-      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#legal"}= I18n.t("legal.title")
+      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#legal-modal"}= I18n.t("legal.title")
     .footer-item.pull-left
-      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#read-more"}= I18n.t("read-more.title")
+      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#read-more-modal"}= I18n.t("read-more.title")
     .footer-item.pull-left
-      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#about"}= I18n.t("about.title")
+      %a{href: "#", :'data-toggle' => "modal", :'data-target' => "#about-modal"}= I18n.t("about.title")
 
 = partial 'pages/modal', locals: {name: 'the-movie'   }
 = partial 'pages/modal', locals: {name: 'credits'     }

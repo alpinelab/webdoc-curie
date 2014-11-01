@@ -25,17 +25,49 @@ footer
     a
       color: $curie-gray
 
-.credits-wrapper
-  margin-top: 3em
-  .credit
-    font-size: 1.5em
-    text-align: center
-    text-transform: none
-    margin: 3em 0
-    .role
+#credits-modal
+  .modal-title
+    display: none
+  .modal-body
+    margin: 2em 5em
+    +font-curie-popover-text
+    .nav-tabs
+      border: none
+      li
+        width: 50%
+        a
+          text-transform: lowercase
+          color: $curie-orange
+          +font-curie-popover-section-title
+          border: none
+          padding-bottom: 20px
+          outline: 0
+          &:hover
+            background: $curie-gray-bg
+      li.active
+        a
+          border-bottom: solid 1px $curie-orange
+    .tab-content
       color: $curie-gray
-    .name
-      color: $curie-orange
+      text-transform: none
+      margin-top: 5em
+      #credits
+        .credit
+          font-size: 1.5em
+          text-align: center
+          text-transform: none
+          margin: 1.5em 0
+          .role
+            color: $curie-gray
+          .name
+            color: $curie-orange
+      #thanks
+        max-height: 30em
+        overflow: auto
+        padding: 0 11em
+        p
+          line-height: 1.4em
+          font-size: 16px
 
 .legal-wrapper
   text-transform: none
