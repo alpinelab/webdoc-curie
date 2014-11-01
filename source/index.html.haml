@@ -33,7 +33,7 @@ layout: fullscreen
         = image_tag "logos/partners/landing/#{partner}.png"
 = partial 'pages/disclaimer'
 
-- content_for :javascripts_disabled do
+- content_for :javascripts do
   :coffeescript
     $(document).ready ->
       $ ->
