@@ -95,6 +95,10 @@ fr:
           author: "de Annick Parent"
           editor: "Ellébore Editions - 2006"
           title: "Itinéraire d'une amazone - Cancer du sein, l'intime partagé"
+        six:
+          author: "de Annick Parent"
+          editor: "Ellébore Editions - 2006"
+          title: "The SCAR Project : Breast Cancer is Not a Pink Ribbon (volume I)"
     datasheets:
       title: "Fiches techniques chirurgicales"
       datasheet:
@@ -105,13 +109,13 @@ fr:
     dvds:
       dvd:
         one:
-          author: "du Dr François Dravet"
-          editor: "Institut de Cancérologie de l'Ouest"
-          title: "Comprendre pour participer aux soins - le cancer du sein"
-        two:
           author: "Martine Arnaud-Goddet"
           editor: "Association AGARO - 2010"
           title: "Le cancer du sein dans le parcours d'une vie"
+        two:
+          author: "du Dr François Dravet"
+          editor: "Institut de Cancérologie de l'Ouest"
+          title: "Comprendre pour participer aux soins - le cancer du sein"
       title: "DVD"
     title: "En savoir plus"
     web:
