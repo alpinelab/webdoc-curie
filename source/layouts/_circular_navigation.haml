@@ -1,5 +1,6 @@
 #rotatescroll
-  .overlay
+  .overlay.circle-container
+    = partial 'layouts/compass'
     .viewport
       %ul.overview
         %li
@@ -24,4 +25,4 @@
     $(document).ready ->
       $("#rotatescroll").tinycircleslider
         dotsSnap: true
-        radius: 300
+        radius: 260

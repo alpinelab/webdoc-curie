@@ -37,6 +37,7 @@
         ,   $slides         = $overview.children()
         ,   $thumb          = $container.find(".thumb")
         ,   $dots           = $container.find(".dot")
+        ,   $compass        = $container.find("#compass")
         ,   $links          = $slides.find("a")
 
         ,   dots            = []
@@ -315,6 +316,10 @@
             $thumb.css({
                 top  : -Math.cos(toRadians(angle)) * self.options.radius + (containerSize.height / 2 - thumbSize.height / 2)
             ,   left :  Math.sin(toRadians(angle)) * self.options.radius + (containerSize.width / 2 - thumbSize.width / 2)
+            });
+
+            $compass.css({
+                transform : "rotate(" + angle + "deg)"
             });
 
             if(fireCallback)
