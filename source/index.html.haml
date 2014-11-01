@@ -1,6 +1,6 @@
 ---
 title: Curie Webdoc - Guérir le regard
-layout: landing
+layout: fullscreen
 ---
 
 #landing.container-fluid
@@ -33,7 +33,7 @@ layout: landing
         = image_tag "logos/partners/landing/#{partner}.png"
 = partial 'pages/disclaimer'
 
-- content_for :javascripts do
+- content_for :javascripts_disabled do
   :coffeescript
     $(document).ready ->
       $ ->
