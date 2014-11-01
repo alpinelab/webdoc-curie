@@ -22,6 +22,7 @@
         ,   dotsSnap       : false // shows dots when user starts dragging and snap to them.
         ,   dotsHide       : true  // fades out the dots when user stops dragging.
         ,   radius         : 140   // Used to determine the size of the circleslider
+        ,   rotateCompass  : false
         }
     ;
 
@@ -318,9 +319,11 @@
             ,   left :  Math.sin(toRadians(angle)) * self.options.radius + (containerSize.width / 2 - thumbSize.width / 2)
             });
 
-            $compass.css({
-                transform : "rotate(" + angle + "deg)"
-            });
+            if (self.options.rotateCompass) {
+                $compass.css({
+                    transform : "rotate(" + angle + "deg)"
+                });
+            }
 
             if(fireCallback)
             {
