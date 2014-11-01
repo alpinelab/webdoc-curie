@@ -25,23 +25,23 @@ footer
     a
       color: $curie-gray
 
-#credits-modal
-  .modal-title
-    display: none
+#read-more-modal, #credits-modal
   .modal-body
     margin: 2em 5em
     +font-curie-popover-text
+    a
+      color: $curie-orange
     .nav-tabs
       border: none
       li
-        width: 50%
         a
           text-transform: lowercase
-          color: $curie-orange
           +font-curie-popover-section-title
           border: none
           padding-bottom: 20px
+          margin: 0
           outline: 0
+          height: 100%
           &:hover
             background: $curie-gray-bg
       li.active
@@ -51,6 +51,15 @@ footer
       color: $curie-gray
       text-transform: none
       margin-top: 5em
+
+#credits-modal
+  .modal-title
+    display: none
+  .modal-body
+    .nav-tabs
+      li
+        width: 50%
+    .tab-content
       #credits
         .credit
           font-size: 1.5em
@@ -69,6 +78,30 @@ footer
           line-height: 1.4em
           font-size: 16px
 
+#read-more-modal
+  .modal-body
+    .nav-tabs
+      li
+        width: 25%
+        a
+          height: 5em
+    .tab-content
+      .link, .media
+        margin-bottom: 2em
+      .link
+        line-height: 1.7em
+        .name
+          font-size: 18px
+        a
+          text-decoration: underline
+      .media
+        width: 15em
+        line-height: 1.5em
+        margin: 0 auto 5em
+        .title
+          font-size: 18px
+        .author, .editor
+          color: $curie-orange
 .legal-wrapper
   text-transform: none
   text-align: left
