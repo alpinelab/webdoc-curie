@@ -1,4 +1,51 @@
+/* Tipue drop 4.0
+ * Copyright (c) 2014 Tipue
+ * Tipue drop is released under the MIT License
+ * http://www.tipue.com/drop */
+
 #tipue_drop_content
+  +font-curie-search
+  color: $curie-gray
+  display: none
+  position: absolute
+  background: #fff
+  z-index: 50
+  top: 54px
   right: 0px
-  margin-top: 4.2em
-  margin-right: 7em
+  width: 30em
+  #tipue_drop_wrapper
+    .tipue_drop_head
+      text-align: center
+      vertical-align: top
+      padding: 1.5em 0
+    .category-title
+      text-align: left
+      position: relative
+      color: white
+      left: -4px
+      padding: 0.5em 1em
+      margin-right: 2em
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+    .title-mastectomy
+      background: $curie-blue
+    .title-surgical
+      background: $curie-orange
+    .title-nonsurgical
+      background: $curie-pink
+    a
+      text-decoration: none
+      outline: none
+      color: $curie-gray
+      .tipue_drop_item
+        height: 6em
+        margin: 1em
+        background: white
+        text-align: left
+        &:hover
+          background: #f7f7f7
+        .tipue_drop_item_image
+          margin: 1em
+        .tipue_drop_item_title
+      &:not(:last-child)
+        .tipue_drop_item
+          border-bottom: solid 1px $curie-gray-bg
