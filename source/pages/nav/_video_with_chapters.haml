@@ -10,26 +10,43 @@
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
+      selectThumbnail = (index) ->
+        element = $('.video-nav').eq(index)
+        $('.video-nav.selected').removeClass('selected')
+        element.addClass('selected')
+        $('#video-player').data("current-video", index)
+        $('.video-description').text(element.data('video-description'))
+
+      findCurrentThumbnail = (time) ->
+        offsets = ($('.video-nav').map ->
+          return $(this).data("video-offset")
+        ).get()
+        closest = (offsets.filter (i)-> 
+          return i <= time
+        ).pop()
+        return offsets.indexOf(closest)
 
       $('.video-nav').on 'click', 'img', ->
-        offset = $(this).parent().data('video-offset')
-        video_desc = $(this).parent().data('video-description')
         element = $(this).closest('.video-nav')
+        offset = element.data('video-offset')
         videojs("video-player").ready ->
           myPlayer = this
           myPlayer.currentTime(offset)
-          $('.video-description').text(video_desc)
           myPlayer.play()
           $("#play").attr('id','pause')
-          $('.video-nav.selected').removeClass('selected')
-          element.addClass('selected')
-          $('#video-player').data("current-video", $('.video-nav').index(element))
+          selectThumbnail($('.video-nav').index(element))
 
       videojs("video-player").ready ->
         myPlayer = this
         this.on 'timeupdate', ->
           if myPlayer.currentTime() > $('.video-nav').eq($("#video-player").data('current-video')+1).data('video-offset')
-            $("#next").click()
+            selectThumbnail(findCurrentThumbnail(myPlayer.currentTime()))
+
+        this.on 'seeked', ->
+          selectThumbnail(findCurrentThumbnail(myPlayer.currentTime()))
+
+        this.on 'ended', ->
+          $("#pause").click()
       
       return
     return

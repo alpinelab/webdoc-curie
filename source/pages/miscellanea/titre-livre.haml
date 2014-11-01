@@ -2,36 +2,31 @@
 layout: nav
 images:
   -
-    src: "lien"
+    src: "http://placehold.it/400x400&text=one"
     desc: "chacha"
   -
-    src: "lien"
+    src: "http://placehold.it/400x400&text=two"
     desc: "chouchou"
 ---
-#carousel-wraper
+#carousel-wrapper
   #carousel-curie.carousel.slide{"data-ride" => "carousel", "data-interval" => "false"}
     / Wrapper for slides
     .carousel-inner{:role => "listbox"}
       - current_page.data.images.each_with_index do |image, index|
         .item{"data-description" => image["desc"], class: "#{'active' if index==0}"}
-          = image_tag lorem.image("600x600")
+          = image_tag image["src"]
 
-  #image-description= current_page.data.images.first["desc"]
-
-  %ul.list-inline
-    %li
-      %a#carousel-selector-0.selected
-        %img.img-responsive{:src => "http://placehold.it/80x60&text=one"}/
-    %li
-      %a#carousel-selector-1
-        %img.img-responsive{:src => "http://placehold.it/80x60&text=two"}/
+  .video-description= current_page.data.images.first["desc"]
+  - current_page.data.images.each_with_index do |image, index|
+    .video-nav{class: "#{'selected' if index==0}", id: "carousel-selector-#{index}"}
+      %img.img-responsive{:src => image["src"]}/
 
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
 
       $('#carousel-curie').on 'slide.bs.carousel', (event)->
-        $('#image-description').text($(event.relatedTarget).data('description'))
+        $('.video-description').text($(event.relatedTarget).data('description'))
 
       # handles the carousel thumbnails
       $("[id^=carousel-selector-]").click ->
