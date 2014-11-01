@@ -17,12 +17,11 @@ title: Curie Webdoc - Guérir le regard
     ]
     $(document).ready ->
       $("#tipue_search_input").tipuedrop()
-      $ ->
-        BV.init()
-        if Modernizr.touch
-          BV.show "http://video-js.zencoder.com/oceans-clip.png"
-        else
-          BV.show playlist[0], ambient: true
+      BV.init()
+      if Modernizr.touch
+        BV.show "http://video-js.zencoder.com/oceans-clip.png"
+      else
+        BV.show playlist[0], ambient: true
       $("#tutorial").click (event) ->
         $("#tutorial-circle").toggleClass("tutorial-mask hide")
         event.stopPropagation()
