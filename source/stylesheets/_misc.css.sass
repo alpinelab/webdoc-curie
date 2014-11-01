@@ -8,6 +8,32 @@
 .misc-wrapper
   margin-top: 8%
 
-#carousel-wraper
-  max-width: 500px
-  margin: auto
+#carousel-wrapper
+  position: absolute
+  left: 50%
+  margin-top: 10%
+  transform: translate(-50%)
+  height: 400px
+  padding-right: 100px
+  padding-left: 100px
+
+  #image-description
+    text-align: center
+    margin-top: 5%
+    color: white
+    @include font-curie-nav 
+
+  ul
+    width: 100%
+    li
+      margin: 5%
+      float: left
+      img
+        border: transparent 3px solid
+      &.selected
+        img
+          border-color: white          
+          -moz-box-shadow: -3px -3px 10px 0px #555555
+          -webkit-box-shadow: -3px -3px 10px 0px #555555
+          -o-box-shadow: -3px -3px 10px 0px #555555
+          box-shadow: -3px -3px 10px 0px #555555

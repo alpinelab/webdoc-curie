@@ -8,22 +8,22 @@ images:
     src: "lien"
     desc: "chouchou"
 ---
-#carousel-wraper
+#carousel-wrapper
   #carousel-curie.carousel.slide{"data-ride" => "carousel", "data-interval" => "false"}
     / Wrapper for slides
     .carousel-inner{:role => "listbox"}
       - current_page.data.images.each_with_index do |image, index|
         .item{"data-description" => image["desc"], class: "#{'active' if index==0}"}
-          = image_tag lorem.image("600x600")
+          = image_tag lorem.image("400x400")
 
   #image-description= current_page.data.images.first["desc"]
 
   %ul.list-inline
-    %li
-      %a#carousel-selector-0.selected
+    %li#carousel-selector-0.selected
+      %a
         %img.img-responsive{:src => "http://placehold.it/80x60&text=one"}/
-    %li
-      %a#carousel-selector-1
+    %li#carousel-selector-1
+      %a
         %img.img-responsive{:src => "http://placehold.it/80x60&text=two"}/
 
 - content_for :javascripts do
