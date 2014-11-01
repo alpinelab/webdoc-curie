@@ -1,6 +1,7 @@
 .involvement-wrapper{id: "partenaire-#{partner}"}
-  %a{href: "#"}= I18n.t("common.back")
+  %a.back{href: "#"}= I18n.t("common.back")
   %a{href: url, target: "_blank"}
     %img{src: "/images/logos/partners/financial/#{partner}.png"}
   %p
     = I18n.t("about.partner.involvement.#{partner}")
+    %a{href: url, target: "_blank"}= I18n.t("common.read-more")
