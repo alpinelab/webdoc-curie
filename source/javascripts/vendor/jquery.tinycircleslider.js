@@ -83,9 +83,12 @@
                 setDots();
             }
 
-            $compass_inner.append($slides.first().clone());
+            first_child = $slides.first().clone();
+            last_child = $slides.last().clone();
+            $compass_inner.append(first_child);
+            $compass_inner.prepend(last_child);
 
-            $compass_inner.css("width", slideSize.width * ($slides.length + 1));
+            $compass_inner.css("width", slideSize.width * ($slides.length + 2));
 
             setEvents();
 
@@ -345,11 +348,12 @@
 
             if(self.options.dots)
             {
-                $compass_inner.css("left", -((angle - self.options.shift) / 360 * slideSize.width * $slides.length));
+                debugger;
+                $compass_inner.css("left", -((angle - self.options.shift) / 360 * slideSize.width * $slides.length) - slideSize.width);
             }
             else
             {
-                $compass_inner.css("left", -(closestSlides[1] * slideSize.width + Math.abs(closestAngles[1]) * slideSize.width / (Math.abs(closestAngles[1]) + Math.abs(closestAngles[2]))));
+                $compass_inner.css("left", -(closestSlides[1] * slideSize.width + Math.abs(closestAngles[1]) * slideSize.width / (Math.abs(closestAngles[1]) + Math.abs(closestAngles[2]))) - slideSize.width);
             }
 
             $thumb.css({
