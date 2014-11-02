@@ -6,24 +6,26 @@ layout: fullscreen
 #landing.container-fluid
   .row
     .col-sm-12
-      #sylvie
-        #introduced-by
-          %p= I18n.t("landing.credits.introduced-by")
-        .circle-container
-          = partial "layouts/compass"
-          .compass-title.color-orange
-            %h2= I18n.t("common.doc-title1")
-            %h2= I18n.t("common.doc-title2")
-            = image_tag "pictograms/cicatrice-white.png"
-            .triangle.landing-deg-triangle
-              = image_tag "pictograms/arrow_orange_small.png"
-            #enter
-              %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
-          #productor
-            %p.directed-by= I18n.t("landing.credits.directed-by")
-            %p.producted-by
-              = I18n.t("landing.credits.producted-by")
-              = image_tag "logos/kepler-22.png"
+      #introduced-by
+        %p= I18n.t("landing.credits.introduced-by")
+  .row
+    .col-sm-12
+      #compass-container.fixed
+        = partial "layouts/compass"
+        .viewport.color-orange
+          %h1= I18n.t("common.doc-title").html_safe
+          = image_tag "pictograms/scar-white.png"
+          / .triangle.landing-deg-triangle
+          /   = image_tag "pictograms/arrow_orange_small.png"
+          #enter
+            %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
+  .row
+    .col-sm-12
+      #productor
+        %p.directed-by= I18n.t("landing.credits.directed-by")
+        %p.producted-by
+          = I18n.t("landing.credits.producted-by")
+          = image_tag "logos/kepler-22.png"
 
 #partners
   %p= I18n.t("landing.credits.in-partenership-with")

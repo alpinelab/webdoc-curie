@@ -28,8 +28,7 @@ fr:
   common:
     back: "Retour"
     close: "Close"
-    doc-title1: "Guérir le"
-    doc-title2: "Regard"
+    doc-title: 'Guérir le<br><span class="big">Regard</span>'
     enter: "Entrer"
     menu: "Menu"
     read-more: "En savoir plus"

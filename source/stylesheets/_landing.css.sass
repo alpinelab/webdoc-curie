@@ -1,28 +1,38 @@
 #landing
   padding-bottom: 115px
-#sylvie
-  background-repeat: no-repeat
-  width: 100%
-  min-height: 44em
-  background-position: center 0
-  display: block
   text-align: center
+  min-height: 44em
+
+  #introduced-by, #productor
+    +font-curie-landing-sub
+    color: white
+
   #introduced-by
     margin-top: 25px
 
-  .circle-container
-    .compass-title
-      img
-        margin-top: 2em
-      h2
+  #productor
+    margin-bottom: 30px
+    img
+      margin-left: 3px
+
+  #compass-container.fixed
+    margin: 20px 0 30px
+    .viewport
+      position: absolute
+      top: 100px
+      h1
         +font-curie-landing
-        line-height: 45px
-      h2:first-child
+        color: white
         font-size: 40px
-      h2:last-of-type
-        font-size: 60px
+        line-height: 60px
+        text-transform: uppercase
+        .big
+          color: $curie-orange
+          font-size: 60px
+      img
+        margin-top: 1em
       #enter
-        padding-top: 2em
+        margin-top: 2em
         .btn, .btn:hover, .btn:active, .btn:visited, .btn:focus
           text-transform: uppercase
           background-color: $curie-orange
@@ -30,17 +40,10 @@
           font-weight: bold
           width: 50%
           color: white
+    .landing-deg-triangle
+      transform: translate(-50%,-50%) rotate(320deg) translate(20em) rotate(90deg)
+      border: none
 
-  .landing-deg-triangle
-    transform: translate(-50%,-50%) rotate(320deg) translate(20em) rotate(90deg)
-    border: none
-
-  #introduced-by, #productor
-    +font-curie-landing-sub
-    color: white
-  #productor
-    img
-      margin-left: 3px
 
 #partners
   position: absolute

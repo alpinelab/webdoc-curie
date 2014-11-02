@@ -1,4 +1,4 @@
-#rotatescroll
+#compass-container
   = partial 'layouts/compass'
   .viewport
     %ul.compass-inner
@@ -18,7 +18,7 @@
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
-      $("#rotatescroll").tinycircleslider
+      $("#compass-container").tinycircleslider
         dotsSnap: true
         radius: 270
         shift: 45
