@@ -9,7 +9,6 @@
 #= require vendor/video-js/_video
 #= require vendor/video-js/lang/_fr
 #= require vendor/_bigvideo
-#= require vendor/polyfills
 #= require vendor/jquery.tinycircleslider
 #= require_tree .
 
