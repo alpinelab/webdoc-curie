@@ -339,16 +339,16 @@
 
         function setCSS(angle, fireCallback)
         {
+            closestSlidesAndAngles = findClosestSlide(angle);
+            closestSlides = closestSlidesAndAngles[0];
+            closestAngles = closestSlidesAndAngles[1];
+
             if(self.options.dots)
             {
                 $compass_inner.css("left", -((angle - self.options.shift) / 360 * slideSize.width * $slides.length));
             }
             else
             {
-                closestSlidesAndAngles = findClosestSlide(angle);
-                closestSlides = closestSlidesAndAngles[0];
-                closestAngles = closestSlidesAndAngles[1];
-
                 $compass_inner.css("left", -(closestSlides[1] * slideSize.width + Math.abs(closestAngles[1]) * slideSize.width / (Math.abs(closestAngles[1]) + Math.abs(closestAngles[2]))));
             }
 
@@ -360,6 +360,8 @@
             $thumb_arrow.css({
                 transform : "rotate(" + angle + "deg)"
             });
+
+            $thumb.attr('data-closest-slide', $slides[closestSlides[0]].className);
 
             if(fireCallback)
             {

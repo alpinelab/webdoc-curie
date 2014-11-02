@@ -82,6 +82,18 @@ $compass-inner-size: 380px
       border-right: solid ($thumb-arrow-size/2) transparent
       border-bottom: solid ($thumb-arrow-size)
       border-bottom-color: $curie-orange
+    &[data-closest-slide=infosein]
+      .arrow
+        border-bottom-color: $curie-orange
+    &[data-closest-slide=mastectomy]
+      .arrow
+        border-bottom-color: $curie-blue
+    &[data-closest-slide=surgical]
+      .arrow
+        border-bottom-color: $curie-pink
+    &[data-closest-slide=nonsurgical]
+      .arrow
+        border-bottom-color: $curie-orange
   .dot
     display: none
 
