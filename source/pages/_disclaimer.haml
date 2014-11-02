@@ -1,17 +1,16 @@
 #modal-intro.modal.fade
   .modal-dialog
-    .modal-content{class: "color-orange"}
+    .modal-content
       .modal-header
         %button.close{"data-dismiss" => "modal", :type => "button"}
-          %span{"aria-hidden" => "true"} ×
+          %span{"aria-hidden" => "true"} &times;
           %span.sr-only= I18n.t("common.close")
         .modal-title
-          %h2= I18n.t("common.doc-title1")
-          %h2= I18n.t("common.doc-title2")
+          %h2= I18n.t("common.doc-title").html_safe
           = image_tag "pictograms/scar-grey.png"
       .modal-body
-        %p= I18n.t("disclaimer.message")
-      .modal-footer#disclaimer-modal-footer
+        %p= I18n.t("disclaimer.message").html_safe
+      .modal-footer
         %p
           %a{href: "/pages/home"}= I18n.t("disclaimer.discover")
         .divider

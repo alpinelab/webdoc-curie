@@ -50,7 +50,7 @@ fr:
     subtitle-thanks: "Remerciements"
     title: "Crédits"
   disclaimer:
-    message: "Ce web-documentaire ne remplace pas une consultation médicale, ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toutes femmes se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
+    message: "Ce web-documentaire ne remplace pas une consultation médicale,<br>ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toute femme se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
     discover: "Découvrez le web-documentaire"
   landing:
     credits:

@@ -68,11 +68,35 @@
       max-height: 80px
 
 #modal-intro
-  #disclaimer-modal-footer
+  .modal-header
+    .close
+      font-family: Arial
+    h2
+      .big
+        color: $curie-orange
+        font-size: 1.5em
+  .modal-body
+    font-size: 0.7em
+    p:first-line
+      color: $curie-orange
+  .modal-footer
     text-align: center
     border: none
+    a
+      +font-curie-nav
+      color: $curie-orange
+      text-transform: none
+      &::before
+        content: ''
+        width: 0
+        height: 0
+        position: relative
+        left: -15px
+        display: inline-block
+        border-top: solid 6px transparent
+        border-bottom: solid 6px transparent
+        border-left: solid 10px $curie-gray
     .divider
       border-top: solid 1px $curie-orange
       width: 15%
-      margin: auto
-
+      margin: 20px auto 10px
