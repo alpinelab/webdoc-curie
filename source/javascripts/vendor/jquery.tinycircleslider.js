@@ -24,6 +24,7 @@
         ,   dotsSnap       : false // shows dots when user starts dragging and snap to them.
         ,   dotsHide       : true  // fades out the dots when user stops dragging.
         ,   radius         : 140   // Used to determine the size of the circleslider
+        ,   shift          : 0     // angle of first dot
         }
     ;
 
@@ -157,7 +158,7 @@
             $slides.each(function(index, slide)
             {
                 var $dotClone = $dots.clone()
-                ,   angle     = self.options.dots ? (index * 360 / $slides.length) : parseInt($(slide).attr("data-degrees"), 10)
+                ,   angle     = self.options.dots ? (index * 360 / $slides.length) + self.options.shift : parseInt($(slide).attr("data-degrees"), 10)
                 ,   position  =
                     {
                         top  : -Math.cos(toRadians(angle)) * self.options.radius + containerSize.height / 2 - dotSize.height / 2
@@ -340,7 +341,7 @@
         {
             if(self.options.dots)
             {
-                $compass_inner.css("left", -(angle / 360 * slideSize.width * $slides.length));
+                $compass_inner.css("left", -((angle - self.options.shift) / 360 * slideSize.width * $slides.length));
             }
             else
             {
