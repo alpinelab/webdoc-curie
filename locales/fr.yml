@@ -125,6 +125,20 @@ fr:
       melilotus-blog: "Blog de Mélilotus"
       monoboob: "MoNoBooB.com"
       title: "Web"
+  compass:
+    inner:
+      infosein:
+        pretitle: Le groupe
+        title: Info-Sein
+      mastectomy:
+        pretitle: La
+        title: Mastectomie
+      surgical:
+        pretitle: Reconstruction
+        title: Chirurgicale
+      nonsurgical:
+        pretitle: Reconstruction
+        title: Non chirurgicale
   nav:
     mastectomy:
       article: la

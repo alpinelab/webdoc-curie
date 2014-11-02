@@ -34,8 +34,8 @@
 
         var self            = this
         ,   $viewport       = $container.find(".viewport")
-        ,   $overview       = $container.find(".overview")
-        ,   $slides         = $overview.children()
+        ,   $compass_inner  = $container.find(".compass-inner")
+        ,   $slides         = $compass_inner.children()
         ,   $thumb          = $container.find(".thumb")
         ,   $thumb_arrow    = $thumb.find(".arrow")
         ,   $dots           = $container.find(".dot")
@@ -79,16 +79,16 @@
                 setDots();
             }
 
-            $overview.append($slides.first().clone());
+            $compass_inner.append($slides.first().clone());
 
-            $overview.css("width", slideSize.width * ($slides.length + 1));
+            $compass_inner.css("width", slideSize.width * ($slides.length + 1));
 
             setEvents();
 
-            setCSS(45);
+            setCSS(0);
 
             // Add a temporary slide to show the webdoc title. It's only used on the initial state, then the slide is hide once the compass is drag
-            $overview.prepend('<li id="temp"><span>GUERIR LE REGARD</span></li>');
+            $compass_inner.prepend('<li id="temp"><span>GUERIR LE REGARD</span></li>');
 
             return self;
         }
@@ -171,7 +171,7 @@
             $.each(dots, function(index, dot)
             {
                 $(dot.dot).addClass("dot-" + (index + 1));
-                $overview.append(dot.slide);
+                $compass_inner.append(dot.slide);
             });
 
             $container.append(docFragment);
@@ -301,7 +301,7 @@
         {
             if(self.options.dots)
             {
-                $overview.css("left", -(angle / 360 * slideSize.width * $slides.length));
+                $compass_inner.css("left", -(angle / 360 * slideSize.width * $slides.length));
             }
             else
             {
@@ -309,7 +309,7 @@
                 closestSlides = closestSlidesAndAngles[0];
                 closestAngles = closestSlidesAndAngles[1];
 
-                $overview.css("left", -(closestSlides[1] * slideSize.width + Math.abs(closestAngles[1]) * slideSize.width / (Math.abs(closestAngles[1]) + Math.abs(closestAngles[2]))));
+                $compass_inner.css("left", -(closestSlides[1] * slideSize.width + Math.abs(closestAngles[1]) * slideSize.width / (Math.abs(closestAngles[1]) + Math.abs(closestAngles[2]))));
             }
 
             $thumb.css({
