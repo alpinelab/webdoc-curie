@@ -37,6 +37,7 @@
         ,   $overview       = $container.find(".overview")
         ,   $slides         = $overview.children()
         ,   $thumb          = $container.find(".thumb")
+        ,   $thumb_arrow    = $thumb.find(".arrow")
         ,   $dots           = $container.find(".dot")
         ,   $compass        = $container.find("#compass")
         ,   $links          = $slides.find("a")
@@ -84,10 +85,7 @@
 
             setEvents();
 
-            $thumb.css({
-                top  : -Math.cos(toRadians(45)) * self.options.radius + (containerSize.height / 2 - thumbSize.height / 2)
-            ,   left :  Math.sin(toRadians(45)) * self.options.radius + (containerSize.width / 2 - thumbSize.width / 2)
-            });
+            setCSS(45);
 
             // Add a temporary slide to show the webdoc title. It's only used on the initial state, then the slide is hide once the compass is drag
             $overview.prepend('<li id="temp"><span>GUERIR LE REGARD</span></li>');
@@ -317,6 +315,10 @@
             $thumb.css({
                 top  : -Math.cos(toRadians(angle)) * self.options.radius + (containerSize.height / 2 - thumbSize.height / 2)
             ,   left :  Math.sin(toRadians(angle)) * self.options.radius + (containerSize.width / 2 - thumbSize.width / 2)
+            });
+
+            $thumb_arrow.css({
+                transform : "rotate(" + angle + "deg)"
             });
 
             if (self.options.rotateCompass) {

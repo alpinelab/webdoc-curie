@@ -1,3 +1,6 @@
+$thumb-arrow-size: 32px
+$tutorial-circle-radius: 50px
+
 #rotatescroll
   height: 464px
   position: relative
@@ -43,12 +46,17 @@
 
   .thumb
     position: absolute
-    border-radius: 50%
-    background-color: red
     cursor: pointer
-    width: 2em
     z-index: 200
-    height: 2em
+    .arrow
+      content: ''
+      width: 0
+      height: 0
+      border-top: 0
+      border-left: solid ($thumb-arrow-size/2) transparent
+      border-right: solid ($thumb-arrow-size/2) transparent
+      border-bottom: solid ($thumb-arrow-size)
+      border-bottom-color: $curie-orange
   .dot
     border-radius: 50%
     background: blue
@@ -59,3 +67,18 @@
     z-index: 100
     span
       display: none
+
+#tutorial-circle.tutorial-mask
+  height: $tutorial-circle-radius * 2
+  width: $tutorial-circle-radius * 2
+  top: - $tutorial-circle-radius + ($thumb-arrow-size/2)
+  left: - $tutorial-circle-radius + ($thumb-arrow-size/2)
+  position: absolute
+  border-radius: 50%
+  box-shadow: 0 0 0 9999px rgba(0,0,0, 0.5)
+  span
+    +font-curie-tutorial
+    color: white
+    position: fixed
+    margin-left: 2 * $tutorial-circle-radius
+    text-transform: uppercase
