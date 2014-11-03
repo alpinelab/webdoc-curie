@@ -1,62 +1,119 @@
-#rotatescroll
-  height: 40em
+#compass-container
   position: relative
-  width: 40em
-  display: block
-  margin: 0 auto
-  .overlay
-    pointer-events: none
-    border: solid 1px pink
-    border-radius: 50%
-    margin: 0 auto
-    height: 35em
-    width: 35em
-    line-height: 35em
-    text-align: center
+  display: inline-block
+  width: $compass-outer-size
+  height: $compass-outer-size
+
+  #compass
+    position: absolute
+    top: 0
+    left: 0
+
   .viewport
+    position: absolute
+    top: ($compass-outer-size - $compass-inner-size)/2
+    left: ($compass-outer-size - $compass-inner-size)/2
+    width: $compass-inner-size
+    height: $compass-inner-size
     border-radius: 50%
     overflow: hidden
-    height: 30em
-    width: 30em
-    display: inline-block
-    vertical-align: middle
-    line-height: 30em
-    text-align: center
-  .overview
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+  ul.compass-inner
     list-style: none
     margin: 0
     padding: 0
     position: relative
     li
-      height: 30em
-      width: 425px
+      height: $compass-inner-size
+      width: $compass-inner-size
       float: left
       position: relative
-      span
-        font-size: 2.6em
-        text-transform: uppercase
-        vertical-align: middle
+      text-align: center
+      line-height: $compass-inner-size
+      .slide-container
         display: inline-block
-        text-align: left
+        vertical-align: middle
         line-height: normal
-      a
-        pointer-events: auto
+        +font-curie-text
+        text-transform: uppercase
+        padding-top: 1em
+        .pretitle
+          font-size: 1.8em
+          color: white
+        .title
+          font-size: 2.4em
+        img
+          display: block
+          margin: 0.5em auto 1.5em
+        a
+          pointer-events: auto
+          color: white
+      &.infosein
+        .title
+          color: $curie-orange
+        a
+          background: $curie-orange
+      &.mastectomy
+        .title
+          color: $curie-blue
+        a
+          background: $curie-blue
+      &.surgical
+        .title
+          color: $curie-pink
+        a
+          background: $curie-pink
+      &.nonsurgical
+        .title
+          color: $curie-orange
+        a
+          background: $curie-orange
 
   .thumb
     position: absolute
-    border-radius: 50%
-    background-color: red
     cursor: pointer
-    width: 2em
     z-index: 200
-    height: 2em
+    .arrow
+      content: ''
+      width: 0
+      height: 0
+      border-top: 0
+      border-left: solid ($compass-arrow-size/2) transparent
+      border-right: solid ($compass-arrow-size/2) transparent
+      border-bottom: solid ($compass-arrow-size)
+      border-bottom-color: $curie-orange
+    &[data-closest-slide=infosein]
+      .arrow
+        border-bottom-color: $curie-orange
+    &[data-closest-slide=mastectomy]
+      .arrow
+        border-bottom-color: $curie-blue
+    &[data-closest-slide=surgical]
+      .arrow
+        border-bottom-color: $curie-pink
+    &[data-closest-slide=nonsurgical]
+      .arrow
+        border-bottom-color: $curie-orange
   .dot
-    border-radius: 50%
-    background: blue
-    // display: none
-    height: 2em
-    width: 2em
-    position: absolute
-    z-index: 100
-    span
-      display: none
+    display: none
+
+#tutorial-circle.tutorial-mask
+  height: $tutorial-circle-radius * 2
+  width: $tutorial-circle-radius * 2
+  top: - $tutorial-circle-radius + ($compass-arrow-size/2)
+  left: - $tutorial-circle-radius + ($compass-arrow-size/2)
+  position: absolute
+  border-radius: 50%
+  box-shadow: 0 0 0 9999px rgba(0,0,0, 0.5)
+  span
+    +font-curie-tutorial
+    color: white
+    position: fixed
+    margin-left: 2 * $tutorial-circle-radius
+    text-transform: uppercase
+
+.spacer
+  height: 50px

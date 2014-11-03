@@ -1,109 +1,117 @@
-.circle-container
-  position: relative
-  margin: 0 auto
-  width: 36em
-  height: 36em
-  border-radius: 50%
+// .circle-container
+//   position: relative
+//   margin: 0 auto
+//   width: 36em
+//   height: 36em
+//   border-radius: 50%
 
-  .compass-title
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%,-50%)
-    text-transform: uppercase
-    text-align: center
-    color: white
+//   .compass-title
+//     position: absolute
+//     top: 50%
+//     left: 50%
+//     transform: translate(-50%,-50%)
+//     text-transform: uppercase
+//     text-align: center
+//     color: white
 
-    h2
-      @include font-curie-popover-title
+//     h2
+//       @include font-curie-popover-title
 
-  .menu-item
-    overflow: hidden
-    position: absolute
-    top: 50%
-    left: 50%
-    border: dashed 1px
-    white-space: nowrap
-    text-transform: uppercase
-    height: 10em
-    width: 60%
-    
-    ul
-      list-style-type: none
-      li:before
-        display: inline-block
-        transform: rotate(90deg)
-        margin-right: 10px
-      &.blue
-        li:before 
-          content: image-url("pictograms/arrow_blue_small.png")
-      &.orange
-        li:before 
-          content: image-url("pictograms/arrow_orange_small.png")
-      &.pink
-        li:before 
-          content: image-url("pictograms/arrow_pink_small.png")
+//   .menu-item
+//     overflow: hidden
+//     position: absolute
+//     top: 50%
+//     left: 50%
+//     border: dashed 1px
+//     white-space: nowrap
+//     text-transform: uppercase
+//     height: 10em
+//     width: 60%
 
-
-    h2
-      @include font-curie-text
-      text-align: center
-
-    a:link, a:visited, a:hover, a:active
-      text-decoration: none
-      color: white
-    a:hover, a:active
-      padding-bottom: 1px
-      border-bottom: 2px solid white
-
-  .triangle
-    overflow: hidden
-    position: absolute
-    top: 50%
-    left: 50%
-    border: dashed 1px white
-
-  ul
-    opacity: 0
-
-.deg0-triangle
-  transform: translate(-50%,-50%) rotate(360deg) translate(18em) rotate(90deg)
-.deg45-triangle
-  transform: translate(-50%,-50%) rotate(-330deg) translate(18em) rotate(90deg)
-.deg135-triangle
-  transform: translate(-50%,-50%) rotate(-210deg) translate(18em) rotate(90deg)
-.deg180-triangle
-  transform: translate(-50%,-50%) rotate(-180deg) translate(18em) rotate(90deg)
-.deg225-triangle
-  transform: translate(-50%,-50%) rotate(-150deg) translate(18em) rotate(90deg)
-.deg315-triangle
-  transform: translate(-50%,-50%) rotate(-395deg) translate(18em) rotate(90deg)
+//     ul
+//       list-style-type: none
+//       li:before
+//         display: inline-block
+//         transform: rotate(90deg)
+//         margin-right: 10px
+//       &.blue
+//         li:before 
+//           content: image-url("pictograms/arrow_blue_small.png")
+//       &.orange
+//         li:before 
+//           content: image-url("pictograms/arrow_orange_small.png")
+//       &.pink
+//         li:before 
+//           content: image-url("pictograms/arrow_pink_small.png")
 
 
-.deg0
-  transform: translate(18em) translate(-50%,-50%)
+//     h2
+//       @include font-curie-text
+//       text-align: center
 
-.deg45
-  transform: rotate(45deg) translate(18em) rotate(-45deg) translate(20%,-50%)
+//     a:link, a:visited, a:hover, a:active
+//       text-decoration: none
+//       color: white
+//     a:hover, a:active
+//       padding-bottom: 1px
+//       border-bottom: 2px solid white
 
-.deg135
-  transform: rotate(135deg) translate(18em) rotate(-135deg) translate(-120%,-50%)
+//   .triangle
+//     overflow: hidden
+//     position: absolute
+//     top: 50%
+//     left: 50%
+//     border: dashed 1px white
 
-.deg180
-  transform: rotate(180deg) translate(18em) rotate(-180deg) translate(-120%,-50%)
+//   ul
+//     opacity: 0
 
-.deg225
-  transform: rotate(225deg) translate(18em) rotate(-225deg) translate(-120%,-50%)
+// .deg0-triangle
+//   transform: translate(-50%,-50%) rotate(360deg) translate(18em) rotate(90deg)
+// .deg45-triangle
+//   transform: translate(-50%,-50%) rotate(-330deg) translate(18em) rotate(90deg)
+// .deg135-triangle
+//   transform: translate(-50%,-50%) rotate(-210deg) translate(18em) rotate(90deg)
+// .deg180-triangle
+//   transform: translate(-50%,-50%) rotate(-180deg) translate(18em) rotate(90deg)
+// .deg225-triangle
+//   transform: translate(-50%,-50%) rotate(-150deg) translate(18em) rotate(90deg)
+// .deg315-triangle
+//   transform: translate(-50%,-50%) rotate(-395deg) translate(18em) rotate(90deg)
 
-.deg315
-  transform: rotate(315deg) translate(18em) rotate(-315deg) translate(20%,-50%)
 
-.color-blue
-  p:first-line, h2:nth-last-of-type(1)
-    color: $curie-blue
-.color-orange
-  p:first-line, h2:nth-last-of-type(1)
-    color: $curie-orange
+// .deg0
+//   transform: translate(18em) translate(-50%,-50%)
 
-body
-  background-color: #aaaaaa
+// .deg45
+//   transform: rotate(45deg) translate(18em) rotate(-45deg) translate(20%,-50%)
+
+// .deg135
+//   transform: rotate(135deg) translate(18em) rotate(-135deg) translate(-120%,-50%)
+
+// .deg180
+//   transform: rotate(180deg) translate(18em) rotate(-180deg) translate(-120%,-50%)
+
+// .deg225
+//   transform: rotate(225deg) translate(18em) rotate(-225deg) translate(-120%,-50%)
+
+// .deg315
+//   transform: rotate(315deg) translate(18em) rotate(-315deg) translate(20%,-50%)
+
+// .home-button
+//   float: left
+//   margin: 15px
+
+// .back-button
+//   float: right
+//   margin: 15px
+
+// .color-blue
+//   p:first-line, h2:nth-last-of-type(1)
+//     color: $curie-blue
+// .color-orange
+//   p:first-line, h2:nth-last-of-type(1)
+//     color: $curie-orange
+
+// body
+//   background-color: #aaaaaa
