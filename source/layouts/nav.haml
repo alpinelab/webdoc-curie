@@ -25,12 +25,7 @@
   %link{rel: 'icon', type: 'image/ico', href: 'favicon.ico' }
   = stylesheet_link_tag 'main'
 %body
-  .home-button
-    %a{href: "/"}
-      = image_tag 'mainNav/btn_home.png'
-  .back-button
-    %a{href: "."}
-      = image_tag 'mainNav/btn_close_big.png'
+
   = yield
   = javascript_include_tag 'main'
   = yield_content(:javascripts)
