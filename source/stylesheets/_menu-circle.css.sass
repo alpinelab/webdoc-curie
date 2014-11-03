@@ -14,8 +14,17 @@
     text-align: left
     @include menu-position(225deg,5%, 0%)
     width: 50%
-    h2
+    h2, ul
       margin: 0
+      a, a:hover, a:visited, a:active, a:link
+        text-transform: uppercase
+        text-decoration: none
+        +font-curie-text
+        color: white
+      a:hover, a:active
+        padding-bottom: 1px
+        border-bottom: 2px solid white
+      
 
     ul
       opacity: 0

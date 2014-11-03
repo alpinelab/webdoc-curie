@@ -11,7 +11,7 @@
           - current_page.data.items.each do |key, item|
             .triangle
               = image_tag "pictograms/arrow_#{current_page.data.color}_small.png"
-          - current_page.data.items.each do |key, item|
+          - current_page.data.items.take(1).each do |key, item|
             - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
             .menu-item
               %h2
