@@ -15,8 +15,6 @@ layout: fullscreen
         .viewport.color-orange
           %h1= I18n.t("common.doc-title").html_safe
           = image_tag "pictograms/scar-white.png"
-          / .triangle.landing-deg-triangle
-          /   = image_tag "pictograms/arrow_orange_small.png"
           #enter
             %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
         .thumb
