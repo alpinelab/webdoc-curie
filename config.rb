@@ -20,10 +20,6 @@
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
-with_layout :landing do
-  page "/pages/landing/*"
-end
-
 with_layout :fullscreen do
   page "/pages/mastectomy"
 end
@@ -78,7 +74,7 @@ end
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
+  activate :livereload, host: 'localhost'
 end
 
 # Build-specific configuration

@@ -18,10 +18,13 @@
     var pluginName = "tinycircleslider"
     ,   defaults   =
         {
-            dots           : true  // automatic placement of dots or use predefined location on slide.
+            interval       : false // move to another block on intervals.
+        ,   intervalTime   : 3500  // time between intervals.
+        ,   dots           : true  // automatic placement of dots or use predefined location on slide.
         ,   dotsSnap       : false // shows dots when user starts dragging and snap to them.
         ,   dotsHide       : true  // fades out the dots when user stops dragging.
         ,   radius         : 140   // Used to determine the size of the circleslider
+        ,   shift          : 0     // angle of first dot
         }
     ;
 
@@ -33,10 +36,12 @@
 
         var self            = this
         ,   $viewport       = $container.find(".viewport")
-        ,   $overview       = $container.find(".overview")
-        ,   $slides         = $overview.children()
+        ,   $compass_inner  = $container.find(".compass-inner")
+        ,   $slides         = $compass_inner.children()
         ,   $thumb          = $container.find(".thumb")
+        ,   $thumb_arrow    = $thumb.find(".arrow")
         ,   $dots           = $container.find(".dot")
+        ,   $compass        = $container.find("#compass")
         ,   $links          = $slides.find("a")
 
         ,   dots            = []
@@ -62,6 +67,8 @@
             ,   height : $dots.outerHeight()
             }
 
+        ,   intervalTimer   = null
+        ,   animationTimer  = null
         ,   animationStep   = 0
         ,   touchEvents     = "ontouchstart" in document.documentElement
         ;
@@ -76,19 +83,16 @@
                 setDots();
             }
 
-            $overview.append($slides.first().clone());
+            first_child = $slides.first().clone();
+            last_child = $slides.last().clone();
+            $compass_inner.append(first_child);
+            $compass_inner.prepend(last_child);
 
-            $overview.css("width", slideSize.width * ($slides.length + 1));
+            $compass_inner.css("width", slideSize.width * ($slides.length + 2));
 
             setEvents();
 
-            $thumb.css({
-                top  : -Math.cos(toRadians(45)) * self.options.radius + (containerSize.height / 2 - thumbSize.height / 2)
-            ,   left :  Math.sin(toRadians(45)) * self.options.radius + (containerSize.width / 2 - thumbSize.width / 2)
-            });
-
-            // Add a temporary slide to show the webdoc title. It's only used on the initial state, then the slide is hide once the compass is drag
-            $overview.prepend('<li id="temp"><span>GUERIR LE REGARD</span></li>');
+            self.move(0, self.options.interval);
 
             return self;
         }
@@ -115,13 +119,26 @@
                     event.preventDefault();
                     event.stopImmediatePropagation();
 
+                    clearTimeout(intervalTimer);
+
                     if(0 === animationStep)
                     {
                         self.move($(this).text() - 1);
                     }
+
+                    self.start();
+
                     return false;
                 });
             }
+        }
+
+        function setTimer(slideFirst)
+        {
+            intervalTimer = setTimeout(function()
+            {
+                self.move(($slides[(self.slideCurrent + 1)] !== undefined ? (self.slideCurrent + 1) : 0), true);
+            }, (slideFirst ? 50 : self.options.intervalTime));
         }
 
         function toRadians(degrees)
@@ -144,7 +161,7 @@
             $slides.each(function(index, slide)
             {
                 var $dotClone = $dots.clone()
-                ,   angle     = self.options.dots ? (index * 360 / $slides.length) : parseInt($(slide).attr("data-degrees"), 10)
+                ,   angle     = self.options.dots ? (index * 360 / $slides.length) + self.options.shift : parseInt($(slide).attr("data-degrees"), 10)
                 ,   position  =
                     {
                         top  : -Math.cos(toRadians(angle)) * self.options.radius + containerSize.height / 2 - dotSize.height / 2
@@ -171,14 +188,29 @@
             $.each(dots, function(index, dot)
             {
                 $(dot.dot).addClass("dot-" + (index + 1));
-                $overview.append(dot.slide);
+                $compass_inner.append(dot.slide);
             });
 
             $container.append(docFragment);
 
             $dots = $container.find(".dot");
-            $dots.hide();
         }
+
+        this.start = function(first)
+        {
+            if(self.options.interval)
+            {
+                setTimer( first );
+            }
+            return self;
+        };
+
+        this.stop = function()
+        {
+            clearTimeout(intervalTimer);
+
+            return self;
+        };
 
         function findShortestPath(angleA, angleB)
         {
@@ -239,20 +271,18 @@
                     ];
         }
 
-        this.move = function(slideIndex)
+        this.move = function(slideIndex, interval)
         {
             var angleDestination = dots[slideIndex] && dots[slideIndex].angle || 0
             ,   angleDelta       = findShortestPath(angleDestination, self.angleCurrent)[0]
             ,   framerate        = Math.ceil(Math.abs(angleDelta) / 10)
             ,   angleStep        = (angleDelta / framerate) || 0
             ;
+
             self.slideCurrent = slideIndex;
 
-            stepMove(angleStep, angleDestination, framerate);
-            if(BV.getPlayer())
-            {
-                BV.show(playlist[slideIndex],{ambient: true});
-            }
+            stepMove(angleStep, angleDestination, framerate, interval);
+
             return self;
         };
 
@@ -261,17 +291,30 @@
             return (degrees < 0) ? 360 + (degrees % -360) : degrees % 360;
         }
 
-        function stepMove(angleStep, angleDestination, framerate)
+        function stepMove(angleStep, angleDestination, framerate, interval)
         {
             animationStep += 1;
 
             var angle = sanitizeAngle(Math.round(animationStep * angleStep + self.angleCurrent));
 
+            if(animationStep === framerate && interval)
+            {
+                self.start();
+            }
+
             setCSS(angle, animationStep === framerate);
 
             if(animationStep < framerate)
             {
-                stepMove(angleStep, angleDestination, framerate);
+                animationTimer = setTimeout(function()
+                {
+                    stepMove(angleStep, angleDestination, framerate, interval);
+                    if(BV.getPlayer())
+                    {
+                        BV.show(playlist[slideIndex],{ambient: true});
+                    }
+
+                }, 50);
             }
             else
             {
@@ -299,23 +342,30 @@
 
         function setCSS(angle, fireCallback)
         {
+            closestSlidesAndAngles = findClosestSlide(angle);
+            closestSlides = closestSlidesAndAngles[0];
+            closestAngles = closestSlidesAndAngles[1];
+
             if(self.options.dots)
             {
-                $overview.css("left", -(angle / 360 * slideSize.width * $slides.length));
+                debugger;
+                $compass_inner.css("left", -((angle - self.options.shift) / 360 * slideSize.width * $slides.length) - slideSize.width);
             }
             else
             {
-                closestSlidesAndAngles = findClosestSlide(angle);
-                closestSlides = closestSlidesAndAngles[0];
-                closestAngles = closestSlidesAndAngles[1];
-
-                $overview.css("left", -(closestSlides[1] * slideSize.width + Math.abs(closestAngles[1]) * slideSize.width / (Math.abs(closestAngles[1]) + Math.abs(closestAngles[2]))));
+                $compass_inner.css("left", -(closestSlides[1] * slideSize.width + Math.abs(closestAngles[1]) * slideSize.width / (Math.abs(closestAngles[1]) + Math.abs(closestAngles[2]))) - slideSize.width);
             }
 
             $thumb.css({
                 top  : -Math.cos(toRadians(angle)) * self.options.radius + (containerSize.height / 2 - thumbSize.height / 2)
             ,   left :  Math.sin(toRadians(angle)) * self.options.radius + (containerSize.width / 2 - thumbSize.width / 2)
             });
+
+            $thumb_arrow.css({
+                transform : "rotate(" + angle + "deg)"
+            });
+
+            $thumb.attr('data-closest-slide', $slides[closestSlides[0]].className);
 
             if(fireCallback)
             {
@@ -331,6 +381,8 @@
             }
             event.preventDefault();
 
+            clearTimeout(animationTimer);
+
             if(!touchEvents)
             {
                 $(document).unbind("mousemove mouseup");
@@ -339,35 +391,28 @@
 
             if(self.options.dotsSnap)
             {
-                if(self.options.dotsHide)
-                {
-                    $dots.fadeOut("slow");
-                }
-
                 self.move(findClosestSlide(self.angleCurrent)[0][0]);
             }
+
+            self.start();
         }
 
         function startDrag(event)
         {
             event.preventDefault();
-            // hide the temporary slide
-            $("#temp").hide();
+
             if($(event.target).hasClass("dot"))
             {
                 return false;
             }
+
+            clearTimeout(intervalTimer);
 
             if(!touchEvents)
             {
                 $(document).mousemove(drag);
                 $(document).mouseup(endDrag);
                 $thumb.mouseup(endDrag);
-            }
-
-            if(self.options.dotsSnap && self.options.dotsHide)
-            {
-                $dots.fadeIn("slow");
             }
         }
 
