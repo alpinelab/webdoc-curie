@@ -4,9 +4,6 @@
     <loc>http://www.example.com</loc>
   </url>
   <url>
-    <loc>http://www.example.com/search</loc>
-  </url>
-  <url>
     <loc>http://www.example.com/pages/mastectomy/example-video-with-chapters</loc>
   </url>
   <url>
@@ -19,7 +16,7 @@
     <loc>http://www.example.com/pages/mastectomy/nav</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/landing</loc>
+    <loc>http://www.example.com/pages/home</loc>
   </url>
   <url>
     <loc>http://www.example.com/pages/miscellanea</loc>
