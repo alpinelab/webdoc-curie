@@ -1,17 +1,6 @@
 = wrap_layout :fullscreen do
-  .wrapper
-    #screen-1.screen{:'data-video' => "http://player.vimeo.com/external/110470750.hd.mp4?s=af9b58ea0a25cff6377b7e98c52d5204"}
-      %img.big-image{src: "/images/posters/00-backgroundimage-landingpage.jpg"}
-        %h1.video-title= "#1 Sylvie"
-    #screen-2.screen{:'data-video' => "http://player.vimeo.com/external/109821776.hd.mp4?s=123961b2d810db71fa25e52555caf8f1"}
-      %img.big-image{src: "/images/posters/01-backgroundimage-groupeinfosein.jpg"}
-        %h1.video-title= "#2 Groupe Info Sein"
-    #screen-3.screen{:'data-video' => "http://player.vimeo.com/external/110338954.hd.mp4?s=b1877aa77bf1de90459da96b84ee758b"}
-      %img.big-image{src: "/images/posters/03-videobackground-reconstruction.jpg"}
-        %h1.video-title= "#3 Reconstruction chirurgicale"
-    #screen-4.screen{:'data-video' => "http://player.vimeo.com/external/110339033.hd.mp4?s=bb242f139508f88774040c4301fa1a5a"}
-      %img.big-image{src: "/images/posters/04-background-sans-interv.jpg"}
-        %h1.video-title= "#4 Reconstruction non chirurgicale"
+  #big-video-image-wrap
+    %img.big-image{src: "/images/posters/01-videobackground-infosein.jpg"}
   = partial "layouts/header"
   = yield
   = partial "layouts/footer"
