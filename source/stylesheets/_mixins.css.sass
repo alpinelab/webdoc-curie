@@ -36,16 +36,38 @@
         margin-top: 1em
 
 @mixin triangle-position($angle,$deviation)
+  height: 0
   position: relative
   top: (1-1*sin($angle))*50%
   left: cos($angle)*50%
-  transform: translate(0%,-50%)
   img
-    transform: rotate(-$angle + 90deg) translate(0%,-100% + $deviation)
+    position: relative
+    top: -9px
+    transform: rotate(-$angle + 90deg) 
 
 @mixin menu-position($angle,$deviation)
+  $value: $angle/1.0deg
+  $deviation-x: 0.0%
+  $deviation-y: 0.0%
+  $translation: 0%
+  @if $value>=0 and $value <90
+    $deviation-x: 1.0*$deviation
+    $deviation-y: -1.0*$deviation
+  @else if $value>=90 and $value <180
+    $deviation-x: -1.0*$deviation
+    $deviation-y: -1.0*$deviation
+    $translation: -100%
+  @else if $value>=180 and $value <270
+    $deviation-x: -1.0*$deviation
+    $deviation-y: 1.0*$deviation
+    $translation: -100%
+  @else
+    $deviation-x: 1.0*$deviation
+    $deviation-y: 1.0*$deviation
+  
+  height: 0
   text-align: left
   position: relative
-  top: (1-1*sin($angle))*50%-$deviation
-  left: (1+cos($angle))*50%+$deviation
-  transform: translate(0,-100%)
+  left: (1+cos($angle))*50% + $deviation-x
+  top: (1-1*sin($angle))*50% + $deviation-y
+  transform: translate($translation,-100%)

@@ -8,11 +8,17 @@
             %h1= I18n.t("compass.inner.#{current_page.data.name}.pretitle")
             %h1{class: "color-#{current_page.data.color}"}= I18n.t("compass.inner.#{current_page.data.name}.title")
             = image_tag "pictograms/" + current_page.data.name + "-white.png"
-          .triangle
-            = image_tag "pictograms/arrow_#{current_page.data.color}_small.png"
-          .menu-item
-            %h2 blabla dfaefe
-    -# current_page.data.items.each do |key, item|
+          - current_page.data.items.each do |key, item|
+            .triangle
+              = image_tag "pictograms/arrow_#{current_page.data.color}_small.png"
+          - current_page.data.items.each do |key, item|
+            - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
+            .menu-item
+              %h2
+                %a{href: page_name.slugify}= page_name 
+
+
+    
 
           -# .menu-item{class: "deg"}
         -# %h2
