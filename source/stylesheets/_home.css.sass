@@ -1,9 +1,6 @@
-body
-  position: relative
-  overflow: hidden
-
 #main
   padding-bottom: 40px
+  text-align: center
 
 #tutorial
   height: 45px
@@ -13,14 +10,14 @@ body
   background-position: center
   position: absolute
   bottom: 5em
-  pointer: pointer
+  cursor: pointer
   right: 2em
 
 #tutorial-circle.tutorial-mask
-  height: 100px
-  width: 100px
-  top: -36px
-  left: -36px
+  height: $tutorial-circle-radius * 2
+  width: $tutorial-circle-radius * 2
+  top: - $tutorial-circle-radius + ($compass-arrow-size/2)
+  left: - $tutorial-circle-radius + ($compass-arrow-size/2)
   position: absolute
   border-radius: 50%
   box-shadow: 0 0 0 9999px rgba(0,0,0, 0.5)
@@ -28,7 +25,7 @@ body
     +font-curie-tutorial
     color: white
     position: fixed
-    margin-left: 7em
+    margin-left: 2 * $tutorial-circle-radius
     text-transform: uppercase
 
 .wrapper

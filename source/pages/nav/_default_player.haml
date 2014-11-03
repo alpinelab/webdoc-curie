@@ -1,44 +1,39 @@
-#control-wrapper
-  #next.control
-  #prev.control
-  #pause.control
-  %video#video-player.video-js.vjs-curie-skin{"data-setup" => '{ "controls": true, "preload": "auto" }', :height => "100%", :poster => image_path("posters/#{current_page.data.poster}"), :preload => "auto", :width => "auto", "data-current-video" => 0}
+.video-wrapper
+  %video#video-player.video-js.vjs-curie-skin{"data-setup" => '{ "controls": false, "preload": "auto", "autoplay": true}', :height => "auto", :poster => image_path("posters/#{current_page.data.poster}"), :preload => "auto", :"max-width" => "100%", "data-current-video" => 0}
     %source{:src => default_src, :type => "video/mp4"}
-    %p.vjs-no-js
-      To view this video please enable JavaScript, and consider upgrading to a web browser that
-      %a{:href => "http://videojs.com/html5-video-support/", :target => "_blank"} supports HTML5 video
+  .prev.control
+  .pause.control
+  .next.control
 
 - content_for :javascripts do
   :coffeescript
+    aspectRatio = 720/1280
+    resizeVideoJS = ->
+      player = $("#video-player")
+      width = player.parent().width()
+      $("#video-player").width(width).height(width * aspectRatio)
     $(document).ready ->
-
+      $(window).resize ->
+        resizeVideoJS()
       videojs("video-player").ready ->
-        this.play()
-
-      $('#control-wrapper').on 'click', '#pause', ->
+        resizeVideoJS()
+      $('.play, .pause').click ->
         element = $(this)
         videojs("video-player").ready ->
-          this.pause()
-          element.attr('id','play')
-
-      $('#control-wrapper').on 'click', '#play', ->
-        element = $(this)
-        videojs("video-player").ready ->
-          this.play()
-          element.attr('id','pause')
-
-      $('#control-wrapper').on 'click', '#next', ->
+          if this.paused()
+            this.play()
+          else
+            this.pause()
+          element.toggleClass('play pause')
+      $('.next').click ->
         videojs("video-player").ready ->
           current_video = $('#video-player').data('current-video')
-          if current_video < $('.video-nav').length - 1 
+          if current_video < $('.video-nav').length - 1
             $('#video-player').data('current-video',current_video + 1)
             $('.video-nav').eq(current_video+1).find('img').click()
-
-      $('#control-wrapper').on 'click', '#prev', ->
+      $('.prev').click ->
         videojs("video-player").ready ->
           current_video = $('#video-player').data('current-video')
           if current_video > 0
             $('#video-player').data('current-video',current_video - 1)
             $('.video-nav').eq(current_video-1).find('img').click()
-      return
-    return

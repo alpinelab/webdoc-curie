@@ -1,20 +1,16 @@
-#rotatescroll
-  .overlay
-    .viewport
-      %ul.overview
-        %li
-          %span= I18n.t('navbar.group')
-          %a.btn.btn-default{href: "#{}"}= I18n.t("common.enter")
-        %li
-          %span= I18n.t('navbar.mastectomy')
-          %a.btn.btn-default{href: "/pages/mastectomy"}= I18n.t("common.enter")
-        %li
-          %span= I18n.t('navbar.reconstruction')
-          %a.btn.btn-default{href: "#"}= I18n.t("common.enter")
-        %li
-          %span= I18n.t('navbar.alternatives')
-          %a.btn.btn-default{href: "#"}= I18n.t("common.enter")
+#compass-container
+  = partial 'layouts/compass'
+  .viewport
+    %ul.compass-inner
+      - %w{infosein mastectomy surgical nonsurgical}.each do |section|
+        %li{class: section}
+          .slide-container
+            .pretitle= I18n.t("compass.inner.#{section}.pretitle")
+            .title= I18n.t("compass.inner.#{section}.title")
+            = image_tag("pictograms/#{section}-white.png", class: 'picto')
+            %a.btn.btn-default{href: "/pages/#{section}"}= I18n.t("common.enter")
   .thumb
+    .arrow
     #tutorial-circle.hide
       %span= I18n.t('tutorial.arrow')
   .dot
@@ -22,7 +18,7 @@
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
-      $("#rotatescroll").tinycircleslider
+      $("#compass-container").tinycircleslider
         dotsSnap: true
-        radius: 300
-      return
+        radius: 270
+        shift: 45
