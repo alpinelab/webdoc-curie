@@ -2,7 +2,7 @@
   #next.control
   #prev.control
   #pause.control
-  %video#video-player.video-js.vjs-curie-skin{"data-setup" => '{ "controls": true, "preload": "auto" }', :height => "100%", :poster => image_path("posters/#{current_page.data.poster}"), :preload => "auto", :width => "auto", "data-current-video" => 0}
+  %video#video-player.video-js.vjs-curie-skin{"data-setup" => '{ "controls": true, "preload": "auto" }', :height => "720", :poster => image_path("posters/#{current_page.data.poster}"), :preload => "auto", :width => "1280", "data-current-video" => 0}
     %source{:src => default_src, :type => "video/mp4"}
     %p.vjs-no-js
       To view this video please enable JavaScript, and consider upgrading to a web browser that
