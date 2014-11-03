@@ -1,25 +1,31 @@
-.circle-container
-  %span
-    = partial "layouts/compass"
-  .compass-title{class: "color-#{current_page.data.color}"}
-    %h2= I18n.t(["nav",current_page.data.name,"article"].join("."))
-    %h2= I18n.t(["nav",current_page.data.name,"title"].join("."))
-    = image_tag "pictograms/" + current_page.data.name + "-white.png"
-  - current_page.data.items.each do |key, item|
-    .triangle{class: "deg#{item.angle}-triangle"}
-      = image_tag "pictograms/arrow_#{current_page.data.color}_small.png"
-    .menu-item{class: "deg#{item.angle}"}
-      %h2
-        .thumbnail-nav
-          -# = image_tag "thumbnails/thumbnail_rounded_avec_tmp.png"
-        - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
-        %a{ href: page_name.slugify }= page_name 
-      - if !item["sub_items"].nil?
-        %ul{class: "#{current_page.data.color}"} 
-          - item["sub_items"].each do |sub_item|
-            %li
-              - item_name = I18n.t(["nav",current_page.data.name,sub_item].join("."))
-              %a{href: item_name.slugify }= item_name
+#navigation
+  #compass-container.container-fluid
+    .row
+      .col-sm-12
+        #compass-container.fixed
+          = partial "layouts/compass"
+          .viewport
+            %h1= I18n.t("compass.inner.#{current_page.data.name}.pretitle")
+            %h1{class: "color-#{current_page.data.color}"}= I18n.t("compass.inner.#{current_page.data.name}.title")
+            = image_tag "pictograms/" + current_page.data.name + "-white.png"
+          .triangle
+            = image_tag "pictograms/arrow_#{current_page.data.color}_small.png"
+          .menu-item
+            %h1 blabla
+    -# current_page.data.items.each do |key, item|
+
+          -# .menu-item{class: "deg"}
+        -# %h2
+        -#   .thumbnail-nav
+        -#     -# = image_tag "thumbnails/thumbnail_rounded_avec_tmp.png"
+        -#   - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
+        -#   %a{ href: page_name.slugify }= page_name 
+        -# - if !item["sub_items"].nil?
+        -#   %ul{class: "#{current_page.data.color}"} 
+        -#     - item["sub_items"].each do |sub_item|
+        -#       %li
+        -#         - item_name = I18n.t(["nav",current_page.data.name,sub_item].join("."))
+        -#         %a{href: item_name.slugify }= item_name
 
 
 
@@ -31,12 +37,5 @@
         $(this).find('ul').animate({opacity: 1})
       $('.menu-item').on 'mouseleave', ->
         $(this).find('ul').animate({opacity: 0})
-      BV.init()
-      if Modernizr.touch
-        BV.show "http://video-js.zencoder.com/oceans-clip.png"
-      else
-        BV.show "http://video-js.zencoder.com/oceans-clip.mp4",
-          ambient: true
-          doLoop: true
-      return
+
 

@@ -11,3 +11,41 @@
     color: $color
   &:-ms-input-placeholder
     color: $color
+
+
+@mixin compass-style
+  padding-bottom: 115px
+  text-align: center
+  min-height: 44em
+
+  #compass-container.fixed
+    margin: 20px 0 30px
+    .viewport
+      color: white
+      position: absolute
+      top: 100px
+      h1
+        +font-curie-landing
+        font-size: 40px
+        line-height: 60px
+        text-transform: uppercase
+        .big
+          color: $curie-orange
+          font-size: 60px
+      img
+        margin-top: 1em
+
+@mixin triangle-position($angle,$deviation)
+  position: relative
+  top: (1-1*sin($angle))*50%
+  left: cos($angle)*50%
+  transform: translate(0%,-50%)
+  img
+    transform: rotate(-$angle + 90deg) translate(0%,-100% + $deviation)
+
+@mixin menu-position($angle)
+  text-align: left
+  position: relative
+  top: (1-1*sin($angle))*50%
+  left: (1+cos($angle))*50%
+  transform: translate(0%,-150%)
