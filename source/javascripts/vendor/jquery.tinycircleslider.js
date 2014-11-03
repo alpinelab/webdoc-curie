@@ -309,17 +309,18 @@
                 animationTimer = setTimeout(function()
                 {
                     stepMove(angleStep, angleDestination, framerate, interval);
-                    if(BV.getPlayer())
-                    {
-                        BV.show(playlist[slideIndex],{ambient: true});
-                    }
-
                 }, 50);
             }
             else
             {
                 animationStep = 0;
                 self.angleCurrent = angleDestination;
+                if($.BV.getPlayer())
+                {
+                    $('.big-image').attr('src', playlist[self.slideCurrent][0].poster);
+                    $('.big-image').css({'opacity':1});
+                    $.BV.show(playlist[self.slideCurrent],{ambient: true});
+                }
             }
         }
 
@@ -348,7 +349,6 @@
 
             if(self.options.dots)
             {
-                debugger;
                 $compass_inner.css("left", -((angle - self.options.shift) / 360 * slideSize.width * $slides.length) - slideSize.width);
             }
             else

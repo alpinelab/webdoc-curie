@@ -9,11 +9,12 @@
 #= require vendor/video-js/_video
 #= require vendor/video-js/lang/_fr
 #= require vendor/_bigvideo
-#= require vendor/polyfills
+#= require vendor/_bigvideo-image
 #= require vendor/jquery.tinycircleslider
 #= require_tree .
 
 videojs.options.flash.swf = "/javascripts/vendor/video-js/video-js.swf"
-@BV = new $.BigVideo
+$.BV = new $.BigVideo
   useFlashForFirefox:false
   controls: true
+$.BV.init()

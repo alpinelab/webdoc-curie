@@ -4,18 +4,18 @@
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
-      BV.init()
+      $.BV.init()
       if Modernizr.touch
-        BV.show $("#skip-intro").data('poster')
+        $.BV.show $("#skip-intro").data('poster')
       else
-        BV.show [
+        $.BV.show [
           src: $("#skip-intro").data('video'), type: 'video/mp4'
         ]
       $("#skip-intro").click((event) ->
         hideIntroVideo()
-        BV.getPlayer().pause()
+        $.BV.getPlayer().pause()
       )
-      BV.getPlayer().on("ended", (event) ->
+      $.BV.getPlayer().on("ended", (event) ->
         hideIntroVideo()
       )
       return
