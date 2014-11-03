@@ -7,12 +7,15 @@
   h1.color-blue
     color: $curie-blue
 
-  .triangle
-    @include triangle-position(45deg,50%)
+  @for $i from 0 through 72
+    .triangle-angle-#{$i*5}
+      @include triangle-position($i*5*1deg,100%)
+
+    .menu-angle-#{$i*5}
+      @include menu-position($i*5*1deg, 5% , 20%)
 
   .menu-item
     text-align: left
-    @include menu-position(225deg,5%, 0%)
     width: 50%
     h2, ul
       margin: 0

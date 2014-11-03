@@ -45,14 +45,14 @@
   $value: $angle/1.0deg
   $deviation-x: 0.0%
   $deviation-y: 0.0%
-  @if $value>=0 and $value <90
+  @if $value>=0 and $value <=90
     $deviation-x: 1.0*$deviation
     $deviation-y: -1.0*$deviation
-  @else if $value>=90 and $value <180
+  @else if $value>90 and $value <=180
     $deviation-x: -1.0*$deviation
     $deviation-y: -1.0*$deviation
     $translation: -100% - $translation
-  @else if $value>=180 and $value <270
+  @else if $value>180 and $value <=270
     $deviation-x: -1.0*$deviation
     $deviation-y: 1.0*$deviation
     $translation: -100% - $translation
