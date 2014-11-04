@@ -143,33 +143,211 @@ fr:
         pretitle: Reconstruction
         title: Non chirurgicale
   nav:
+    infoboobs:
+      title-1: "le groupe"
+      title-2: "info-sein"
+      text-intro: "text infosein"
+      séance-groupe-infosein: "Une séance du groupe Info-Sein"
+      mots-groupe-infosein: "Les mots du groupe Info-Sein"
+
     mastectomy:
-      title-1: la
-      title-2: mastectomie
-      text-intro: Il n’y a pas de mots pour décrire la perte d’un sein. Cette épreuve, aussi difficile que cachée pour la plupart des femmes, est le point de départ de leur chemin vers la reconstruction, soit chirurgicale, soit par un autre chemin.
-      paroles-soignants: Les paroles des soignants
-      sentence-image: La sentence des images
-      mots-femmes: Les mots des femmes
-      mots-mathieu: Les mots de Mathieu
-      parcours-lena: Le parcours de Léna
-      bonjour: "bonjour"
-      url: mastectomie
+      title-1: "la"
+      title-2: "mastectomie"
+      text-intro: "Il n’y a pas de mots pour décrire la perte d’un sein. Cette épreuve, aussi difficile que cachée pour la plupart des femmes, est le point de départ de leur chemin vers la reconstruction, soit chirurgicale, soit par un autre chemin."
+      l-imagerie: "L'imagerie"
+      parcours-léna: "Le parcours de Léna"
+      mots-femmes: "Les mots des femmes"
+      mots-mathieu: "Les mots de Mathieu"
+      paroles-soignants: "Les paroles des soignants"
+
+    surgical:
+      title-1: "reconstruction"
+      title-2: "chirurgicale"
+      text-intro: "text reconstruction chirurgicale"
+      reconstruction-immédiate: "La reconstruction immédiate"
+      parcours-sylvie: "Le parcours de Sylvie"
+      mots-femmes: "Les mots des femmes"
+      paroles-soignants: "Les paroles des soignants"
+      reconstruction-secondaire: "La reconstruction secondaire"
+      prothèses: "Prothèse(s)"
+      reconstruction-secondaire-prothèse: "Reconstruction secondaire par prothèse"
+      delphine-reconstruction-expandeur: "Delphine, reconstruction par expandeur"
+      mots-sabine: "Les mots de Sabine"
+      reconstructions-autologues: "Les reconstructions autologues"
+      reconstruction-grand-dorsal: "La reconstruction par grand dorsal"
+      reconstruction-diep-tram: "La reconstruction par DIEP et TRAM"
+      parcours-geneviève: "Le parcours de Geneviève"
+      mots-nathalie: "Les mots de Nathalie"
+      tram-esmeralda: "Le TRAM d’Esméralda... 4 ans après"
+      paroles-soignants-3: "Les paroles des soignants"
+      ester-jumelles: "Ester et ses jumelles, du TRAM au DIEP"
+      reconstruction-lipomodelage: "la reconstruction par lipomodelage"
+      étapes-finition: "Les étapes de finition"
+
+    nonsurgical:
+      title-1: "reconstruction"
+      title-2: "non chirurgicale"
+      text-intro: "text reconstruction non chirurgicale"
+      femmes-amazones: "Trois femmes amazones"
+      cathie-femme-asymétrique: "Cathie, une femme asymétrique"
+      laurence-tatouage-fleur: "Laurence, tatouage, fleurs de tiaré"
+      géraldine-chemin: "Géraldine, un chemin..."
+      paroles-soignants-5: "Les paroles de soignants"
+      garance-ligne-vêtements: "Garance, ligne de vêtements asymétriques"
+
+    interrogations:
+      title-1: "reconstruction"
+      title-2: "non chirurgicale"
+      text-intro: "text interrogations"
+      sexualité: "Et la sexualité ?"
+      ana-maria-reconstruction: "Ana Maria, reconstruction et vieillesse"
+      cécile-reconstruction-métastatique: "Cécile, reconstruction en phase métastatique"
+      création-service-santé: "La création au service de la santé"
+      livre-peu-conventionnel: "Un livre peu conventionnel"
+      ligne-lingerie-dédiée: "Une ligne de lingerie dédiée..."
+
+    misc:
+      title-0: "Interventions en animations"
+      title-1: "Un livre novateur, un outil précieux"
+      title-2: "Se voir, se montrer"
+  
   the-movie:
     title: "Le film"
     subtitle: "Guérir le regard"
+  
   tutorial:
     arrow: "Déplacer la flèche pour naviguer"
     image: "Tutoriel"
-  misc:
-    title-0: Les opérations
-    text-0: "je suis un text c'est trop bien, j'appartiens au misc 0"
-    title-1: Les femmes
-    text-1: "je suis un text c'est trop bien, j'appartiens au misc 1"
-    title-2: Titre livre
-    text-2: "je suis un text c'est trop bien, j'appartiens au misc 2"
+
   videos:
-    first-video: "Titre Description"
-    second-video: "loulou"
+    #01 Info sein
+    séance-info-sein: "Une séance du groupe Info-Sein"
+
+    #02 Mastectomie Imagerie
+    sentence-images-biopsie: "La sentence des images et de la biopsie"
+    mots-laurence: "Les mots de Laurence"
+
+    #02 Mastectomie Léna
+    se-préparer-ablation: "Se préparer à l'ablation"
+    consultation-infirmière-mastectomie: "La consultation infirmière pré-opératoire"
+    consultation-accueil-mastectomie: "Consultation d'accueil en hospitalisation"
+    jour-mastectomie: "Le jour de la mastectomie"
+    vidéo-laboratoire: "Le laboratoire"
+    découverte-cicatrice-pansement: "La découverte de la cicatrice, premier pansement"
+    prothèse-coton-reconstruction: "La prothèse en coton, première reconstruction"
+    consultations-post-mastectomie: "Consultations post-opératoires et bons résultats"
+    radiothérapie-radiothérapeute: "La radiothérapie et le radiothérapeute"
+    dans-le-jardin: "Dans le jardin"
+
+    #03 Reconstruction Sylvie
+    disagnostic-propositions: "Diagnostic et propositions"
+    proposition-déstabilisante: "Une proposition déstabilisante"
+    consultation-infirmière-reconstruction: "La consultation infirmière pré-opératoire"
+    échéance-improbable: "L’échéance improbable"
+    consultation-accueil-reconstruction: "Consultation d’accueil en hospitalisation"
+    jour-intervention: "Le jour de l’intervention"
+    visite-chirurgien-reconstruction: "Visite du chirurgien, première vision"
+    pas-de-regrets: "Pas de regrets"
+    consultations-post-reconstruction: "Consultation post opératoire... bonnes nouvelles !"
+    corps-étranger: "Le corps étranger"
+
+    #03 Reconstruction secondaire
+    reconstruction-secondaire-prothèse: "Reconstruction secondaire par prothèse"
+    delphine-reconstruction-expandeur: "Delphine, reconstruction par expandeur"
+    mots-sabine: "Les mots de Sabine"
+    paroles-soignants-1: "Les paroles des soignants"
+
+    #03 Reconstruction grand dorsal
+    elisabeth-dernière-consultation: "Élisabeth, dernière consultation avant l’intervention"
+    danielle-grand-dorsal: "Danielle, le grand dorsal à distance"
+    mots-femmes-1: "Les mots des femmes"
+    paroles-soignants-2: "Les paroles de soignants"
+
+    #03 Reconstruction Geneviève
+    choix-sans-hésitation: "Un choix sans hésitation"
+    dernière-consultation: "Dernière consultation avant l’intervention"
+    angioscanner-permis-diep: "L’angioscanner ou le permis pour le DIEP"
+    consultation-infirmière-secondaire: "La consultation infirmière pré-opératoire"
+    jour-diep: "Le jour du DIEP"
+    visite-chirurgien-secondaire: "Visite du chirurgien, première vision"
+    consultations-post-secondaire: "Consultation post opératoire... En pleine forme !"
+
+    #03 Reconstruction DIEP
+    mots-nathalie: "Les mots de Nathalie"
+    tram-esmeralda: "Le TRAM d’Esméralda... 4 ans après"
+    paroles-soignants-3: "Les paroles des soignants"
+    ester-jumelles: "Ester et ses jumelles, du TRAM au DIEP"
+
+    #03 Reconstruction Lipomodelage
+    lipomodelage-animation: "Le lipomodelage en animation"
+    marie-dernière-étape: "Marie, dernière étape"
+    paroles-soignants-4: "Les paroles des soignants"
+
+    #03 Reconstruction Finition
+    christine-consultation-finition: "Christine, consultation avant étapes de finition"
+    mots-femmes-2: "Les mots des femmes"
+
+    #04 Sans reconstruction
+    cathie-femme-asymétrique: "Cathie, une femme asymétrique"
+    laurence-tatouage-fleur: "Laurence, tatouage, fleurs de tiaré"
+    géraldine-chemin: "Géraldine, un chemin..."
+    paroles-soignants-5: "Les paroles de soignants"
+    garance-ligne-vêtements: "Garance, ligne de vêtements asymétriques"
+
+    #05 Interrogations reconstruction
+    ana-maria-reconstruction: "Ana Maria, reconstruction et vieillesse"
+    cécile-reconstruction-métastatique: "Cécile, reconstruction en phase métastatique"
+
+    #05 Interrogations livre
+    livre-peu-conventionnel: "Un livre peu conventionnel"
+    ligne-lingerie-dédiée: "Une ligne de lingerie dédiée..."
+
+    #06 MISC
+    livre-novateur: "Un livre novateur, un outil précieux"
+    voir-montrer: "Se voir, se montrer"
+
   chapters:
-    chapter-1: "yayaya"
-    chapter-2: "bimbim"
+    #01 Info sein
+    la-genèse: "La genèse"
+    relation-soignants-soignés: "Pour une relation soignants-soignés"
+    nouvelle-définition-reconstruction: "Une nouvelle définition de la reconstruction mammaire"
+    vases-communicants: "Vases communicants"
+    la-finalité: "La finalité"
+
+    #02 Mastectomie femmes
+    avant-mastectomie: "Avant la mastectomie"
+    premier-pansement-1: "Le premier pansement"
+    la-cicatrice: "La cicatrice"
+    après-mastectomie: "Après la mastectomie"
+    le-couple: "Le couple"
+
+    #02 Mastectomie mathieu
+    être-étranger: "Être étranger"
+    sein-féminité: "Sein et féminité"
+    l-inconnu: "L'inconnu"
+
+    #02 Mastectomie soignants
+    annonce-mastectomie: "Annonce de la mastectomie"
+    premier-pansement-2: "Le premier pansement"
+    regard-social: "Le regard social"
+
+    #03 Reconstruction femmes
+    l-espoir: "L'espoir"
+    l-échec: "L'échec"
+
+    #03 Reconstruction soignants
+    l-illusion: "L'illusion"
+    temps-primordial: "Le temps est primordial"
+
+    #05 Interrogations sexualité
+    femmes-célibataires: "Femmes célibataires"
+    les-couples: "Couples"
+
+    #06 MISC
+    la-mastectomie: "La mastectomie"
+    reconstruction-prothèses: "Reconstruction par prothèse(s)"
+    reconstruction-prothèses-symétrisation: "Reconstruction par prothèse(s) avec symétrisation"
+    reconstruction-grand-dorsal: "Reconstruction grand dorsal"
+    reconstruction-diep: "Reconstruction par DIEP"
+    reconstruction-lipomodelage: "Reconstruction par Lipomodelage"
+    reconstruction-aréole-memelon: "Reconstruction de l'aréole et du memelon"
