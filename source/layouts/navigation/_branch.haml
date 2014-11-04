@@ -7,7 +7,7 @@
           .viewport
             %h1= I18n.t("compass.inner.#{current_page.data.name}.pretitle")
             %h1{class: "color-#{current_page.data.color}"}= I18n.t("compass.inner.#{current_page.data.name}.title")
-            = image_tag "pictograms/" + current_page.data.name + "-white.png"
+            = image_tag "pictograms/" + (current_page.data.picto || current_page.data.name) + "-white.png"
           - current_page.data.items.each do |key, item|
             %div{class: "triangle-angle-" + item["angle-triangle"].to_s }
               = image_tag "pictograms/arrow_#{current_page.data.color}_small.png"
@@ -22,7 +22,7 @@
                   - item["sub_items"].each do |sub_item|
                     %li
                       - item_name = I18n.t(["nav",current_page.data.name,sub_item].join("."))
-                      %a{href: item_name.slugify }= item_name
+                      = link_to item_name, key.slugify+"/"+sub_item.slugify
               - else
                 %h2.menu-item-title
                   = link_to page_name, key.slugify
