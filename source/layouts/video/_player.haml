@@ -18,7 +18,7 @@
         resizeVideoJS()
       videojs("video-player").ready ->
         resizeVideoJS()
-        this.on 'play', ->
+        this.on 'loadeddata', ->
           $('.loader-image').transit({'opacity':0},500)
       $('.play, .pause').click ->
         element = $(this)
