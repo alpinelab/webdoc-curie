@@ -3,7 +3,8 @@
 
 - content_for :javascripts do
   :coffeescript
-    initBigVideoImage()
+    $.BV.init()
+    initVideoImageLoader($.BV.getPlayer())
     enterToCategory = ->
       pathArray = window.location.pathname.split('/')
       pathArray.pop()

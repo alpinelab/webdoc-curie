@@ -1,5 +1,8 @@
 #player-wrapper
-  = partial "layouts/video/player", locals: { default_src: current_page.data.src }
+  - unless current_page.data.poster.blank?
+    .image-wrapper.over-video-player
+      %img.loader-image{src: current_page.data.poster}
+  = partial "layouts/video/player", locals: { default_src: current_page.data.video_src }
 
   .video-description= I18n.t("chapters." + current_page.data.chapters.keys.first)
 
