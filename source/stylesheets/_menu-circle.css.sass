@@ -17,7 +17,8 @@
   .menu-item
     text-align: left
     width: 50%
-    h2, ul
+
+    .menu-item-title, ul
       margin: 0
       a, a:hover, a:visited, a:active, a:link
         text-transform: uppercase
@@ -27,6 +28,11 @@
       a:hover, a:active
         padding-bottom: 1px
         border-bottom: 2px solid white
+      li:before 
+        content: image-url("pictograms/arrow_blue_small.png")
+        margin-left: -20px
+        display: inline-block
+        transform: rotate(90deg)
       
 
     ul
