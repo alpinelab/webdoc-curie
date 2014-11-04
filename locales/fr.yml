@@ -152,6 +152,7 @@ fr:
       text-intro: "text infosein"
       réunion: "Une séance du groupe Info-Sein"
       mots-info-sein: "Les mots du groupe Info-Sein"
+      url: "groupe-info-sein"
 
     mastectomy:
       title-1: "la"
@@ -162,6 +163,7 @@ fr:
       mots-femmes: "Les mots des femmes"
       mots-mathieu: "Les mots de Mathieu"
       paroles-soignants: "Les paroles des soignants"
+      url: "mastectomie"
 
     #Intro for imagery page
     intro-imagery:
@@ -184,6 +186,7 @@ fr:
       paroles-soignants-3: "Les paroles des soignants"
       ester-jumelles: "Ester et ses jumelles, du TRAM au DIEP"
       finitions: "Les étapes de finition"
+      url: "avec-chirurgie"
 
     #Intro for secondary page
     secondary:
@@ -210,6 +213,7 @@ fr:
       géraldine-chemin: "Géraldine, un chemin..."
       paroles-soignants-5: "Les paroles de soignants"
       garance-ligne-vêtements: "Garance, ligne de vêtements asymétriques"
+      url: "sans-chirurgie"
 
     interrogations:
       title-1: "reconstruction"
@@ -221,6 +225,7 @@ fr:
       création-service-santé: "La création au service de la santé"
       livre-peu-conventionnel: "Un livre peu conventionnel"
       ligne-lingerie-dédiée: "Une ligne de lingerie dédiée..."
+      url: "interrogations"
 
     misc:
       title-0: "Interventions en animations"
