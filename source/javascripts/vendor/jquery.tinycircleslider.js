@@ -103,9 +103,9 @@
 
             if(touchEvents)
             {
-                $container[0].ontouchstart = startDrag;
-                $container[0].ontouchmove  = drag;
-                $container[0].ontouchend   = endDrag;
+                $thumb[0].ontouchstart = startDrag;
+                $thumb[0].ontouchmove  = drag;
+                $thumb[0].ontouchend   = endDrag;
             }
             else
             {
@@ -114,7 +114,7 @@
 
             if(self.options.dotsSnap)
             {
-                $container.delegate(".dot", eventType, function(event)
+                $thumb.delegate(".dot", eventType, function(event)
                 {
                     event.preventDefault();
                     event.stopImmediatePropagation();
