@@ -1,9 +1,9 @@
 = wrap_layout :fullscreen do
   .nav-buttons
     .home-button
-      %a{href: "/pages/home"}
+      %a{href: "/pages"}
         = image_tag 'mainNav/btn_home.png'
     .back-button
-      %a{href: "."}
+      %a{href: File.dirname(current_page.url)}
         = image_tag 'mainNav/btn_close_big.png'
   = yield

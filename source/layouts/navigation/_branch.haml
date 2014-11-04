@@ -17,16 +17,15 @@
                 = image_tag "thumbnails/" + item["thumbnail"]
               - if !item["sub_items"].nil?
                 %h2.menu-item-title
-                  %a{href: "#"}= page_name
+                  = link_to page_name, "#"
                 %ul{class: "color-#{current_page.data.color}"}
                   - item["sub_items"].each do |sub_item|
                     %li
                       - item_name = I18n.t(["nav",current_page.data.name,sub_item].join("."))
-                      %a{href: item_name.slugify }= item_name
+                      = link_to item_name, File.join(current_page.url, key.slugify)
               - else
                 %h2.menu-item-title
-                  = link_to page_name, key.slugify
-
+                  = link_to key.slugify, File.join(current_page.url, key.slugify)
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
