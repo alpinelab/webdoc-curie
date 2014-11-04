@@ -43,7 +43,8 @@ helpers do
   def upper_page
     url = File.dirname(current_page.url)
     source_file = File.dirname(current_page.source_file) + "/index.haml"
-    File.exist?(source_file) ? url :  File.dirname(url)
+    parent_file = File.dirname(File.dirname(current_page.source_file)) + "/index.haml"
+    (File.exist?(source_file) and File.exist?(parent_file)) ? url :  File.dirname(url)
   end
 end
 
