@@ -30,7 +30,7 @@ items:
 
 - content_for :javascripts do
   :coffeescript
-    initBigVideoImage()
+    initVideoImageLoader($.BV.getPlayer())
     $(document).ready ->
       $("#modal-intro").modal "show"
       $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110338853.hd.mp4?s=4598cc7b31d8585ac240d92aa9cfba2e" }], ambient: true
