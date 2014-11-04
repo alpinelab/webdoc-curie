@@ -1,18 +1,20 @@
-$(function() {
-  var $bigImage = $('.big-image'), $window = $(window);
-  $.BV.getPlayer().on('loadeddata', function() {
-    onVideoLoaded();
-  });
-  $bigImage.imagesLoaded(adjustImagePositioning);
-  $window.on('resize', adjustImagePositioning);
+  function initBigVideoImage() {
+    $.BV.getPlayer().on('loadeddata', function() {
+      onVideoLoaded();
+    });
+    $('.big-image').imagesLoaded(adjustImagePositioning);
+    $(window).on('resize', adjustImagePositioning);
+  }
+
   function onVideoLoaded() {
     $('.big-image').transit({'opacity':0},500);
   }
+
   function adjustImagePositioning() {
     var img = new Image();
-    img.src = $bigImage.attr('src');
-    var windowWidth = $window.width(),
-      windowHeight = $window.height(),
+    img.src = $('.big-image').attr('src');
+    var windowWidth = $(window).width(),
+      windowHeight = $(window).height(),
       r_w = windowHeight / windowWidth,
       i_w = img.width,
       i_h = img.height,
@@ -26,11 +28,10 @@ $(function() {
       new_h   = windowWidth * r_i;
       new_w   = windowWidth;
     }
-    $bigImage.css({
+    $('.big-image').css({
       width   : new_w,
       height  : new_h,
       left    : ( windowWidth - new_w ) / 2,
       top     : ( windowHeight - new_h ) / 2
     })
   }
-});

@@ -20,9 +20,6 @@
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
-with_layout :fullscreen do
-  page "/pages/mastectomy"
-end
 
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)

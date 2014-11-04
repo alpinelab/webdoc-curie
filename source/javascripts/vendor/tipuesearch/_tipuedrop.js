@@ -68,6 +68,7 @@ http://www.tipue.com/drop
                         item = tipuedrop_in.pages[i]
                         if ((item.title.search(pat) != -1 || item.tags.search(pat) != -1) && c < set.show)
                         {
+                          console.log(item);
                           results[item.category].push('<a href="' + item.loc + '"><div class="tipue_drop_item"><img src="' + compute_image_link(item.category, item.media) + '" class="tipue_drop_item_image pull-left"><div class="tipue_drop_item_title">' + item.title + '</div></div></a>');
                           c++;
                         }

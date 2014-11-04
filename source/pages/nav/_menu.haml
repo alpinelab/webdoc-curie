@@ -13,30 +13,18 @@
         .thumbnail-nav
           -# = image_tag "thumbnails/thumbnail_rounded_avec_tmp.png"
         - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
-        %a{ href: page_name.slugify }= page_name 
+        %a{ href: page_name.slugify }= page_name
       - if !item["sub_items"].nil?
-        %ul{class: "#{current_page.data.color}"} 
+        %ul{class: "#{current_page.data.color}"}
           - item["sub_items"].each do |sub_item|
             %li
               - item_name = I18n.t(["nav",current_page.data.name,sub_item].join("."))
               %a{href: item_name.slugify }= item_name
 
-
-
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
-      $("#modal-intro").modal "show"
       $('.menu-item').on 'mouseenter', ->
         $(this).find('ul').animate({opacity: 1})
       $('.menu-item').on 'mouseleave', ->
         $(this).find('ul').animate({opacity: 0})
-      BV.init()
-      if Modernizr.touch
-        BV.show "http://video-js.zencoder.com/oceans-clip.png"
-      else
-        BV.show "http://video-js.zencoder.com/oceans-clip.mp4",
-          ambient: true
-          doLoop: true
-      return
-

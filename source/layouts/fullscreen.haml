@@ -25,6 +25,7 @@
   %link{rel: 'icon', type: 'image/ico', href: 'favicon.ico' }
   = stylesheet_link_tag 'main'
 %body
+  = partial "layouts/video/bigvideo-images"
   = yield
   = javascript_include_tag 'main'
   = yield_content(:javascripts)
