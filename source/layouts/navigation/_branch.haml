@@ -22,7 +22,7 @@
                   - item["sub_items"].each do |sub_item|
                     %li
                       - item_name = I18n.t(["nav",current_page.data.name,sub_item].join("."))
-                      = link_to item_name, File.join(current_page.url, sub_item.slugify)
+                      = link_to item_name, File.join(current_page.url, key.slugify, sub_item.slugify)
               - else
                 %h2.menu-item-title
                   = link_to key.slugify, File.join(current_page.url, key.slugify)
