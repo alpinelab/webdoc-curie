@@ -2,7 +2,7 @@
   = partial 'layouts/compass'
   .viewport
     %ul.compass-inner
-      - %w{infosein mastectomy surgical nonsurgical}.each do |section|
+      - %w{infosein mastectomy surgical nonsurgical interrogations}.each do |section|
         %li{class: section}
           .slide-container
             .pretitle= I18n.t("compass.inner.#{section}.pretitle")

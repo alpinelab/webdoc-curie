@@ -145,6 +145,9 @@ fr:
       nonsurgical:
         pretitle: Reconstruction
         title: Non chirurgicale
+      interrogations:
+        pretitle: "&nbsp;"
+        title: Interrogations
   nav:
     infosein:
       title-1: "le groupe"
