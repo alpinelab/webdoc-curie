@@ -1,33 +1,48 @@
-#video-wrapper
-  #control-wrapper
+#player-wrapper
+  position: relative
+  margin: 0 auto
+  width: 70%
+  .video-wrapper
     position: relative
-
-  .control
-    position: absolute
-    content: " "
-    width: 35px
-    height: 35px
-    background-repeat: no-repeat
-    z-index: 100
-    bottom: 1em
-    transform: translate(-50%)
-
-  #next
-    background-image: image-url("controlVideo/next.png")
-    left: 70%
-
-  #prev
-    background-image: image-url("controlVideo/prev.png")
-    left: 30%
-
-  #pause
-    background-image: image-url("controlVideo/pause.png")
-    left: 50%
-
-  #play
-    background-image: image-url("controlVideo/play.png")
-    left: 50%
-
+    .control
+      position: absolute
+      width: 35px
+      height: 35px
+      background-repeat: no-repeat
+      z-index: 100
+      bottom: 1em
+      transform: translate(-50%)
+    .prev
+      background-image: image-url("controlVideo/prev.png")
+      left: 30%
+    .pause
+      background-image: image-url("controlVideo/pause.png")
+      left: 50%
+    .play
+      background-image: image-url("controlVideo/play.png")
+      left: 50%
+    .next
+      background-image: image-url("controlVideo/next.png")
+      left: 70%
+  .video-description
+    text-align: center
+    margin-top: 3%
+    color: white
+    +font-curie-nav
+  .video-nav-wrapper
+    position: relative
+    margin: 0 auto
+    text-align: center
+    .video-nav
+      margin: 2%
+      border: transparent 3px solid
+      display: inline-block
+      &.selected
+        border-color: white
+        -moz-box-shadow: -3px -3px 10px 0px #555555
+        -webkit-box-shadow: -3px -3px 10px 0px #555555
+        -o-box-shadow: -3px -3px 10px 0px #555555
+        box-shadow: -3px -3px 10px 0px #555555
 .vjs-curie-skin
   .vjs-control-text
     display: none !important
@@ -35,14 +50,13 @@
     border-radius: 50px
     position: absolute
     left: 10%
-    right: 0
     width: 80%
     font-size: 0.9em
     height: 8px
-    /* Set above the rest of the controls.
+    // Set above the rest of the controls.
     bottom: 7em
-    /* Shrink the bar slower than it grows.
-    /* transition
+    // Shrink the bar slower than it grows.
+    // transition
     -webkit-transition: all 0.4s
     -moz-transition: all 0.4s
     -o-transition: all 0.4s
@@ -59,14 +73,14 @@
       height: 100%
       margin: 0
       padding: 0
-      /* updated by javascript during playback
+      // updated by javascript during playback
       width: 0
-      /* Needed for IE6
+      // Needed for IE6
       left: 0
       top: 0
     .vjs-slider-handle
       position: absolute
-      /* Needed for IE6
+      // Needed for IE6
       left: 0
       top: 0
       &:before

@@ -1,0 +1,35 @@
+---
+layout: nav
+name: mastectomy
+poster: /images/posters/02-videobackground-mastecomie.jpg
+color: blue
+items:
+  sentence-image:
+    angle-triangle: 180
+    angle-item: 180
+    sub_items:
+      - bonjour
+      - bonjour
+  parcours-lena:
+    angle-triangle: 30
+    angle-item: 40
+  mots-femmes:
+    angle-triangle: 150
+    angle-item: 135
+  mots-mathieu:
+    angle-triangle: 215
+    angle-item: 215
+    thumbnail: thumbnail_rounded_avec_tmp.png
+  paroles-soignants:
+    angle-triangle: 325
+    angle-item: 320
+---
+
+= partial 'layouts/navigation/branch'
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    initBigVideoImage()
+    $(document).ready ->
+      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/109823311.hd.mp4?s=17a5ae34361c7cda0b1d780b1623010a" }], ambient: true

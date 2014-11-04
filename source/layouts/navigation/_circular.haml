@@ -1,0 +1,24 @@
+#compass-container
+  = partial 'layouts/compass'
+  .viewport
+    %ul.compass-inner
+      - %w{infosein mastectomy surgical nonsurgical}.each do |section|
+        %li{class: section}
+          .slide-container
+            .pretitle= I18n.t("compass.inner.#{section}.pretitle")
+            .title= I18n.t("compass.inner.#{section}.title")
+            = image_tag("pictograms/#{section}-white.png", class: 'picto')
+            %a.btn.btn-default{href: "/pages/#{I18n.t('nav.' + section + '.url')}"}= I18n.t("common.enter")
+  .thumb
+    .arrow
+    #tutorial-circle.hide
+      %span= I18n.t('tutorial.arrow')
+  .dot
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#compass-container").tinycircleslider
+        dotsSnap: true
+        radius: 270
+        shift: 45

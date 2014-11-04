@@ -1,5 +1,5 @@
 ---
-title: Curie Webdoc - Guérir le regard
+poster: /images/posters/00-backgroundimage-landingpage.jpg
 layout: fullscreen
 ---
 
@@ -15,10 +15,11 @@ layout: fullscreen
         .viewport.color-orange
           %h1= I18n.t("common.doc-title").html_safe
           = image_tag "pictograms/scar-white.png"
-          / .triangle.landing-deg-triangle
-          /   = image_tag "pictograms/arrow_orange_small.png"
           #enter
             %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
+        .thumb
+          .arrow
+
   .row
     .col-sm-12
       #productor
@@ -33,13 +34,11 @@ layout: fullscreen
     - %w(institut-curie au-sein-de-la-difference fondation-dominique-tom-alberici mutuelle-bleue fondation-michelin astra-zeneca fondation-macsf thermes-la-roche-posay).each do |partner|
       %li= image_tag "logos/partners/landing/#{partner}.png"
 
-= partial 'pages/disclaimer'
+= partial 'layouts/modals/disclaimer'
 
 - content_for :javascripts do
   :coffeescript
+    initBigVideoImage()
     $(document).ready ->
-      BV.init()
-      if Modernizr.touch
-        BV.show "http://video-js.zencoder.com/oceans-clip.png"
-      else
-        BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110470750.hd.mp4?s=af9b58ea0a25cff6377b7e98c52d5204" }], ambient: true
+      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110470750.hd.mp4?s=af9b58ea0a25cff6377b7e98c52d5204" }], ambient: true
+
