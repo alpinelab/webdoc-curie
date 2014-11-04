@@ -1,0 +1,22 @@
+---
+layout: nav
+poster: "02-02-backgroundimage-mastecradio.jpg"
+name: intro-imagery
+picto: mastectomy
+color: blue
+videos:
+  sentence-images-biopsie:
+    src: "http://player.vimeo.com/external/109822169.hd.mp4?s=b9c71cc1837fc6bf1f29258842d716c5"
+    thumbnail: "02-02-01-videoseule-diagnmastecradio.jpg"
+  mots-laurence:
+    src: "http://player.vimeo.com/external/109822171.hd.mp4?s=44ab5d25d6b3794da2f9421453d94beb"
+    thumbnail: "02-02-02-videoseule-itwfemmemastecradio.jpg"
+---
+
+= partial "layouts/video/playlist"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"

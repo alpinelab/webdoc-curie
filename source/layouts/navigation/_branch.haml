@@ -25,7 +25,7 @@
                       %a{href: item_name.slugify }= item_name
               - else
                 %h2.menu-item-title
-                  = link_to page_name, page_name.slugify
+                  = link_to page_name, key.slugify
 
 - content_for :javascripts do
   :coffeescript
