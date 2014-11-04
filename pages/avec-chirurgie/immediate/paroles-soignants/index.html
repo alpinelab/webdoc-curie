@@ -1,0 +1,120 @@
+<!DOCTYPE html> <!--[if lt IE 7 ]><html class=ie6 lang=fr><![endif]--> <!--[if IE 7 ]><html class=ie7 lang=fr><![endif]--> <!--[if IE 8 ]><html class=ie8 lang=fr><![endif]--> <!--[if IE 9 ]><html class=ie9 lang=fr><![endif]--> <!--[if (gt IE 9)|!(IE)]><!--> <html lang=fr><![endif]--> <head> <title></title> <meta content='IE=edge,chrome=1' http-equiv=X-UA-Compatible> <meta charset=utf-8> <meta name=description> <meta content='width=device-width, initial-scale=1.0' name=viewport> <link href='apple-touch-icon-152x152-precomposed.png' rel=apple-touch-icon sizes=152x152> <link href='apple-touch-icon-144x144-precomposed.png' rel=apple-touch-icon sizes=144x144> <link href='apple-touch-icon-114x114-precomposed.png' rel=apple-touch-icon sizes=114x114> <link href='apple-touch-icon-120x120-precomposed.png' rel=apple-touch-icon sizes=120x120> <link href='apple-touch-icon-76x76-precomposed.png' rel=apple-touch-icon sizes=76x76> <link href='apple-touch-icon-72x72-precomposed.png' rel=apple-touch-icon sizes=72x72> <link href='apple-touch-icon-60x60-precomposed.png' rel=apple-touch-icon sizes=60x60> <link href='apple-touch-icon-57x57-precomposed.png' rel=apple-touch-icon sizes=57x57> <link href='apple-touch-icon-precomposed.png' rel=apple-touch-icon> <link href='apple-touch-icon.png' rel=apple-touch-icon> <link href='favicon.png' rel='shortcut icon'> <link href='favicon.ico' rel=icon type='image/ico'> <link href="../../../../stylesheets/main-5b913193.css" rel=stylesheet /> </head> <body> <div class=image-wrapper> <img class=background-image width=1280 height=720 src="../../../../images/posters/03-02-04-videochapitree-itwsoignantsreconstimm-04bf72ab.jpg"/> </div> <div class=nav-buttons> <div class=home-button> <a href='/pages'> <img width=48 height=45 src="../../../../images/mainNav/btn_home-eea29b06.png"/> </a> </div> <div class=back-button> <a href='/pages/avec-chirurgie/immediate'> <img width=48 height=45 src="../../../../images/mainNav/btn_close_big-b27a1006.png"/> </a> </div> </div> <div id=player-wrapper> <div class='image-wrapper over-video-player'> <img class=loader-image width=1280 height=720 src="../../../../images/posters/03-02-04-videochapitree-itwsoignantsreconstimm-04bf72ab.jpg"/> </div> <div class=video-wrapper> <video class='video-js vjs-curie-skin' data-current-video=0 data-setup='{ "controls": false, "preload": "auto", "autoplay": true}' height=auto id=video-player max-width='100%' poster='../../../../images/posters/03-02-04-videochapitree-itwsoignantsreconstimm-04bf72ab.jpg'> <source src='//player.vimeo.com/external/109825422.hd.mp4?s=f3586b7d87b3ac274ccbaf25fbcca9d4' type='video/mp4'> </video> <div class='prev control'></div> <div class='pause control'></div> <div class='next control'></div> </div> <div class=video-description>L'illusion</div> <div class=video-nav-wrapper> <div class='selected video-nav' data-video-description="L'illusion" data-video-offset=25> <img width=100px src="../../../../images/posters/03-02-04-videochapitree-itwsoignantsreconstimm-04bf72ab.jpg"/> </div> <div class=video-nav data-video-description='Le temps est primordial' data-video-offset=96> <img width=100px src="../../../../images/posters/03-02-04-videochapitree-itwsoignantsreconstimm-04bf72ab.jpg"/> </div> <div class=video-nav data-video-description='Avoir le choix' data-video-offset=131> <img width=100px src="../../../../images/posters/03-02-04-videochapitree-itwsoignantsreconstimm-04bf72ab.jpg"/> </div> </div> </div> <script src="../../../../javascripts/main-db3f4049.js"></script> <script>
+    (function() {
+      var aspectRatio, resizeVideoJS;
+    
+      aspectRatio = 720 / 1280;
+    
+      resizeVideoJS = function() {
+        var player, width;
+        player = $("#video-player");
+        width = player.parent().width();
+        $("#video-player").width(width).height(width * aspectRatio);
+        return $('.loader-image').width(width).height(width * aspectRatio);
+      };
+    
+      $(document).ready(function() {
+        $(window).resize(function() {
+          return resizeVideoJS();
+        });
+        videojs("video-player").ready(function() {
+          resizeVideoJS();
+          return this.on('play', function() {
+            return $('.loader-image').transit({
+              'opacity': 0
+            }, 500);
+          });
+        });
+        $('.play, .pause').click(function() {
+          var element;
+          element = $(this);
+          return videojs("video-player").ready(function() {
+            if (this.paused()) {
+              this.play();
+            } else {
+              this.pause();
+            }
+            return element.toggleClass('play pause');
+          });
+        });
+        $('.next').click(function() {
+          return videojs("video-player").ready(function() {
+            var current_video;
+            current_video = $('#video-player').data('current-video');
+            if (current_video < $('.video-nav').length - 1) {
+              $('#video-player').data('current-video', current_video + 1);
+              return $('.video-nav').eq(current_video + 1).find('img').click();
+            }
+          });
+        });
+        return $('.prev').click(function() {
+          return videojs("video-player").ready(function() {
+            var current_video;
+            current_video = $('#video-player').data('current-video');
+            if (current_video > 0) {
+              $('#video-player').data('current-video', current_video - 1);
+              return $('.video-nav').eq(current_video - 1).find('img').click();
+            }
+          });
+        });
+      });
+    
+    }).call(this);
+  </script> <script>
+    (function() {
+      $(document).ready(function() {
+        var findCurrentThumbnail, selectThumbnail;
+        selectThumbnail = function(index) {
+          var element;
+          element = $('.video-nav').eq(index);
+          $('.video-nav.selected').removeClass('selected');
+          element.addClass('selected');
+          $('#video-player').data("current-video", index);
+          return $('.video-description').text(element.data('video-description'));
+        };
+        findCurrentThumbnail = function(time) {
+          var closest, offsets;
+          offsets = ($('.video-nav').map(function() {
+            return $(this).data("video-offset");
+          })).get();
+          closest = (offsets.filter(function(i) {
+            return i <= time;
+          })).pop();
+          return offsets.indexOf(closest);
+        };
+        $('.video-nav').on('click', 'img', function() {
+          var element, offset;
+          element = $(this).closest('.video-nav');
+          offset = element.data('video-offset');
+          return videojs("video-player").ready(function() {
+            var myPlayer;
+            myPlayer = this;
+            myPlayer.currentTime(offset);
+            return selectThumbnail($('.video-nav').index(element));
+          });
+        });
+        return videojs("video-player").ready(function() {
+          var myPlayer;
+          myPlayer = this;
+          this.on('timeupdate', function() {
+            if (myPlayer.currentTime() > $('.video-nav').eq($("#video-player").data('current-video') + 1).data('video-offset')) {
+              return selectThumbnail(findCurrentThumbnail(myPlayer.currentTime()));
+            }
+          });
+          this.on('seeked', function() {
+            return selectThumbnail(findCurrentThumbnail(myPlayer.currentTime()));
+          });
+          return this.on('ended', function() {
+            return $(".pause").click();
+          });
+        });
+      });
+    
+    }).call(this);
+  </script> <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-XXXXXXX-X', 'example.com');
+    ga('send', 'pageview');
+  </script> </body> </html>

@@ -25,7 +25,34 @@
     <loc>http://www.example.com/pages/mastectomie/paroles-soignants</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/home</loc>
+    <loc>http://www.example.com/pages</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/immediate/sylvie</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/immediate/mots-femmes</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/immediate/paroles-soignants</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/prothese/sabine</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/prothese/delphine</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/prothese/animation</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/prothese/paroles-soignants</loc>
   </url>
   <url>
     <loc>http://www.example.com/pages/miscellanees</loc>
@@ -38,5 +65,17 @@
   </url>
   <url>
     <loc>http://www.example.com/pages/miscellanees/les-operations</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/groupe-info-sein</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/groupe-info-sein/mots-info-sein</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/groupe-info-sein/reunion</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/groupe-info-sein/intro</loc>
   </url>
 </urlset>
