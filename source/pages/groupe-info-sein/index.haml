@@ -1,0 +1,22 @@
+---
+layout: nav
+name: infosein
+poster: /images/posters/01-videobackground-infosein.jpg
+color: orange
+items:
+  réunion:
+    angle-triangle: 180
+    angle-item: 180
+  mots-info-sein:
+    angle-triangle: 0
+    angle-item: 0
+---
+
+= partial 'layouts/navigation/branch'
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    initBigVideoImage()
+    $(document).ready ->
+      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/109821776.hd.mp4?s=123961b2d810db71fa25e52555caf8f1" }], ambient: true

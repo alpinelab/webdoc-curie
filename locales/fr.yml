@@ -143,12 +143,12 @@ fr:
         pretitle: Reconstruction
         title: Non chirurgicale
   nav:
-    infoboobs:
+    infosein:
       title-1: "le groupe"
       title-2: "info-sein"
       text-intro: "text infosein"
-      séance-groupe-infosein: "Une séance du groupe Info-Sein"
-      mots-groupe-infosein: "Les mots du groupe Info-Sein"
+      réunion: "Une séance du groupe Info-Sein"
+      mots-info-sein: "Les mots du groupe Info-Sein"
 
     mastectomy:
       title-1: "la"
