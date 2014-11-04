@@ -11,3 +11,57 @@
     color: $color
   &:-ms-input-placeholder
     color: $color
+
+
+@mixin compass-style
+  #compass-container.fixed
+    margin: 20px 0 30px
+    .viewport
+      color: white
+      position: absolute
+      top: 100px
+      h1
+        +font-curie-landing
+        font-size: 40px
+        line-height: 60px
+        text-transform: uppercase
+        .big
+          color: $curie-orange
+          font-size: 60px
+      img
+        margin-top: 1em
+
+@mixin triangle-position($angle,$deviation)
+  height: 0
+  position: relative
+  top: (1-1*sin($angle))*50%
+  left: cos($angle)*50%
+  img
+    position: relative
+    top: -9px
+    transform: rotate(-$angle + 90deg) translate(0,-$deviation)
+
+@mixin menu-position($angle,$deviation,$translation)
+  $value: $angle/1.0deg
+  $deviation-x: 0.0%
+  $deviation-y: 0.0%
+  @if $value>=0 and $value <=90
+    $deviation-x: 1.0*$deviation
+    $deviation-y: -1.0*$deviation
+  @else if $value>90 and $value <=180
+    $deviation-x: -1.0*$deviation
+    $deviation-y: -1.0*$deviation
+    $translation: -100% - $translation
+  @else if $value>180 and $value <=270
+    $deviation-x: -1.0*$deviation
+    $deviation-y: 1.0*$deviation
+    $translation: -100% - $translation
+  @else
+    $deviation-x: 1.0*$deviation
+    $deviation-y: 1.0*$deviation
+
+  height: 0
+  position: relative
+  left: (1+cos($angle))*50% + $deviation-x
+  top: (1-1*sin($angle))*50% + $deviation-y
+  transform: translate($translation,-100%)
