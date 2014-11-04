@@ -20,6 +20,8 @@
               = image_tag "pictograms/arrow_#{current_page.data.color}_small.png"
             - page_name = I18n.t(["nav",current_page.data.name,key].join("."))
             .menu-item{class: "menu-angle-#{item['angle-item']}" }
+              - if !item["thumbnail"].nil?
+                = image_tag "thumbnails/" + item["thumbnail"]
               - if !item["sub_items"].nil?
                 %h2.menu-item-title
                   %a{href: "#"}= page_name 
