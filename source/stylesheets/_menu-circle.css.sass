@@ -20,6 +20,18 @@
 
     ul
       text-align: left
+      opacity: 0
+      list-style-type: none
+      li::before
+        content: ''
+        width: 0
+        height: 0
+        position: relative
+        left: -15px
+        display: inline-block
+        border-top: solid 6px transparent
+        border-bottom: solid 6px transparent
+        border-left: solid 10px $curie-gray
 
     .menu-item-title, ul
       margin: 0
@@ -31,12 +43,3 @@
       a:hover, a:active
         padding-bottom: 1px
         border-bottom: 2px solid white
-      li:before 
-        content: image-url("pictograms/arrow_blue_small.png")
-        margin-left: -20px
-        display: inline-block
-        transform: rotate(90deg)
-      
-
-    ul
-      opacity: 0

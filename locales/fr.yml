@@ -144,8 +144,8 @@ fr:
         title: Non chirurgicale
   nav:
     mastectomy:
-      article: la
-      title: mastectomie
+      title-1: la
+      title-2: mastectomie
       text-intro: Il n’y a pas de mots pour décrire la perte d’un sein. Cette épreuve, aussi difficile que cachée pour la plupart des femmes, est le point de départ de leur chemin vers la reconstruction, soit chirurgicale, soit par un autre chemin.
       paroles-soignants: Les paroles des soignants
       sentence-image: La sentence des images
