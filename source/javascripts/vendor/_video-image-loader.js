@@ -1,18 +1,18 @@
-  function initBigVideoImage() {
-    $.BV.getPlayer().on('loadeddata', function() {
+  function initVideoImageLoader(player) {
+    player.on('loadeddata', function() {
       onVideoLoaded();
     });
-    $('.big-image').imagesLoaded(adjustImagePositioning);
+    $('.loader-image').imagesLoaded(adjustImagePositioning);
     $(window).on('resize', adjustImagePositioning);
   }
 
   function onVideoLoaded() {
-    $('.big-image').transit({'opacity':0},500);
+    $('.loader-image').transit({'opacity':0},2000);
   }
 
   function adjustImagePositioning() {
     var img = new Image();
-    img.src = $('.big-image').attr('src');
+    img.src = $('.loader-image').attr('src');
     var windowWidth = $(window).width(),
       windowHeight = $(window).height(),
       r_w = windowHeight / windowWidth,
@@ -28,7 +28,7 @@
       new_h   = windowWidth * r_i;
       new_w   = windowWidth;
     }
-    $('.big-image').css({
+    $('.loader-image').css({
       width   : new_w,
       height  : new_h,
       left    : ( windowWidth - new_w ) / 2,

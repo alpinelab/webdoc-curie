@@ -1,3 +1,6 @@
-- unless current_page.data.poster.blank?
-  #big-video-image-wrap
-    %img.big-image{src: current_page.data.poster}
+- unless current_page.data.background.blank? and current_page.data.poster.blank?
+  .image-wrapper
+    - if current_page.data.background
+      %img.background-image{src: current_page.data.background}
+    - else
+      %img.loader-image{src: current_page.data.poster}

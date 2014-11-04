@@ -317,8 +317,8 @@
                 self.angleCurrent = angleDestination;
                 if($.BV.getPlayer())
                 {
-                    $('.big-image').attr('src', playlist[self.slideCurrent][0].poster);
-                    $('.big-image').css({'opacity':1});
+                    $('.loader-image').attr('src', playlist[self.slideCurrent][0].poster);
+                    $('.loader-image').css({'opacity':1});
                     $.BV.show(playlist[self.slideCurrent],{ambient: true});
                 }
             }
