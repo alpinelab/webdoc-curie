@@ -21,8 +21,9 @@ title: Curie Webdoc - Guérir le regard
     ]
     $(document).ready ->
       $("#tipue_search_input").tipuedrop()
-      $("#tutorial").click (event) ->
+      eventType = (if Modernizr.touch then 'touchstart' else 'mousedown')
+      $("#tutorial").on eventType, (event) ->
         $("#tutorial-circle").toggleClass("tutorial-mask hide")
         event.stopPropagation()
-        $(document).one("mousedown", (-> $("#tutorial-circle").toggleClass("tutorial-mask hide")))
-      $("#tutorial").click() # display tutorial layer
+        $(document).one(eventType, (-> $("#tutorial-circle").toggleClass("tutorial-mask hide")))
+      $("#tutorial").trigger(eventType) # display tutorial layer
