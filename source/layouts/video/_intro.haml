@@ -1,4 +1,5 @@
-#skip-intro{:'data-video-src' => current_page.data.video_src}
+- url = File.join(File.dirname(current_page.url), current_page.data.redirect_to.to_s)
+#skip-intro{data: {:'video-src' => current_page.data.video_src, :'redirect-to' => url}}
   %span= I18n.t("common.skip-intro")
 
 - content_for :javascripts do
@@ -6,9 +7,7 @@
     $.BV.init()
     initVideoImageLoader($.BV.getPlayer())
     enterToCategory = ->
-      pathArray = window.location.pathname.split('/')
-      pathArray.pop()
-      window.location.assign(pathArray.join('/'))
+      window.location.assign($("#skip-intro").data('redirect-to'))
     $(document).ready ->
       $.BV.show [src: $("#skip-intro").data('video-src'), type: 'video/mp4']
       $("#skip-intro").click (event) ->
