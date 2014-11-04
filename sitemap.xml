@@ -4,30 +4,30 @@
     <loc>http://www.example.com</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/mastectomy/example-video-with-chapters</loc>
+    <loc>http://www.example.com/pages/mastectomie/example-video-with-chapters</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/mastectomy</loc>
+    <loc>http://www.example.com/pages/mastectomie</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/mastectomy/example-multiple-videos</loc>
+    <loc>http://www.example.com/pages/mastectomie/example-multiple-videos</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/mastectomy/nav</loc>
+    <loc>http://www.example.com/pages/mastectomie/intro</loc>
   </url>
   <url>
     <loc>http://www.example.com/pages/home</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/miscellanea</loc>
+    <loc>http://www.example.com/pages/miscellanees</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/miscellanea/titre-livre</loc>
+    <loc>http://www.example.com/pages/miscellanees/titre-livre</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/miscellanea/les-femmes</loc>
+    <loc>http://www.example.com/pages/miscellanees/les-femmes</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/miscellanea/les-operations</loc>
+    <loc>http://www.example.com/pages/miscellanees/les-operations</loc>
   </url>
 </urlset>
