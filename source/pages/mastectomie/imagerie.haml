@@ -1,6 +1,9 @@
 ---
 layout: nav
 poster: "02-02-backgroundimage-mastecradio.jpg"
+name: intro-imagery
+picto: mastectomy
+color: blue
 videos:
   sentence-images-biopsie:
     src: "http://player.vimeo.com/external/109822169.hd.mp4?s=b9c71cc1837fc6bf1f29258842d716c5"
@@ -11,3 +14,9 @@ videos:
 ---
 
 = partial "layouts/video/playlist"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"

@@ -160,6 +160,12 @@ fr:
       mots-mathieu: "Les mots de Mathieu"
       paroles-soignants: "Les paroles des soignants"
 
+    #Intro for imagery page
+    intro-imagery:
+      title-1: "l'"
+      title-2: "imagerie"
+      text-intro: "l'imagerie blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla"
+
     surgical:
       title-1: "reconstruction"
       title-2: "chirurgicale"
