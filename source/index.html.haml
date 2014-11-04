@@ -34,7 +34,7 @@ layout: fullscreen
     - %w(institut-curie au-sein-de-la-difference fondation-dominique-tom-alberici mutuelle-bleue fondation-michelin astra-zeneca fondation-macsf thermes-la-roche-posay).each do |partner|
       %li= image_tag "logos/partners/landing/#{partner}.png"
 
-= partial 'pages/disclaimer'
+= partial 'layouts/modals/disclaimer'
 
 - content_for :javascripts do
   :coffeescript

@@ -8,13 +8,13 @@
     - financial_partners.each_with_index do |partner, index|
       - if (index % 4) == 0
         .financial-row
-      = partial 'pages/about/financial-partner', locals: {partner: partner[:name], url: partner[:url]}
+      = partial 'pages/footer/about/financial-partner', locals: {partner: partner[:name], url: partner[:url]}
   #broadcast-partners
     %h2= I18n.t("about.partner.broadcast.title")
     - broadcast_partners.each_with_index do |partner, index|
       - if (index % 6) == 0
         .broadcast-row
-      = partial 'pages/about/broadcast-partner', locals: {partner: partner[:name], url: partner[:url]}
+      = partial 'pages/footer/about/broadcast-partner', locals: {partner: partner[:name], url: partner[:url]}
 
 - financial_partners.each do |partner|
-  = partial 'pages/about/involvement', locals: {partner: partner[:name], url: partner[:url]}
+  = partial 'pages/footer/about/involvement', locals: {partner: partner[:name], url: partner[:url]}

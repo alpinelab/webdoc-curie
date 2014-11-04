@@ -24,10 +24,8 @@ images:
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
-
       $('#carousel-curie').on 'slide.bs.carousel', (event)->
         $('.video-description').text($(event.relatedTarget).data('description'))
-
       # handles the carousel thumbnails
       $("[id^=carousel-selector-]").click ->
         id_selector = $(this).attr("id")
@@ -37,7 +35,6 @@ images:
         $("[id^=carousel-selector-]").removeClass "selected"
         $(this).addClass "selected"
         return
-
       # when the carousel slides, auto update
       $("#carousel-curie").on "slid", (e) ->
         id = $(".item.active").data("slide-number")

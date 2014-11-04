@@ -1,5 +1,5 @@
 #player-wrapper
-  = partial "pages/nav/default_player", locals: { default_src: current_page.data.videos.values.first["src"] }
+  = partial "layouts/video/player", locals: { default_src: current_page.data.videos.values.first["src"] }
 
   .video-description= I18n.t("videos." + current_page.data.videos.keys.first)
 
