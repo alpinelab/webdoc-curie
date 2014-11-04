@@ -1,6 +1,7 @@
 ---
 layout: nav
 name: mastectomy
+poster: /images/posters/02-videobackground-mastecomie.jpg
 color: blue
 items:
   sentence-image:
@@ -21,3 +22,8 @@ items:
 = partial 'pages/nav/menu'
 = partial 'pages/nav/modal'
 
+- content_for :javascripts do
+  :coffeescript
+    initBigVideoImage()
+    $(document).ready ->
+      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/109823311.hd.mp4?s=17a5ae34361c7cda0b1d780b1623010a" }], ambient: true

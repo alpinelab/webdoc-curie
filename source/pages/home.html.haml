@@ -1,5 +1,6 @@
 ---
 title: Curie Webdoc - Guérir le regard
+poster: /images/posters/01-videobackground-infosein.jpg
 ---
 
 #main.container-fluid
@@ -12,6 +13,7 @@ title: Curie Webdoc - Guérir le regard
 
 - content_for :javascripts do
   :coffeescript
+    initBigVideoImage()
     @playlist = [
       [{ type: "video/mp4",  src: "http://player.vimeo.com/external/109821776.hd.mp4?s=123961b2d810db71fa25e52555caf8f1", poster: "/images/posters/01-videobackground-infosein.jpg"}],
       [{ type: "video/mp4",  src: "http://player.vimeo.com/external/109823311.hd.mp4?s=17a5ae34361c7cda0b1d780b1623010a", poster: "/images/posters/02-videobackground-mastecomie.jpg"}],

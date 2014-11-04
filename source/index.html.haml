@@ -1,5 +1,5 @@
 ---
-title: Curie Webdoc - Guérir le regard
+poster: /images/posters/00-backgroundimage-landingpage.jpg
 layout: fullscreen
 ---
 
@@ -38,9 +38,7 @@ layout: fullscreen
 
 - content_for :javascripts do
   :coffeescript
+    initBigVideoImage()
     $(document).ready ->
-      BV.init()
-      if Modernizr.touch
-        BV.show "http://video-js.zencoder.com/oceans-clip.png"
-      else
-        BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110470750.hd.mp4?s=af9b58ea0a25cff6377b7e98c52d5204" }], ambient: true
+      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110470750.hd.mp4?s=af9b58ea0a25cff6377b7e98c52d5204" }], ambient: true
+

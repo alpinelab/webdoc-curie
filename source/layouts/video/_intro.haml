@@ -1,0 +1,17 @@
+#skip-intro{:'data-video-src' => current_page.data.video_src}
+  %span= I18n.t("common.skip-intro")
+
+- content_for :javascripts do
+  :coffeescript
+    initBigVideoImage()
+    enterToCategory = ->
+      pathArray = window.location.pathname.split('/')
+      pathArray.pop()
+      window.location.assign(pathArray.join('/'))
+    $(document).ready ->
+      $.BV.show [src: $("#skip-intro").data('video-src'), type: 'video/mp4']
+      $("#skip-intro").click (event) ->
+        $.BV.getPlayer().pause()
+        enterToCategory()
+      $.BV.getPlayer().on "ended", (event) ->
+        enterToCategory()
