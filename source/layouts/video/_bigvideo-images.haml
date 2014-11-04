@@ -1,6 +1,6 @@
 - unless current_page.data.background.blank? and current_page.data.poster.blank?
   .image-wrapper
     - if current_page.data.background
-      %img.background-image{src: current_page.data.background}
+      = image_tag "posters/" + current_page.data.background, class: "background-image"
     - else
-      %img.loader-image{src: current_page.data.poster}
+      = image_tag "posters/" + current_page.data.poster, class: "loader-image"

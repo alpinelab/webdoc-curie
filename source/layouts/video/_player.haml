@@ -1,5 +1,5 @@
 .video-wrapper
-  %video#video-player.video-js.vjs-curie-skin{"data-setup" => '{ "controls": false, "preload": "auto"}', :height => "auto", :poster => image_path("#{current_page.data.poster}"), :preload => "auto", :"max-width" => "100%", "data-current-video" => 0}
+  %video#video-player.video-js.vjs-curie-skin{"data-setup" => '{ "controls": false, "preload": "auto", "autoplay": true}', :height => "auto", :poster => image_path("posters/#{current_page.data.poster}"), :"max-width" => "100%", "data-current-video" => 0}
     %source{:src => default_src, :type => "video/mp4"}
   .prev.control
   .pause.control
@@ -19,7 +19,7 @@
       videojs("video-player").ready ->
         resizeVideoJS()
         this.on 'play', ->
-          $('.loader-image').transit({'opacity':0},3000)
+          $('.loader-image').transit({'opacity':0},500)
       $('.play, .pause').click ->
         element = $(this)
         videojs("video-player").ready ->

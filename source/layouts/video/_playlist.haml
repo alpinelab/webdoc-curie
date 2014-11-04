@@ -1,14 +1,14 @@
 #player-wrapper
   - unless current_page.data.videos.values.first["poster"].blank?
     .image-wrapper.over-video-player
-      %img.loader-image{src: current_page.data.videos.values.first["poster"] }
+      = image_tag "posters/" + current_page.data.videos.values.first["poster"] , class: 'loader-image'
   = partial "layouts/video/player", locals: { default_src: current_page.data.videos.values.first["src"] }
 
   .video-description= I18n.t("videos." + current_page.data.videos.keys.first)
 
   .video-nav-wrapper
     - current_page.data.videos.each_with_index do |(key, video), index|
-      .video-nav{data: {:'video-src' => video["src"], :'video-description' => I18n.t("videos." + key), :'video-poster' => video["poster"]}, class: "#{'selected' if index == 0}" }
+      .video-nav{data: {:'video-src' => video["src"], :'video-description' => I18n.t("videos." + key), :'video-poster' => "/images/posters/#{video['poster']}"}, class: "#{'selected' if index == 0}" }
         = image_tag "posters/" + video["thumbnail"], width: "100px"
 
 - content_for :javascripts do
