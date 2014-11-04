@@ -29,7 +29,6 @@
 - content_for :javascripts do
   :coffeescript
     $(document).ready ->
-      $("#modal-intro").modal "show"
       $('.menu-item').on 'mouseenter', ->
         $(this).find('ul').animate({opacity: 1})
       $('.menu-item').on 'mouseleave', ->

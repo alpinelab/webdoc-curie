@@ -5,7 +5,7 @@ picto: surgical
 poster: "03-03-background-reconstruction-sec.jpg"
 color: pink
 items:
-  prothèse: 
+  prothèse:
     angle-triangle: 180
     angle-item: 180
     sub_items:
@@ -13,14 +13,14 @@ items:
       - delphine
       - sabine
       - paroles-soignants
-  autologues: 
+  autologues:
     angle-triangle: 20
     angle-item: 30
     sub_items:
       - grand-dorsal
       - diep
       - lipomodelage
-  lipomodelage: 
+  lipomodelage:
     angle-triangle: 330
     angle-item: 330
 ---
@@ -32,4 +32,5 @@ items:
   :coffeescript
     initBigVideoImage()
     $(document).ready ->
+      $("#modal-intro").modal "show"
       $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110338853.hd.mp4?s=4598cc7b31d8585ac240d92aa9cfba2e" }], ambient: true
