@@ -39,11 +39,13 @@ set :images_dir, 'images'
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def upper_page
+    url = File.dirname(current_page.url)
+    source_file = File.dirname(current_page.source_file) + "/index.haml"
+    File.exist?(source_file) ? url :  File.dirname(url)
+  end
+end
 
 # i18n extension
 activate :i18n, :mount_at_root => :fr
