@@ -4,16 +4,25 @@
     <loc>http://www.example.com</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/mastectomie/example-video-with-chapters</loc>
-  </url>
-  <url>
     <loc>http://www.example.com/pages/mastectomie</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/mastectomie/example-multiple-videos</loc>
+    <loc>http://www.example.com/pages/mastectomie/imagerie</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/mastectomie/mots-femmes</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/mastectomie/lena</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/mastectomie/mots-mathieu</loc>
   </url>
   <url>
     <loc>http://www.example.com/pages/mastectomie/intro</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/mastectomie/paroles-soignants</loc>
   </url>
   <url>
     <loc>http://www.example.com/pages/home</loc>
