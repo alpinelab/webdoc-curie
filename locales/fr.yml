@@ -178,8 +178,6 @@ fr:
       mots-femmes: "Les mots des femmes"
       paroles-soignants: "Les paroles des soignants"
       secondaire: "La reconstruction secondaire"
-      reconstruction-grand-dorsal: "La reconstruction par grand dorsal"
-      reconstruction-diep-tram: "La reconstruction par DIEP et TRAM"
       parcours-geneviève: "Le parcours de Geneviève"
       mots-nathalie: "Les mots de Nathalie"
       tram-esmeralda: "Le TRAM d’Esméralda... 4 ans après"
@@ -199,6 +197,8 @@ fr:
       delphine: "Delphine, reconstruction par expandeur"
       sabine: "Les mots de Sabine"
       paroles-soignants: "Les paroles des soignants"
+      grand-dorsal: "La reconstruction par grand dorsal"
+      diep: "La reconstruction par DIEP et TRAM"
 
     nonsurgical:
       title-1: "reconstruction"
