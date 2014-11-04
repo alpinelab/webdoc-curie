@@ -139,6 +139,9 @@ fr:
       surgical:
         pretitle: Reconstruction
         title: Chirurgicale
+      secondary:
+        pretitle: Reconstruction
+        title: secondaire
       nonsurgical:
         pretitle: Reconstruction
         title: Non chirurgicale
@@ -170,25 +173,32 @@ fr:
       title-1: "reconstruction"
       title-2: "chirurgicale"
       text-intro: "text reconstruction chirurgicale"
-      reconstruction-immédiate: "La reconstruction immédiate"
-      parcours-sylvie: "Le parcours de Sylvie"
+      immédiate: "La reconstruction immédiate"
+      sylvie: "Le parcours de Sylvie"
       mots-femmes: "Les mots des femmes"
       paroles-soignants: "Les paroles des soignants"
-      reconstruction-secondaire: "La reconstruction secondaire"
-      prothèses: "Prothèse(s)"
-      reconstruction-secondaire-prothèse: "Reconstruction secondaire par prothèse"
-      delphine-reconstruction-expandeur: "Delphine, reconstruction par expandeur"
-      mots-sabine: "Les mots de Sabine"
-      reconstructions-autologues: "Les reconstructions autologues"
-      reconstruction-grand-dorsal: "La reconstruction par grand dorsal"
-      reconstruction-diep-tram: "La reconstruction par DIEP et TRAM"
+      secondaire: "La reconstruction secondaire"
       parcours-geneviève: "Le parcours de Geneviève"
       mots-nathalie: "Les mots de Nathalie"
       tram-esmeralda: "Le TRAM d’Esméralda... 4 ans après"
       paroles-soignants-3: "Les paroles des soignants"
       ester-jumelles: "Ester et ses jumelles, du TRAM au DIEP"
-      reconstruction-lipomodelage: "la reconstruction par lipomodelage"
-      étapes-finition: "Les étapes de finition"
+      finitions: "Les étapes de finition"
+
+    #Intro for secondary page
+    secondary:
+      title-1: "Reconstruction"
+      title-2: "secondaire"
+      text-intro: "la reconstruction secondaire blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla"
+      prothèse: "Prothèse(s)"
+      autologues: "Les reconstructions autologues"
+      lipomodelage: "la reconstruction par lipomodelage"
+      animation: "Reconstruction secondaire par prothèse"
+      delphine: "Delphine, reconstruction par expandeur"
+      sabine: "Les mots de Sabine"
+      paroles-soignants: "Les paroles des soignants"
+      grand-dorsal: "La reconstruction par grand dorsal"
+      diep: "La reconstruction par DIEP et TRAM"
 
     nonsurgical:
       title-1: "reconstruction"
@@ -344,6 +354,7 @@ fr:
     #03 Reconstruction soignants
     l-illusion: "L'illusion"
     temps-primordial: "Le temps est primordial"
+    avoir-choix: "Avoir le choix"
 
     #05 Interrogations sexualité
     femmes-célibataires: "Femmes célibataires"

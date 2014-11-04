@@ -7,7 +7,7 @@
           .viewport
             %h1= I18n.t("compass.inner.#{current_page.data.name}.pretitle")
             %h1{class: "color-#{current_page.data.color}"}= I18n.t("compass.inner.#{current_page.data.name}.title")
-            = image_tag "pictograms/" + current_page.data.name + "-white.png"
+            = image_tag "pictograms/" + (current_page.data.picto || current_page.data.name) + "-white.png"
           - current_page.data.items.each do |key, item|
             %div{class: "triangle-angle-" + item["angle-triangle"].to_s }
               = image_tag "pictograms/arrow_#{current_page.data.color}_small.png"

@@ -1,0 +1,29 @@
+---
+layout: nav
+name: surgical
+poster: "03-videobackground-reconstruction.jpg"
+color: pink
+items:
+  immédiate: 
+    angle-triangle: 180
+    angle-item: 180
+    sub_items:
+      - sylvie
+      - mots-femmes
+      - paroles-soignants
+  secondaire: 
+    angle-triangle: 20
+    angle-item: 30
+  finitions: 
+    angle-triangle: 330
+    angle-item: 330
+---
+
+= partial 'layouts/navigation/branch'
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    initBigVideoImage()
+    $(document).ready ->
+      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/109825420.hd.mp4?s=f3e09643a73596cb2e09a1a87f2c4b31" }], ambient: true
