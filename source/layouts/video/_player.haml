@@ -20,7 +20,7 @@
         videojs("video-player").load()
         resizeVideoJS()
         this.on 'loadeddata', ->
-          $('.loader-image').animate({'opacity':0},500,"swing",->
+          $('.loader-image').animate({'opacity':0},0,"swing",->
             $('.image-wrapper').removeClass('over-video-player')
           )
           this.play()
