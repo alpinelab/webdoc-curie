@@ -40,11 +40,12 @@ set :images_dir, 'images'
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def upper_page
-    url = File.dirname(current_page.url)
-    source_file = File.dirname(current_page.source_file) + "/index.haml"
-    parent_file = File.dirname(File.dirname(current_page.source_file)) + "/index.haml"
-    (File.exist?(source_file) and File.exist?(parent_file)) ? url :  File.dirname(url)
+  def parent_page
+    source_file      = current_page.source_file
+    parent_file      = File.dirname(source_file) + "/index.haml"
+    parent_url       = File.dirname(current_page.url)
+    upper_parent_url = File.dirname(parent_url)
+    File.exist?(parent_file) ? parent_url : upper_parent_url
   end
 end
 

@@ -4,6 +4,6 @@
       %a{href: "/pages"}
         = image_tag 'mainNav/btn_home.png'
     .back-button
-      %a{href: upper_page}
+      %a{href: current_page.data.parent_page || parent_page}
         = image_tag 'mainNav/btn_close_big.png'
   = yield
