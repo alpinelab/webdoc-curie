@@ -1,0 +1,44 @@
+---
+layout: nav
+name: intro-genevieve
+color: pink
+picto: surgical
+background: "03-03-background-reconstruction-sec.jpg"
+videos:
+  choix-sans-hésitation:
+    src: "http://player.vimeo.com/external/109913564.hd.mp4?s=fe343fbb50ff1095a852518e48b00d5c"
+    thumbnail: "03-03-03-02-01-02-videoseule-itwgene.jpg"
+    poster: "03-03-03-02-01-02-videoseule-itwgene.jpg"
+  dernière-consultation:
+    src: "http://player.vimeo.com/external/109913565.hd.mp4?s=cb0b5ccaa7bbcd4fa4d162e6e35097f1"
+    thumbnail: "03-03-03-02-01-03-videoseule-consultmédecingene.jpg"
+    poster: "03-03-03-02-01-03-videoseule-consultmédecingene.jpg"
+  angioscanner-permis-diep:
+    src: "http://player.vimeo.com/external/109913566.hd.mp4?s=93509ca3080fb5951d7685f9fe112b1c"
+    thumbnail: "03-03-03-02-01-04-videoseule-angioscannergene.jpg"
+    poster: "03-03-03-02-01-04-videoseule-angioscannergene.jpg"
+  consultation-infirmière-secondaire:
+    src: "http://player.vimeo.com/external/109913567.hd.mp4?s=772de5002ef52bf1636347b2d76123ac"
+    thumbnail: "03-03-03-02-01-05-videoseule-consultinfgene.jpg"
+    poster: "03-03-03-02-01-05-videoseule-consultinfgene.jpg"
+  jour-diep:
+    src: "http://player.vimeo.com/external/109913662.hd.mp4?s=295313fe08f2da741b5dbbf35e1f6f9f"
+    thumbnail: "03-03-03-02-01-06-videoseule-opegene.jpg"
+    poster: "03-03-03-02-01-06-videoseule-opegene.jpg"
+  visite-chirurgien-secondaire:
+    src: "http://player.vimeo.com/external/109913663.hd.mp4?s=8751bd778d3830f390f4185ff3b6ae3d"
+    thumbnail: "03-03-03-02-01-07-videoseule-J1pansementgene.jpg"
+    poster: "03-03-03-02-01-07-videoseule-J1pansementgene.jpg"
+  consultations-post-secondaire:
+    src: "http://player.vimeo.com/external/109913664.hd.mp4?s=8db08830362665832898c4f1addb3a01"
+    thumbnail: "03-03-03-02-01-08-videoseule-postopgene.jpg"
+    poster: "03-03-03-02-01-08-videoseule-postopgene.jpg"
+---
+
+= partial 'layouts/modals/intro'
+= partial "layouts/video/playlist"
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"

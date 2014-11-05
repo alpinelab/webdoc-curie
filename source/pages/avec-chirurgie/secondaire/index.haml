@@ -30,6 +30,7 @@ items:
 
 - content_for :javascripts do
   :coffeescript
+    $.BV.init()
     initVideoImageLoader($.BV.getPlayer())
     $(document).ready ->
       $("#modal-intro").modal "show"

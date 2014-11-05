@@ -1,22 +1,24 @@
 ---
 layout: nav
-name: surgical
-poster: "03-videobackground-reconstruction.jpg"
-color: pink
+name: interrogations
+poster: "05-videobackground-interrogations.jpg"
+color: orange
 items:
-  immédiate:
+  sexualité:
     angle-triangle: 180
     angle-item: 180
-    sub_items:
-      - sylvie
-      - mots-femmes
-      - paroles-soignants
-  secondaire:
+  vieillesse:
     angle-triangle: 20
     angle-item: 30
-  finitions:
+  metastase:
     angle-triangle: 330
     angle-item: 330
+  service-santé:
+    angle-triangle: 250
+    angle-item: 250
+    sub_items:
+      - livre-peu-conventionnel
+      - garance
 ---
 
 = partial 'layouts/navigation/branch'
@@ -28,4 +30,4 @@ items:
     initVideoImageLoader($.BV.getPlayer())
     $(document).ready ->
       $("#modal-intro").modal "show"
-      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/109825420.hd.mp4?s=f3e09643a73596cb2e09a1a87f2c4b31" }], ambient: true
+      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110645678.hd.mp4?s=a8f5c73a6c26501a00a6980fbecc909e" }], ambient: true

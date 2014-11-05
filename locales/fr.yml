@@ -206,28 +206,33 @@ fr:
       grand-dorsal: "La reconstruction par grand dorsal"
       diep: "La reconstruction par DIEP et TRAM"
 
+    intro-genevieve:
+      title-1: "Reconstruction"
+      title-2: "DIEP"
+      text-intro: "la reconstruction secondaire blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla"
+
     nonsurgical:
       title-1: "reconstruction"
       title-2: "non chirurgicale"
       text-intro: "text reconstruction non chirurgicale"
       femmes-amazones: "Trois femmes amazones"
-      cathie-femme-asymétrique: "Cathie, une femme asymétrique"
-      laurence-tatouage-fleur: "Laurence, tatouage, fleurs de tiaré"
-      géraldine-chemin: "Géraldine, un chemin..."
-      paroles-soignants-5: "Les paroles de soignants"
-      garance-ligne-vêtements: "Garance, ligne de vêtements asymétriques"
+      cathie: "Cathie, une femme asymétrique"
+      laurence: "Laurence, tatouage, fleurs de tiaré"
+      géraldine: "Géraldine, un chemin..."
+      paroles-soignants: "Les paroles de soignants"
+      garance: "Garance, ligne de vêtements asymétriques"
       url: "sans-chirurgie"
 
     interrogations:
-      title-1: "reconstruction"
-      title-2: "non chirurgicale"
+      title-1: "&nbsp;"
+      title-2: "Interrogations"
       text-intro: "text interrogations"
       sexualité: "Et la sexualité ?"
-      ana-maria-reconstruction: "Ana Maria, reconstruction et vieillesse"
-      cécile-reconstruction-métastatique: "Cécile, reconstruction en phase métastatique"
-      création-service-santé: "La création au service de la santé"
+      vieillesse: "Ana Maria, reconstruction et vieillesse"
+      metastase: "Cécile, reconstruction en phase métastatique"
+      service-santé: "La création au service de la santé"
       livre-peu-conventionnel: "Un livre peu conventionnel"
-      ligne-lingerie-dédiée: "Une ligne de lingerie dédiée..."
+      garance: "Une ligne de lingerie dédiée..."
       url: "interrogations"
 
     misc:
