@@ -66,10 +66,10 @@ end
 
 activate :google_analytics do |ga|
   # Property ID (default = nil)
-  ga.tracking_id = 'UA-XXXXXXX-X'
+  ga.tracking_id = 'UA-56426073-1'
 
   # Tracking across a domain and its subdomains (default = nil)
-  ga.domain_name = 'example.com'
+  ga.domain_name = 'guerirleregard.fr'
 end
 
 # Reload the browser automatically whenever files change
@@ -121,7 +121,7 @@ configure :build do
     ]
   }
 
-  activate :sitemap, :hostname => "http://www.example.com"
+  activate :sitemap, :hostname => "http://guerirlereguard.fr"
 end
 
 activate :deploy do |deploy|
