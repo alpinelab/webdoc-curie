@@ -1,18 +1,22 @@
 ---
 layout: nav
-images:
- - "lien"
- - "lien"
- - "lien"
+name: misc
+poster: "03-03-background-reconstruction-sec.jpg"
+items:
+  animations:
+    thumbnail: "http://placehold.it/320x180"
+  livre-marseille:
+    thumbnail: "http://placehold.it/320x180"
+  se-voir-se-montrer:
+    thumbnail: "http://placehold.it/320x180"
 ---
-.col-md-10.col-md-offset-1.misc-wrapper
-  .row
-    - current_page.data.images.each_with_index do |image, index|
-      .col-md-4
-        .misc-title
-          - page_name = I18n.t("misc.title-"+index.to_s)
-          %h2= I18n.t("misc.title-"+index.to_s)
-        .misc-image
-          = link_to "./miscellanea/" + page_name.slugify do
-            = image_tag lorem.image('320x180')
+
+= partial "layouts/navigation/table"
+
+- content_for :javascripts do
+  :coffeescript
+    $.BV.init()
+    initVideoImageLoader($.BV.getPlayer())
+    $(document).ready ->
+      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110645482.hd.mp4?s=86106d862edb1e25c3292d22938aada1" }], ambient: true
 
