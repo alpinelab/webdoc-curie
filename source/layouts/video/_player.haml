@@ -20,16 +20,25 @@
         videojs("video-player").load()
         resizeVideoJS()
         this.on 'loadeddata', ->
-          $('.loader-image').transit({'opacity':0},500)
+          $('.loader-image').animate({'opacity':0},500,"swing",->
+            $('.image-wrapper').removeClass('over-video-player')
+          )
           this.play()
-      $('.play, .pause').click ->
+        this.on 'play', ->
+          $('.play').removeClass('play').addClass('pause')
+        this.on 'pause', ->
+          $('.pause').removeClass('pause').addClass('play')
+        this.on 'useractive', ->
+          $('.control, .vjs-control-bar').removeClass('inactive')
+        this.on 'userinactive', ->
+          $('.control, .vjs-control-bar').addClass('inactive')
+      $('.play, .pause, .vjs-tech').click ->
         element = $(this)
         videojs("video-player").ready ->
           if this.paused()
             this.play()
           else
             this.pause()
-          element.toggleClass('play pause')
       $('.next').click ->
         videojs("video-player").ready ->
           current_video = $('#video-player').data('current-video')
