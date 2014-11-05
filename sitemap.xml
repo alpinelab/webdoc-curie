@@ -91,9 +91,6 @@
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/grand-dorsal</loc>
   </url>
   <url>
-    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/lipomodelage</loc>
-  </url>
-  <url>
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/diep</loc>
   </url>
   <url>
@@ -116,6 +113,9 @@
   </url>
   <url>
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire</loc>
+  </url>
+  <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/lipomodelage</loc>
   </url>
   <url>
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/prothese/sabine</loc>
