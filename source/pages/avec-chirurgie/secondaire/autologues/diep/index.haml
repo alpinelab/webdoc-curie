@@ -2,23 +2,20 @@
 layout: nav
 name: diep
 poster: "03-03-background-reconstruction-sec.jpg"
-titles:
-  - geneviève
-  - nathalie
-  - esmeralda
-  - paroles-soignants
-  - ester
+items:
+  geneviève:
+    thumbnail: "http://placehold.it/320x180"
+  nathalie:
+    thumbnail: "http://placehold.it/320x180"
+  esmeralda:
+    thumbnail: "http://placehold.it/320x180"
+  paroles-soignants:
+    thumbnail: "http://placehold.it/320x180"
+  ester:
+    thumbnail: "http://placehold.it/320x180"
 ---
 
-.col-md-10.col-md-offset-1
-  .row
-    - current_page.data.titles.each do |title|
-      .col-md-4
-        .misc-title
-          %h2= I18n.t("nav.diep." + title)
-        .misc-image
-          = link_to File.join(current_page.url, title.slugify) do
-            %img.img-responsive{src: lorem.image('320x180')}
+= partial "layouts/navigation/table"
 
 - content_for :javascripts do
   :coffeescript

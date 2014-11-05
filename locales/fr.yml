@@ -238,9 +238,9 @@ fr:
       url: "interrogations"
 
     misc:
-      title-0: "Interventions en animations"
-      title-1: "Un livre novateur, un outil précieux"
-      title-2: "Se voir, se montrer"
+      animations: "Interventions en animations"
+      livre-marseille: "Un livre novateur, un outil précieux"
+      se-voir-se-montrer: "Se voir, se montrer"
 
   the-movie:
     title: "Le film"
