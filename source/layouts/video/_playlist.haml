@@ -1,7 +1,4 @@
 #player-wrapper
-  - unless current_page.data.videos.values.first["poster"].blank?
-    .image-wrapper.over-video-player
-      = image_tag "posters/" + current_page.data.videos.values.first["poster"] , class: 'loader-image'
   = partial "layouts/video/player", locals: { default_src: current_page.data.videos.values.first["src"] }
 
   .video-description= I18n.t("videos." + current_page.data.videos.keys.first)
@@ -17,10 +14,7 @@
       $('.video-nav').on 'click', 'img', ->
         video_src = $(this).parent().data('video-src')
         video_desc = $(this).parent().data('video-description')
-        video_poster = $(this).parent().data('video-poster')
         element = $(this).closest('.video-nav')
-        $('.loader-image').attr('src', video_poster);
-        $('.loader-image').css({'opacity':1});
         videojs("video-player").ready ->
           myPlayer = this
           myPlayer.src(video_src)
