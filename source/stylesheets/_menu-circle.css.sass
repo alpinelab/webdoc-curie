@@ -8,22 +8,36 @@
       @include triangle-position($i*5*1deg,150%)
 
     .menu-angle-#{$i*5}
-      @include menu-position($i*5*1deg, 5% , 20%)
+      @include menu-position($i*5*1deg, 5% , 30%)
 
   .menu-item
-    text-align: center
+    text-align: left
     width: 50%
+
+    a, a:hover, a:visited, a:active, a:link
+      text-transform: uppercase
+      text-decoration: none
+      +font-curie-text
+      color: white
+    a:hover, a:active
+      padding-bottom: 1px
+      border-bottom: 2px solid white
 
     ul
       text-align: left
       opacity: 0
       list-style-type: none
+      padding-left: 0
+      li
+        padding-top: 3px
+        a, a:hover, a:visited, a:active, a:link
+          font-size: 14px
       li::before
         content: ''
         width: 0
         height: 0
         position: relative
-        left: -15px
+        left: 0
         display: inline-block
         border-top: solid 6px transparent
         border-bottom: solid 6px transparent
@@ -34,13 +48,6 @@
       &.color-orange li::before
         border-left: solid 10px $curie-orange
 
-    .menu-item-title, ul
+    .menu-item-title
       margin: 0
-      a, a:hover, a:visited, a:active, a:link
-        text-transform: uppercase
-        text-decoration: none
-        +font-curie-text
-        color: white
-      a:hover, a:active
-        padding-bottom: 1px
-        border-bottom: 2px solid white
+

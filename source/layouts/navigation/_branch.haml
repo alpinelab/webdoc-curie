@@ -6,7 +6,7 @@
           = partial "layouts/compass"
           .viewport
             %ul.compass-inner
-              %li{class: current_page.data.name}
+              %li{class: (current_page.data.picto || current_page.data.name)}
                 .slide-container
                   %h1.pretitle= I18n.t("compass.inner.#{current_page.data.name}.pretitle")
                   %h1.title= I18n.t("compass.inner.#{current_page.data.name}.title")
