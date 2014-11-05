@@ -12,20 +12,20 @@
     .container-fluid
       .row
         .col-sm-12
-          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.datasheets.datasheet.total-mastectomy"), url: {"link" => "#", "text"=> I18n.t("read-more.datasheets.datasheet.download")}}
-          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.datasheets.datasheet.breast-reconstruction"), url: {"link" => "#", "text"=> I18n.t("read-more.datasheets.datasheet.download")}}
-          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.datasheets.datasheet.booklet-faq"), url: {"link" => "#", "text"=> I18n.t("read-more.datasheets.datasheet.download")}}
+          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.datasheets.datasheet.total-mastectomy"), url: {"link" => "http://www.cancersdusein.curie.fr/sites/default/files/Mastectomie-totale.pdf", "text"=> I18n.t("read-more.datasheets.datasheet.download")}}
+          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.datasheets.datasheet.breast-reconstruction"), url: {"link" => "http://www.cancersdusein.curie.fr/sites/default/files/Reconstruction-mammaire-BIS.pdf", "text"=> I18n.t("read-more.datasheets.datasheet.download")}}
+          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.datasheets.datasheet.booklet-faq"), url: {"link" => "http://www.cancersdusein.curie.fr/sites/default/files/Sein-reconstruction-FAQ.pdf", "text"=> I18n.t("read-more.datasheets.datasheet.download")}}
   #web.tab-pane.fade{role: "tabpanel"}
     .container-fluid
       .row
         .col-sm-6
-          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.guerir-le-regard"), url: {"link" => "#", "text"=> I18n.t("read-more.web.link.webdoc.")}}
-          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.infosein-group"), url: {"link" => "#", "text"=> I18n.t("read-more.web.link.website")}}
-          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.curie-institute"), url: {"link" => "#", "text"=> I18n.t("read-more.web.link.website")}}
+          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.guerir-le-regard"), url: {"link" => "https://www.youtube.com/watch?v=uev1ARP9cmI", "text"=> I18n.t("read-more.web.link.webdoc.")}}
+          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.infosein-group"), url: {"link" => "http://www.cancersdusein.curie.fr/fr/article/001182-info-sein-s%E2%80%99informer-sur-la-reconstruction-apr%C3%A8s-une-mastectomie", "text"=> I18n.t("read-more.web.link.website")}}
+          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.curie-institute"), url: {"link" => "http://cancersdusein.curie.fr", "text"=> I18n.t("read-more.web.link.website")}}
         .col-sm-6
-          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.curie-institute-webradio"), url: {"link" => "#", "text"=> I18n.t("read-more.web.link.website")}}
-          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.melilotus-blog"), url: {"link" => "#", "text"=> I18n.t("read-more.web.link.website")}}
-          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.monoboob"), url: {"link" => "#", "text"=> I18n.t("read-more.web.link.website")}}
+          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.curie-institute-webradio"), url: {"link" => "http://radio.curie.fr", "text"=> I18n.t("read-more.web.link.website")}}
+          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.melilotus-blog"), url: {"link" => "https://blogdemelilotus.wordpress.com/", "text"=> I18n.t("read-more.web.link.website")}}
+          = partial 'pages/footer/read-more/link', locals: {name: I18n.t("read-more.web.monoboob"), url: {"link" => "http://emiliemarsollat.wix.com/monoboob", "text"=> I18n.t("read-more.web.link.website")}}
   #dvds.tab-pane.fade{role: "tabpanel"}
     .container-fluid
       .row
