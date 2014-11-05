@@ -6,4 +6,4 @@
           %h2= I18n.t(["nav", current_page.data.name, key].join('.'))
         .misc-image
           = link_to File.join(current_page.url, key.slugify) do
-            = image_tag item["thumbnail"], class: "img-responsive"
+            = image_tag ("thumbnails/"+item["thumbnail"]), class: "img-responsive"
