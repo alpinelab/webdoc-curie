@@ -95,6 +95,18 @@
         height: 8px
         background: $curie-orange
 
+.video-wrapper .vjs-control-bar.inactive, .video-wrapper .control.inactive
+  display: block
+  visibility: hidden
+  opacity: 0
+  /* transition */
+  -webkit-transition: visibility 0.5s, opacity 0.5s
+  -moz-transition: visibility 0.5s, opacity 0.5s
+  -o-transition: visibility 0.5s, opacity 0.5s
+  transition: visibility 0.5s, opacity 0.5s
+
+
+
 #skip-intro
   position: fixed
   width: 100%
