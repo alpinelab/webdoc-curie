@@ -1,8 +1,5 @@
 ---
 layout: nav
-name: intro-genevieve
-color: pink
-picto: surgical
 background: "03-03-background-reconstruction-sec.jpg"
 poster: "03-03-03-02-01-02-videoseule-itwgene.jpg"
 videos:
@@ -36,10 +33,4 @@ videos:
     poster: "03-03-03-02-01-08-videoseule-postopgene.jpg"
 ---
 
-= partial 'layouts/modals/intro'
 = partial "layouts/video/playlist"
-
-- content_for :javascripts do
-  :coffeescript
-    $(document).ready ->
-      $("#modal-intro").modal "show"

@@ -1,5 +1,8 @@
 ---
 layout: nav
+name: intro-lipomodelage
+color: pink
+picto: surgical
 background: "03-03-background-reconstruction-sec.jpg"
 poster: "03-03-03-03-01-videoanimation-lipomodelage.jpg"
 videos:
@@ -17,6 +20,10 @@ videos:
     poster: "03-03-03-03-04-videoseule-itwsoignantslipo.jpg"
 ---
 
-
-
 = partial "layouts/video/playlist"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"

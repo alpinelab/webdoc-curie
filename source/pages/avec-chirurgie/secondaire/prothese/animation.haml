@@ -1,5 +1,8 @@
 ---
 layout: nav
+name: intro-prothèse
+color: pink
+picto: surgical
 background: "03-03-background-reconstruction-sec.jpg"
 poster: "03-03-02-01-videoanim-prothese.jpg"
 videos:
@@ -10,3 +13,9 @@ videos:
 ---
 
 = partial "layouts/video/playlist"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"

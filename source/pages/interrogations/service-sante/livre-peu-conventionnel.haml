@@ -1,5 +1,8 @@
 ---
 layout: nav
+name: intro-service
+color: orange
+picto: interrogations
 background: "05-videobackground-interrogations.jpg"
 poster: "05-05-01-marseille.jpg"
 videos:
@@ -10,3 +13,9 @@ videos:
 ---
 
 = partial "layouts/video/playlist"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"

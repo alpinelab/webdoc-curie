@@ -1,6 +1,8 @@
 ---
 layout: nav
 name: diep
+color: pink
+picto: surgical
 poster: "03-03-background-reconstruction-sec.jpg"
 items:
   geneviève:
@@ -17,10 +19,12 @@ parent_page: "/pages/avec-chirurgie/secondaire/"
 ---
 
 = partial "layouts/navigation/table"
+= partial 'layouts/modals/intro'
 
 - content_for :javascripts do
   :coffeescript
     $.BV.init()
     initVideoImageLoader($.BV.getPlayer())
     $(document).ready ->
+      $("#modal-intro").modal "show"
       $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110338853.hd.mp4?s=4598cc7b31d8585ac240d92aa9cfba2e" }], ambient: true

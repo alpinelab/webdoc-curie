@@ -1,5 +1,8 @@
 ---
 layout: nav
+name: intro-finitions
+color: pink
+picto: surgical
 background: "03-03-background-reconstruction-sec.jpg"
 poster: "03-04-01-videoseule-consultfinitions.jpg"
 videos:
@@ -13,6 +16,10 @@ videos:
     poster: "03-04-02-videoseule-itwfemmesfinition.jpg"
 ---
 
-
-
 = partial "layouts/video/playlist"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"
