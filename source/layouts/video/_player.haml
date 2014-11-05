@@ -20,6 +20,10 @@
         resizeVideoJS()
         this.on 'loadeddata', ->
           $('.loader-image').transit({'opacity':0},500)
+        this.on 'play', ->
+          $('.play').removeClass('play').addClass('pause')
+        this.on 'pause', ->
+          $('.pause').removeClass('pause').addClass('play')
       $('.play, .pause').click ->
         element = $(this)
         videojs("video-player").ready ->
@@ -27,7 +31,6 @@
             this.play()
           else
             this.pause()
-          element.toggleClass('play pause')
       $('.next').click ->
         videojs("video-player").ready ->
           current_video = $('#video-player').data('current-video')
