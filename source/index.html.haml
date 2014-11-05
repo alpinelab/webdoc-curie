@@ -34,7 +34,7 @@ layout: fullscreen
 #partners
   %p= I18n.t("landing.credits.in-partenership-with")
   %ul
-    - %w(institut-curie au-sein-de-la-difference fondation-dominique-tom-alberici mutuelle-bleue fondation-michelin astra-zeneca fondation-macsf thermes-la-roche-posay).each do |partner|
+    - %w(institut-curie fondation-michelin au-sein-de-la-difference fondation-dominique-tom-alberici mutuelle-bleue astra-zeneca fondation-macsf thermes-la-roche-posay).each do |partner|
       %li= image_tag "logos/partners/landing/#{partner}.png"
 
 = partial 'layouts/modals/disclaimer'
