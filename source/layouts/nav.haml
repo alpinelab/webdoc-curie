@@ -7,3 +7,9 @@
       %a{href: current_page.data.parent_page || parent_page}
         = image_tag 'mainNav/btn_close_big.png'
   = yield
+  - content_for :javascripts do
+    :coffeescript
+      $(document).ready ->
+        $('body').css
+          'height'    : 'auto'
+          'min-height': '100%'
