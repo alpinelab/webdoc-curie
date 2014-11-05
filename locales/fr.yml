@@ -62,11 +62,11 @@ fr:
     subtitle: ""
     title: "Mentions légales"
   menu:
-    group-infosein-project: "Groupe projet info-sein"
-    mastectomy: "Mastectomie"
-    nonsurgical: "La reconstruction non chirurgicale"
+    group-infosein-project: "Groupe info-sein"
+    mastectomy: "La Mastectomie"
+    nonsurgical: "Reconstruction non chirurgicale"
     questions: "Interrogations"
-    surgical: "La reconstruction chirurgicale"
+    surgical: "Reconstruction chirurgicale"
   miscellanea:
     title: "Miscellanées"
     subtitle: ""
