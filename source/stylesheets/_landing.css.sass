@@ -2,7 +2,7 @@
   padding-bottom: 115px
   text-align: center
   min-height: 44em
-  +compass-style
+  +compass-fixed
   #introduced-by, #productor
     +font-curie-landing-sub
     color: white
@@ -17,15 +17,30 @@
 
   #compass-container.fixed
     .viewport
-      #enter
-        margin-top: 2em
-        .btn, .btn:hover, .btn:active, .btn:visited, .btn:focus
+      .slide-container
+        width: 100%
+        padding-top: 0
+        h1
+          +font-curie-landing
+          font-size: 40px
+          line-height: 60px
           text-transform: uppercase
-          background-color: $curie-orange
-          border-color: $curie-orange
-          font-weight: bold
-          width: 50%
-          color: white
+          .big
+            color: $curie-orange
+            font-size: 60px
+        img
+          margin-top: 1em
+        #enter
+          margin-top: 2em
+          .btn, .btn:hover, .btn:active, .btn:visited, .btn:focus
+            font-family: $font-family-base
+            text-transform: uppercase
+            background-color: $curie-orange
+            border-color: $curie-orange
+            font-weight: bold
+            font-size: $font-size-base
+            width: 50%
+            color: white
     .thumb
       //  TODO: use future PB's mixins here
       top: 25px
