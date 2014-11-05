@@ -183,11 +183,6 @@ fr:
       mots-femmes: "Les mots des femmes"
       paroles-soignants: "Les paroles des soignants"
       secondaire: "La reconstruction secondaire"
-      parcours-geneviève: "Le parcours de Geneviève"
-      mots-nathalie: "Les mots de Nathalie"
-      tram-esmeralda: "Le TRAM d’Esméralda... 4 ans après"
-      paroles-soignants-3: "Les paroles des soignants"
-      ester-jumelles: "Ester et ses jumelles, du TRAM au DIEP"
       finitions: "Les étapes de finition"
       url: "avec-chirurgie"
 
@@ -210,6 +205,13 @@ fr:
       title-1: "Reconstruction"
       title-2: "DIEP"
       text-intro: "la reconstruction secondaire blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla blablablabla"
+
+    diep:
+      geneviève: "Le parcours de Geneviève"
+      nathalie: "Les mots de Nathalie"
+      esmeralda: "Le TRAM d’Esméralda... 4 ans après"
+      paroles-soignants: "Les paroles des soignants"
+      ester: "Ester et ses jumelles, du TRAM au DIEP"
 
     nonsurgical:
       title-1: "reconstruction"
@@ -236,9 +238,9 @@ fr:
       url: "interrogations"
 
     misc:
-      title-0: "Interventions en animations"
-      title-1: "Un livre novateur, un outil précieux"
-      title-2: "Se voir, se montrer"
+      animations: "Interventions en animations"
+      livre-marseille: "Un livre novateur, un outil précieux"
+      se-voir-se-montrer: "Se voir, se montrer"
 
   the-movie:
     title: "Le film"
