@@ -12,11 +12,14 @@ layout: fullscreen
     .col-sm-12
       #compass-container.fixed
         = partial "layouts/compass"
-        .viewport.color-orange
-          %h1= I18n.t("common.doc-title").html_safe
-          = image_tag "pictograms/scar-white.png"
-          #enter
-            %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
+        .viewport
+          %ul.compass-inner
+            %li.landing
+              .slide-container
+                %h1= I18n.t("common.doc-title").html_safe
+                = image_tag "pictograms/scar-white.png"
+                #enter
+                  %button.btn.btn-warning{type: "button", :'data-toggle' => "modal", :'data-target' => "#modal-intro"}= I18n.t("common.enter")
         .thumb
           .arrow
 
