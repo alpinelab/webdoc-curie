@@ -12,7 +12,6 @@
       player = $("#video-player")
       width = player.parent().width()
       $("#video-player").width(width).height(width * aspectRatio)
-      $('.loader-image').width(width).height(width * aspectRatio)
     $(document).ready ->
       $(window).resize ->
         resizeVideoJS()
@@ -20,9 +19,6 @@
         videojs("video-player").load()
         resizeVideoJS()
         this.on 'loadeddata', ->
-          $('.loader-image').animate({'opacity':0},500,"swing",->
-            $('.image-wrapper').removeClass('over-video-player')
-          )
           this.play()
         this.on 'play', ->
           $('.play').removeClass('play').addClass('pause')

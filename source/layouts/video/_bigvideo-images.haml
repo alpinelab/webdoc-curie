@@ -1,6 +1,3 @@
 - unless current_page.data.background.blank? and current_page.data.poster.blank?
   .image-wrapper
-    - if current_page.data.background
-      = image_tag "posters/" + current_page.data.background, class: "background-image"
-    - else
-      = image_tag "posters/" + current_page.data.poster, class: "loader-image"
+    = image_tag File.join("posters", (current_page.data.background or current_page.data.poster)), class: "loader-image"

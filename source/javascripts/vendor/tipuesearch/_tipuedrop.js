@@ -61,6 +61,9 @@ http://www.tipue.com/drop
                     results["mastectomy"] = [];
                     results["surgical"] = [];
                     results["nonsurgical"] = [];
+                    results["groupeinfo"] = [];
+                    results["interrogations"] = [];
+                    results["misc"] = [];
                     var pat = new RegExp($obj.val(), 'i');
                     var item;
                      for (var i = 0; i < tipuedrop_in.pages.length; i++)
@@ -68,7 +71,6 @@ http://www.tipue.com/drop
                         item = tipuedrop_in.pages[i]
                         if ((item.title.search(pat) != -1 || item.tags.search(pat) != -1) && c < set.show)
                         {
-                          console.log(item);
                           results[item.category].push('<a href="' + item.loc + '"><div class="tipue_drop_item"><img src="' + compute_image_link(item.category, item.media) + '" class="tipue_drop_item_image pull-left"><div class="tipue_drop_item_title">' + item.title + '</div></div></a>');
                           c++;
                         }
@@ -76,9 +78,12 @@ http://www.tipue.com/drop
                      if (c != 0)
                      {
                         var elt = '<div id="tipue_drop_wrapper"><div class="tipue_drop_head">RÉSULTATS DE VOTRE RECHERCHE</div>';
+                        elt += render_category("groupeinfo", results["groupeinfo"]);
                         elt += render_category("mastectomy", results["mastectomy"]);
                         elt += render_category("surgical", results["surgical"]);
                         elt += render_category("nonsurgical", results["nonsurgical"]);
+                        elt += render_category("interrogations", results["interrogations"]);
+                        elt += render_category("misc", results["misc"]);
                         elt += '</div>';
                         $('#tipue_drop_content').html(elt);
                         $('#tipue_drop_content').fadeIn(set.speed);
@@ -101,12 +106,20 @@ http://www.tipue.com/drop
 
                function render_category(category, results)
                {
+                  title = {
+                    "mastectomy": "Mastectomie",
+                    "surgical": "Reconstruction chirurgicale",
+                    "nonsurgical": "Reconstruction non chirurgicale",
+                    "groupeinfo": "Groupe InfoSein",
+                    "interrogations": "Interrogations",
+                    "misc": "Miscellanees"
+                  };
                   var elt = '<div class="search-' + category + '">';
                   for (var i = 0; i < results.length; i++)
                   {
                     if (i == 0)
                     {
-                      elt += '<div class="category-title title-'+ category +'">' + category + '</div>';
+                      elt += '<div class="category-title title-'+ category +'">' + title[category] + '</div>';
                     }
                     elt += results[i];
                   }
