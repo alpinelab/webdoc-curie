@@ -4,6 +4,27 @@
     <loc>http://www.example.com</loc>
   </url>
   <url>
+    <loc>http://www.example.com/pages/interrogations</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/interrogations/metastase</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/interrogations/service-sante/garance</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/interrogations/service-sante/livre-peu-conventionnel</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/interrogations/intro</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/interrogations/vieillesse</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/interrogations/sexualite</loc>
+  </url>
+  <url>
     <loc>http://www.example.com/pages/mastectomie</loc>
   </url>
   <url>
@@ -28,7 +49,34 @@
     <loc>http://www.example.com/pages</loc>
   </url>
   <url>
+    <loc>http://www.example.com/pages/sans-chirurgie</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/sans-chirurgie/garance</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/sans-chirurgie/femmes-amazones/cathie</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/sans-chirurgie/femmes-amazones/geraldine</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/sans-chirurgie/femmes-amazones/laurence</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/sans-chirurgie/intro</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/sans-chirurgie/paroles-soignants</loc>
+  </url>
+  <url>
     <loc>http://www.example.com/pages/avec-chirurgie</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/finitions</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/intro</loc>
   </url>
   <url>
     <loc>http://www.example.com/pages/avec-chirurgie/immediate/sylvie</loc>
@@ -38,6 +86,33 @@
   </url>
   <url>
     <loc>http://www.example.com/pages/avec-chirurgie/immediate/paroles-soignants</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/autologues/grand-dorsal</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/autologues/lipomodelage</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/autologues/diep</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/autologues/diep/ester</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/autologues/diep/esmeralda</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/autologues/diep/genevieve</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/autologues/diep/genevieve-intro</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/autologues/diep/nathalie</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/avec-chirurgie/secondaire/autologues/diep/paroles-soignants</loc>
   </url>
   <url>
     <loc>http://www.example.com/pages/avec-chirurgie/secondaire</loc>
@@ -61,10 +136,13 @@
     <loc>http://www.example.com/pages/miscellanees/titre-livre</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/miscellanees/les-femmes</loc>
+    <loc>http://www.example.com/pages/miscellanees/animations</loc>
   </url>
   <url>
-    <loc>http://www.example.com/pages/miscellanees/les-operations</loc>
+    <loc>http://www.example.com/pages/miscellanees/se-voir-se-montrer</loc>
+  </url>
+  <url>
+    <loc>http://www.example.com/pages/miscellanees/livre-marseille</loc>
   </url>
   <url>
     <loc>http://www.example.com/pages/groupe-info-sein</loc>
