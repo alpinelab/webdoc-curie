@@ -7,7 +7,7 @@
   }
 
   function onVideoLoaded() {
-    $('.loader-image').transit({'opacity':0},2000);
+    $('.loader-image').transit({'opacity':0},300);
   }
 
   function adjustImagePositioning() {
