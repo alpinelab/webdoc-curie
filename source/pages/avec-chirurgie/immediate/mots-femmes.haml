@@ -1,5 +1,8 @@
 ---
 layout: nav
+name: intro-immédiate
+color: pink
+picto: surgical
 src: "http://player.vimeo.com/external/109825421.hd.mp4?s=e3aa0a769ad8d82aa2a1624372d1b5e3"
 background: "03-videobackground-reconstruction.jpg"
 poster: "03-02-03-videochapitree-itwfemmesreconstimm.jpg"
@@ -13,3 +16,9 @@ chapters:
 ---
 
 = partial "layouts/video/chapters"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"

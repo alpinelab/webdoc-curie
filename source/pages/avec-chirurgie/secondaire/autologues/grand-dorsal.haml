@@ -1,5 +1,8 @@
 ---
 layout: nav
+name: intro-grand-dorsal
+color: pink
+picto: surgical
 background: "03-03-background-reconstruction-sec.jpg"
 videos:
   elisabeth-dernière-consultation:
@@ -21,3 +24,9 @@ videos:
 ---
 
 = partial "layouts/video/playlist"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"
