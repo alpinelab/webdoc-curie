@@ -60,7 +60,9 @@
             return $("#tutorial-circle").toggleClass("tutorial-mask hide");
           }));
         });
-        return $("#tutorial").trigger(eventType);
+        if (!document.referrer.match("\/pages\/")) {
+          return $("#tutorial").trigger(eventType);
+        }
       });
     
     }).call(this);
