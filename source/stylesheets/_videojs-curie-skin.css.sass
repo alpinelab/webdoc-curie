@@ -39,9 +39,6 @@
       display: inline-block
       &.selected
         border-color: white
-        -moz-box-shadow: -3px -3px 10px 0px #555555
-        -webkit-box-shadow: -3px -3px 10px 0px #555555
-        -o-box-shadow: -3px -3px 10px 0px #555555
         box-shadow: -3px -3px 10px 0px #555555
 .vjs-curie-skin
   .vjs-control-text
@@ -105,7 +102,8 @@
   -o-transition: visibility 0.5s, opacity 0.5s
   transition: visibility 0.5s, opacity 0.5s
 
-
+.tooltip
+  +font-curie-nav
 
 #skip-intro
   position: fixed
