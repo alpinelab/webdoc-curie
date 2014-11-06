@@ -122,6 +122,24 @@
   </script> <script>
     (function() {
       $(document).ready(function() {
+        $('#modal-intro').on('show.bs.modal', function(e) {
+          return videojs("video-player").ready(function() {
+            return this.one('play', function() {
+              return this.pause();
+            });
+          });
+        });
+        return $('#modal-intro').on('hidden.bs.modal', function(e) {
+          return videojs("video-player").ready(function() {
+            return this.play();
+          });
+        });
+      });
+    
+    }).call(this);
+  </script> <script>
+    (function() {
+      $(document).ready(function() {
         return $("#modal-intro").modal("show");
       });
     
