@@ -10,3 +10,4 @@ gem 'middleman-autoprefixer'
 gem "middleman-google-analytics"
 gem "middleman-sitemap"
 gem 'middleman-deploy', '~> 0.3.0'
+gem 'middleman-s3_sync'
