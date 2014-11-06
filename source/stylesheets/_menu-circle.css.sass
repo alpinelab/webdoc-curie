@@ -2,7 +2,8 @@
   text-align: center
   min-height: 42em
   +compass-fixed
-
+  .star
+    display: none
   @for $i from 0 through 72
     .triangle-angle-#{$i*5}
       @include triangle-position($i*5*1deg,200%)
@@ -50,4 +51,3 @@
 
     .menu-item-title
       margin: 0
-
