@@ -19,9 +19,10 @@
   :coffeescript
     $(document).ready ->
       $('#modal-intro').on 'show.bs.modal', (e) ->
-        videojs("video-player").ready ->
-          this.one 'play', ->
-            this.pause()
-      $('#modal-intro').on 'hidden.bs.modal', (e) ->
-        videojs("video-player").ready ->
-          this.play()
+      if $("#video-player").length
+          videojs("video-player").ready ->
+            this.one 'play', ->
+              this.pause()
+        $('#modal-intro').on 'hidden.bs.modal', (e) ->
+          videojs("video-player").ready ->
+            this.play()

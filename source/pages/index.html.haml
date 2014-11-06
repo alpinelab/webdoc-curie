@@ -29,4 +29,5 @@ poster: "01-videobackground-infosein.jpg"
         $("#tutorial-circle").toggleClass("tutorial-mask hide")
         event.stopPropagation()
         $(document).one(eventType, (-> $("#tutorial-circle").toggleClass("tutorial-mask hide")))
-      $("#tutorial").trigger(eventType) # display tutorial layer
+      unless document.referrer.match("\/pages\/")
+        $("#tutorial").trigger(eventType) # display tutorial layer

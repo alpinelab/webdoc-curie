@@ -32,5 +32,6 @@ items:
     $.BV.init()
     initVideoImageLoader($.BV.getPlayer())
     $(document).ready ->
-      $("#modal-intro").modal "show"
+      if document.referrer.match("\/intro(\/)*$")
+        $("#modal-intro").modal "show"
       $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/109823311.hd.mp4?s=17a5ae34361c7cda0b1d780b1623010a" }], ambient: true
