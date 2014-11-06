@@ -34,7 +34,7 @@ layout: fullscreen
 #partners
   %p= I18n.t("landing.credits.in-partenership-with")
   %ul
-    - %w(institut-curie fondation-michelin au-sein-de-la-difference fondation-dominique-tom-alberici mutuelle-bleue astra-zeneca fondation-macsf thermes-la-roche-posay).each do |partner|
+    - %w(institut-curie fondation-michelin fondation-macsf fondation-dominique-tom-alberici mutuelle-bleue astra-zeneca au-sein-de-la-difference thermes-la-roche-posay).each do |partner|
       %li= image_tag "logos/partners/landing/#{partner}.png"
 
 = partial 'layouts/modals/disclaimer'
@@ -45,4 +45,3 @@ layout: fullscreen
     initVideoImageLoader($.BV.getPlayer())
     $(document).ready ->
       $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110470750.hd.mp4?s=af9b58ea0a25cff6377b7e98c52d5204" }], ambient: true
-
