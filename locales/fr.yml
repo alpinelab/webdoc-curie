@@ -55,7 +55,7 @@ fr:
   landing:
     credits:
       introduced-by: "L'institut Curie présente"
-      directed-by: "Un film de Caroline Swysen"
+      directed-by: "Un webdocumentaire de Caroline Swysen"
       producted-by: "produit par "
       in-partenership-with: "en partenariat avec"
   legal:
@@ -164,6 +164,8 @@ fr:
       title-2: "mastectomie"
       text-intro: "Il n’y a pas de mots pour décrire la perte d’un sein. Cette épreuve, aussi difficile que cachée pour la plupart des femmes, est le point de départ de leur chemin vers la reconstruction, soit chirurgicale, soit par un autre chemin."
       imagerie: "L'imagerie"
+      sentence-images-biopsie: "La sentence des images et de la biopsie"
+      mots-laurence: "Les mots de Laurence"
       léna: "Le parcours de Léna"
       mots-femmes: "Les mots des femmes"
       mots-mathieu: "Les mots de Mathieu"
