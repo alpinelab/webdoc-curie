@@ -14,3 +14,14 @@
       .modal-body
         %p= I18n.t(["nav",current_page.data.name,"text-intro"].join("."))
       .modal-footer
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $('#modal-intro').on 'show.bs.modal', (e) ->
+        videojs("video-player").ready ->
+          this.one 'play', ->
+            this.pause()
+      $('#modal-intro').on 'hidden.bs.modal', (e) ->
+        videojs("video-player").ready ->
+          this.play()
