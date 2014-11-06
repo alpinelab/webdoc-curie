@@ -17,7 +17,7 @@ fr:
         astra-zeneca:
           "AstraZeneca est une multinationale orientée vers l’innovation dans le domaine biopharmaceutique qui se consacre à la recherche, à la mise au point et à la commercialisation de médicaments éthiques, principalement dans les domaines des maladies cardiovasculaires et métaboliques, des maladies respiratoires et inflammatoires, et de l’oncologie. AstraZeneca est présent dans plus de 100 pays et ses médicaments innovants sont utilisés par des millions de patients à travers le monde."
         au-sein-de-sa-difference:
-          "Au même titre que l’éducation, l’information est un véritable outil de liberté. La complémentarité du film institutionnel et du web-documentaire permet d’embrasser la grande et si forte diversité des femmes que leur histoire-cancer aura amené à vivre une mastectomie… et vivre chacune avec : dans leur singularité. Qu’il s’agisse de la maladie elle-même, du vécu, des attentes et la reconstruction qui finit toujours par s’accomplir."
+          "Au même titre que l’éducation, l’information est un véritable outil de liberté. La complémentarité du film institutionnel et du webdocumentaire permet d’embrasser la grande et si forte diversité des femmes que leur histoire-cancer aura amené à vivre une mastectomie… et vivre chacune avec : dans leur singularité. Qu’il s’agisse de la maladie elle-même, du vécu, des attentes et la reconstruction qui finit toujours par s’accomplir."
         thermes-la-roche-posay:
           "Le Centre Thermal dermatologique de La Roche Posay a créé en 2008 une cure Thermale Post cancer, permettant aux patients une prise en charge des séquelles cutanées des traitements anticancéreux : séquelles cicatricielles d’ablation ou de tumorectomie, sécheresse de la peau et des muqueuses... Cette cure thermale prescrite et prise en charge à 100% par la Sécurité sociale propose aussi un accompagnement spécifique sur le plan psychologique grâce à des ateliers et consultations complémentaires (psy, diététique, sophrologie, sport, maquillage…) spécifiques pour aider les patients à rebondir après l’étape de la maladie."
       url: "#"
@@ -50,8 +50,8 @@ fr:
     subtitle-thanks: "Remerciements"
     title: "Crédits"
   disclaimer:
-    message: "Ce web-documentaire ne remplace pas une consultation médicale,<br>ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toute femme se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
-    discover: "Découvrez le web-documentaire"
+    message: "Ce webdocumentaire ne remplace pas une consultation médicale,<br>ni les fiches techniques chirurgicales. Ce n'est pas une encyclopédie médico-chirurgicale. Il a pour objectif de répondre aux questions que toute femme se pose à l'annonce d'une mastéctomie, qu'elles soient d'ordre médical ou sensible."
+    discover: "Découvrez le webdocumentaire"
   landing:
     credits:
       introduced-by: "L'institut Curie présente"
