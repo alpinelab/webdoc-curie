@@ -10,7 +10,7 @@
 #= require vendor/video-js/lang/_fr
 #= require vendor/_bigvideo
 #= require vendor/_video-image-loader
-#= require vendor/jquery.tinycircleslider
+#= require vendor/_jquery.tinycircleslider
 #= require_tree .
 
 videojs.options.flash.swf = "/javascripts/vendor/video-js/video-js.swf"
