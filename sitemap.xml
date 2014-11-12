@@ -37,6 +37,9 @@
     <loc>http://guerirlereguard.fr/pages/mastectomie/mots-femmes</loc>
   </url>
   <url>
+    <loc>http://guerirlereguard.fr/pages/mastectomie/lena-intro</loc>
+  </url>
+  <url>
     <loc>http://guerirlereguard.fr/pages/mastectomie/lena</loc>
   </url>
   <url>
@@ -76,7 +79,10 @@
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie</loc>
   </url>
   <url>
-    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/finitions</loc>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/finitions/christine-consultation-finition</loc>
+  </url>
+  <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/finitions/mots-femmes</loc>
   </url>
   <url>
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/intro</loc>
@@ -88,10 +94,28 @@
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/immediate/mots-femmes</loc>
   </url>
   <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/immediate/sylvie-intro</loc>
+  </url>
+  <url>
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/immediate/paroles-soignants</loc>
   </url>
   <url>
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/grand-dorsal</loc>
+  </url>
+  <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/grand-dorsal</loc>
+  </url>
+  <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/grand-dorsal/elisabeth</loc>
+  </url>
+  <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/grand-dorsal/mots-femmes</loc>
+  </url>
+  <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/grand-dorsal/danielle</loc>
+  </url>
+  <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/grand-dorsal/paroles-soignants</loc>
   </url>
   <url>
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/autologues/diep</loc>
@@ -118,7 +142,13 @@
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire</loc>
   </url>
   <url>
-    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/lipomodelage</loc>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/lipomodelage/lipomodelage-animation</loc>
+  </url>
+  <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/lipomodelage/marie-derniere-etape</loc>
+  </url>
+  <url>
+    <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/lipomodelage/paroles-soignants</loc>
   </url>
   <url>
     <loc>http://guerirlereguard.fr/pages/avec-chirurgie/secondaire/prothese/sabine</loc>
