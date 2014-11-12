@@ -12,7 +12,7 @@
             %span.colored= I18n.t(["nav",current_page.data.name,"title-2"].join("."))
           = image_tag "pictograms/" + (current_page.data.picto || current_page.data.name) + "-grey.png"
       .modal-body
-        %p= I18n.t(["nav",current_page.data.name,"text-intro"].join("."))
+        %p= I18n.t(["nav",current_page.data.name,"text-intro"].join(".")).html_safe
       .modal-footer
 
 - content_for :javascripts do
