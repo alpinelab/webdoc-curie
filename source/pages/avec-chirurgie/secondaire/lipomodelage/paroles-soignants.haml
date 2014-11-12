@@ -1,0 +1,23 @@
+---
+layout: nav
+title: "La reconstruction par lipomodelage - Paroles des soignants"
+description: ""
+name: intro-lipomodelage
+color: pink
+picto: surgical
+background: "03-03-background-reconstruction-sec.jpg"
+poster: "03-03-03-03-04-videoseule-itwsoignantslipo.jpg"
+videos:
+  paroles-soignants-4:
+    src: "http://player.vimeo.com/external/109836793.hd.mp4?s=27925a2072bb3f7a356dfa28cf803708"
+    thumbnail: "03-03-03-03-04-videoseule-itwsoignantslipo.jpg"
+    poster: "03-03-03-03-04-videoseule-itwsoignantslipo.jpg"
+---
+
+= partial "layouts/video/playlist"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"

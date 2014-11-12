@@ -2,13 +2,14 @@
   = partial 'layouts/compass'
   .viewport
     %ul.compass-inner
-      - %w{infosein mastectomy surgical nonsurgical interrogations}.each do |section|
+      - %w{scar infosein mastectomy surgical nonsurgical interrogations}.each do |section|
         %li{class: section}
           .slide-container
             .pretitle= I18n.t("compass.inner.#{section}.pretitle")
             .title= I18n.t("compass.inner.#{section}.title")
             = image_tag("pictograms/#{section}-white.png", class: 'picto')
-            %a.btn.btn-default{href: "/pages/#{I18n.t('nav.' + section + '.url')}/intro"}= I18n.t("common.enter")
+            - unless section == "scar"
+              %a.btn.btn-default{href: "/pages/#{I18n.t('nav.' + section + '.url')}/intro"}= I18n.t("common.enter")
   .thumb
     .arrow
     #tutorial-circle.hide

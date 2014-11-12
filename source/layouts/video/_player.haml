@@ -1,9 +1,11 @@
 .video-wrapper
   %video#video-player.video-js.vjs-curie-skin{:'data-setup' => '{ "controls": false}', :height => "auto", :poster => image_path("posters/#{current_page.data.poster}"), :"max-width" => "100%", "data-current-video" => 0}
     %source{:src => default_src, :type => "video/mp4"}
-  .prev.control
+  - unless (current_page.data.chapters and current_page.data.chapters.length == 1) or (current_page.data.videos and current_page.data.videos.length == 1)
+    .prev.control
   .pause.control
-  .next.control
+  - unless (current_page.data.chapters and current_page.data.chapters.length == 1) or (current_page.data.videos and current_page.data.videos.length == 1)
+    .next.control
 
 - content_for :javascripts do
   :coffeescript

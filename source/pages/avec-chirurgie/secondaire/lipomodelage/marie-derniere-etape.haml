@@ -1,0 +1,23 @@
+---
+layout: nav
+title: "La reconstruction par lipomodelage - Marie dernière étape"
+description: ""
+name: intro-lipomodelage
+color: pink
+picto: surgical
+background: "03-03-background-reconstruction-sec.jpg"
+poster: "03-03-03-03-02-videoseule-consultlipo.jpg"
+videos:
+  marie-dernière-étape:
+    src: "http://player.vimeo.com/external/109836791.hd.mp4?s=083d1328b3c7e4f9a7c33300970f29e7"
+    thumbnail: "03-03-03-03-02-videoseule-consultlipo.jpg"
+    poster: "03-03-03-03-02-videoseule-consultlipo.jpg"
+---
+
+= partial "layouts/video/playlist"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $(document).ready ->
+      $("#modal-intro").modal "show"

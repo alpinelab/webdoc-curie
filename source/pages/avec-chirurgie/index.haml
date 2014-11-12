@@ -10,7 +10,7 @@ items:
     angle-triangle: 180
     angle-item: 180
     sub_items:
-      - sylvie
+      - sylvie-intro
       - mots-femmes
       - paroles-soignants
   secondaire:
@@ -19,6 +19,9 @@ items:
   finitions:
     angle-triangle: 330
     angle-item: 330
+    sub_items:
+      - christine-consultation-finition
+      - mots-femmes
 ---
 
 = partial 'layouts/navigation/branch'
@@ -28,7 +31,6 @@ items:
   :coffeescript
     $.BV.init()
     initVideoImageLoader($.BV.getPlayer())
-    $(document).ready ->
     $(document).ready ->
       if document.referrer.match("\/intro(\/)*$")
         $("#modal-intro").modal "show"

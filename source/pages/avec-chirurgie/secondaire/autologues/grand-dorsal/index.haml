@@ -1,0 +1,31 @@
+---
+layout: nav
+title: "Les reconstructions autologues - Le grand dorsal"
+description: ""
+name: intro-grand-dorsal
+color: pink
+picto: surgical
+poster: "03-03-background-reconstruction-sec.jpg"
+items:
+  elisabeth:
+    thumbnail: "03-03-03-01-01-videoseule-gdconsultelisabeth.jpg"
+  danielle:
+    thumbnail: "03-03-03-01-02-videoseule-gdconsultdanielle.jpg"
+  mots-femmes:
+    thumbnail: "03-03-03-01-03-videochapitree-gditwpatientes.jpg"
+  paroles-soignants:
+    thumbnail: "03-03-03-01-04-videoseule-gditwsoignants.jpg"
+parent_page: "/pages/avec-chirurgie/secondaire/"
+---
+
+= partial "layouts/navigation/table"
+= partial 'layouts/modals/intro'
+
+- content_for :javascripts do
+  :coffeescript
+    $.BV.init()
+    initVideoImageLoader($.BV.getPlayer())
+    $(document).ready ->
+      if document.referrer.match("\/secondaire(\/)*$")
+        $("#modal-intro").modal "show"
+      $.BV.show [{ type: "video/mp4", src: "http://player.vimeo.com/external/110338853.hd.mp4?s=4598cc7b31d8585ac240d92aa9cfba2e" }], ambient: true

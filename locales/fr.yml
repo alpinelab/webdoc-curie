@@ -9,7 +9,7 @@ fr:
         fondation-michelin:
           "La Fondation d'entreprise Michelin a le plaisir d'accompagner l'Institut Curie dans la réalisation du documentaire et du webdocumentaire \"Guérir le regard\". La Fondation d'entreprise Michelin soutient les projets s'inscrivant dans les domaines de la mobilité durable, du sport et de la santé, de la solidarité et de l'éducation, de la protection de l'environnement et de la culture et du patrimoine."
         fondation-macsf:
-          "Mieux communiquer, mieux comprendre, reconnaitre l’Autre : un droit et devoir pour ceux qui patients et/ou soignants allient leurs énergies pour combattre la maladie, pour la vie.  Améliorer la communication patient-soignant tel est le credo de la Fondation MACSF qui s’honore d’être le partenaire de l’institut Curie pour « guérir le regard »."
+          "Mieux communiquer, mieux comprendre, reconnaitre l’Autre : un droit et devoir pour ceux qui patients et/ou soignants allient leurs énergies pour combattre la maladie, pour la vie.  Améliorer la communication patient-soignant tel est le credo de la Fondation MACSF qui s’honore d’être le partenaire de l’Institut Curie pour « guérir le regard »."
         fondation-dominique-tom-alberici:
           "La Fondation Dominique et Tom Alberici soutient activement des projets caritatifs dédiés aux personnes handicapées et aux patients souffrant d’un cancer. La Fondation accompagne des projets en France et dans les pays en voie de développement, notamment à Madagascar. Depuis sa création en 2008, plus de 40 projets ont bénéficié du soutien et du financement de la Fondation."
         mutuelle-bleue:
@@ -33,7 +33,7 @@ fr:
     menu: "Menu"
     read-more: "En savoir plus"
     search: "Recherche"
-    skip-intro: "Passer le flim d'introduction"
+    skip-intro: "Passer le film d'introduction"
   credits:
     role:
       director: "Réalisation"
@@ -54,7 +54,7 @@ fr:
     discover: "Découvrez le webdocumentaire"
   landing:
     credits:
-      introduced-by: "L'institut Curie présente"
+      introduced-by: "L'Institut Curie présente"
       directed-by: "Un webdocumentaire de Caroline Swysen"
       producted-by: "produit par "
       in-partenership-with: "en partenariat avec"
@@ -132,6 +132,9 @@ fr:
       title: "Web"
   compass:
     inner:
+      scar:
+        pretitle: Guérir le
+        title: Regard
       infosein:
         pretitle: Le groupe
         title: Info-Sein
@@ -154,7 +157,7 @@ fr:
     infosein:
       title-1: "le groupe"
       title-2: "info-sein"
-      text-intro: "Des patientes consultées par des soignants… et inversement… C’est ce concept qui fonde le Groupe Info-Sein créé à l’Institut Curie depuis 2 ans.   Son objectif est de créer des outils afin d’aider les femmes à trouver leur chemin de reconstruction après une mastectomie, qu’elle soit ou non chirurgicale."
+      text-intro: "Des patientes consultées par des soignants… et inversement… C’est ce concept qui fonde le Groupe Info-Sein créé à l’Institut Curie depuis 2012.   Son objectif est de créer des outils afin d’aider les femmes à trouver leur chemin de reconstruction après une mastectomie, qu’elle soit ou non chirurgicale."
       réunion: "Une séance du groupe Info-Sein"
       mots-info-sein: "Les mots du groupe Info-Sein"
       url: "groupe-info-sein"
@@ -166,7 +169,7 @@ fr:
       imagerie: "L'imagerie"
       sentence-images-biopsie: "La sentence des images et de la biopsie"
       mots-laurence: "Les mots de Laurence"
-      léna: "Le parcours de Léna"
+      léna-intro: "Le parcours de Léna"
       mots-femmes: "Les mots des femmes"
       mots-mathieu: "Les mots de Mathieu"
       paroles-soignants: "Les paroles des soignants"
@@ -183,12 +186,13 @@ fr:
       title-2: "chirurgicale"
       text-intro: "Chaque technique peut être utilisée  autant dans le cadre d’une  reconstruction immédiate que secondaire. Il y a autant de reconstructions que de femmes. Chacune la voudra, puis la vivra selon son histoire, son tempérament, sa relation avec son corps, son entourage. Il n’y a pas de règle non plus quant au vécu du résultat. Certaines seront simplement satisfaites quelle que soit la qualité esthétique, d’autres n’auront de cesse de chercher une perfection. Il reste néanmoins prudent de rappeler que le sein perdu n’est jamais retrouvé, il est remplacé."
       immédiate: "La reconstruction immédiate"
-      sylvie: "Le parcours de Sylvie"
+      sylvie-intro: "Le parcours de Sylvie"
       mots-femmes: "Les mots des femmes"
       paroles-soignants: "Les paroles des soignants"
       secondaire: "La reconstruction secondaire"
       finitions: "Les étapes de finition"
       url: "avec-chirurgie"
+      christine-consultation-finition: "Christine, consultation avant étapes de finition"
 
     intro-immédiate:
       title-1: "reconstruction"
@@ -203,6 +207,8 @@ fr:
       prothèse: "Prothèse(s)"
       autologues: "Les reconstructions autologues"
       lipomodelage: "la reconstruction par lipomodelage"
+      lipomodelage-animation: "Le lipomodelage en animation"
+      marie-dernière-étape: "Marie, dernière étape"
       animation: "Reconstruction secondaire par prothèse"
       delphine: "Delphine, reconstruction par expandeur"
       sabine: "Les mots de Sabine"
@@ -219,12 +225,17 @@ fr:
       title-1: "reconstruction"
       title-2: "grand dorsal"
       text-intro: "La reconstruction par le muscle grand dorsal est la plus ancienne et la plus solide  des reconstructions autologues. Selon les cas, elle peut être doublée d’une prothèse ou , dans un second temps, d’une injection de graisse. "
+      elisabeth: "Élisabeth, dernière consultation"
+      danielle: "Danielle, le grand dorsal à distance"
+      mots-femmes: "Les mots des femmes"
+      paroles-soignants: "Les paroles de soignants"
+
 
     diep:
       title-1: "reconstruction par"
       title-2: "diep"
       text-intro: "Le principe du diep [Deep inferior epigastric perforator (trad : lambeau libre de peau abdominale vascularisée par les perforantes épigastriques inférieures)]   est de remodeler un sein avec un lambeau de peau et de graisse prélevé sur le ventre, et dont les vaisseaux sont sectionnés pour être rattachés à ceux de la loge du sein manquant. Le tram [Transverse Rectus Abdominis Myocutaneous] est « l’ancêtre » du diep, et désormais plutôt son alternative. Son principe est de prélever le muscle abdominal grand droit et ses vaisseaux en plus du lambeau de graisse et de peau du ventre. Contrairement au diep, le lambeau reste  ici toujours rattaché au corps. C’est donc une reconstruction solide. Mais la fragilisation de la paroi abdominale peut être considérée comme un inconvénient important. "
-      geneviève: "Le parcours de Geneviève"
+      geneviève-intro: "Le parcours de Geneviève"
       nathalie: "Les mots de Nathalie"
       esmeralda: "Le TRAM d’Esméralda... 4 ans après"
       paroles-soignants: "Les paroles des soignants"
@@ -414,4 +425,4 @@ fr:
     reconstruction-grand-dorsal: "Reconstruction grand dorsal"
     reconstruction-diep: "Reconstruction par DIEP"
     reconstruction-lipomodelage: "Reconstruction par Lipomodelage"
-    reconstruction-aréole-memelon: "Reconstruction de l'aréole et du memelon"
+    reconstruction-aréole-mamelon: "Reconstruction de l'aréole et du mamelon"
