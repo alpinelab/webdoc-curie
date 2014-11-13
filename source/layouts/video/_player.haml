@@ -18,8 +18,6 @@
       $(window).resize ->
         resizeVideoJS()
       videojs("video-player").ready ->
-        videojs("video-player").load()
-        resizeVideoJS()
         this.on 'loadeddata', ->
           this.play()
         this.on 'play', ->
@@ -30,6 +28,8 @@
           $('.control, .vjs-control-bar').removeClass('inactive')
         this.on 'userinactive', ->
           $('.control, .vjs-control-bar').addClass('inactive')
+      videojs("video-player").load()
+      resizeVideoJS()
       $('.play, .pause, .vjs-tech').click ->
         element = $(this)
         videojs("video-player").ready ->

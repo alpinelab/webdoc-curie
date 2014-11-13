@@ -369,6 +369,7 @@ fonts to show/hide properly.
 }
 .vjs-default-skin.vjs-live .vjs-live-display {
   display: block;
+  display: none;
 }
 /* Live Display
 --------------------------------------------------------------------------------
@@ -385,12 +386,15 @@ fonts to show/hide properly.
   font-size: 1em;
   /* Align vertically by making the line height the same as the control bar */
   line-height: 3em;
+  display: none;
 }
 .vjs-default-skin .vjs-current-time {
   float: left;
+  display: none;
 }
 .vjs-default-skin .vjs-duration {
   float: left;
+  display: none;
 }
 /* Remaining time is in the HTML, but not included in default design */
 .vjs-default-skin .vjs-remaining-time {
@@ -400,6 +404,7 @@ fonts to show/hide properly.
 .vjs-time-divider {
   float: left;
   line-height: 3em;
+  display: none;
 }
 /* Fullscreen
 --------------------------------------------------------------------------------
@@ -522,12 +527,14 @@ easily in the skin designer. http://designer.videojs.com/
   top: 0;
   width: 100%;
   height: 100%;
+  display: none;
 }
 .vjs-error .vjs-error-display:before {
   content: 'X';
   font-family: Arial;
   font-size: 4em;
   color: #666666;
+  display: none;
   /* In order to center the play icon vertically we need to set the line height
      to the same as the button height */
 
@@ -542,6 +549,7 @@ easily in the skin designer. http://designer.videojs.com/
   width: 100%;
 }
 .vjs-error-display div {
+  display: none;
   position: absolute;
   bottom: 1em;
   right: 0;
@@ -563,7 +571,7 @@ easily in the skin designer. http://designer.videojs.com/
   /* Should be hidden by default */
   display: none;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   font-size: 4em;
   line-height: 1;
@@ -800,8 +808,8 @@ control positioning and full window mode. **
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid rgba(255, 255, 255, 0.7);
 }
+
 /* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when
    checking fullScreenEnabled. */
 .video-js:-moz-full-screen {
@@ -848,6 +856,7 @@ body.vjs-full-window {
   right: 0;
   bottom: 0;
   left: 0;
+  border: 2px solid rgba(255, 255, 255, 0);
 }
 .vjs-poster img {
   display: block;
@@ -869,10 +878,12 @@ body.vjs-full-window {
   /* Leave padding on left and right */
   left: 1em;
   right: 1em;
+  display: none;
 }
 /* Move captions down when controls aren't being shown */
 .video-js.vjs-user-inactive.vjs-playing .vjs-text-track-display {
   bottom: 1em;
+  display: none;
 }
 /* Individual tracks */
 .video-js .vjs-text-track {

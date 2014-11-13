@@ -41,6 +41,9 @@
         border-color: white
         box-shadow: -3px -3px 10px 0px #555555
 .vjs-curie-skin
+  &.video-js .vjs-tech
+    border: 2px solid rgba(255, 255, 255, 0.7)
+
   .vjs-control-text
     display: none !important
   .vjs-progress-control
@@ -91,6 +94,20 @@
         width: 8px
         height: 8px
         background: $curie-orange
+
+// // Loading Spinner
+.vjs-curie-skin .vjs-loading-spinner:before
+  color: white
+  content: "\e01e"
+  font-family: VideoJS
+  position: absolute
+  top: 0
+  left: 0
+  width: 1em
+  height: 1em
+  text-align: center
+  text-shadow: 0em 0em 0.1em #000
+
 
 .video-wrapper .vjs-control-bar.inactive, .video-wrapper .control.inactive
   display: block

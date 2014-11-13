@@ -15,6 +15,8 @@
       $('.video-nav').on 'click', 'img', ->
         video_src = $(this).parent().data('video-src')
         video_desc = $(this).parent().data('original-title')
+        video_poster = $(this).parent().data('video-poster')
+        $("#video-player .vjs-poster").css('background-image', 'url('+ video_poster + ')').show();
         element = $(this).closest('.video-nav')
         videojs("video-player").ready ->
           myPlayer = this
